@@ -1,5 +1,4 @@
 class ProductsController < ApplicationController
-	layout 'review_site'
   def index
     # productsテーブルから最新順に作品を２０件取得する
     @products = Product.order('id ASC').limit(20)

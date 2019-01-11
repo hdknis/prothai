@@ -1,0 +1,57 @@
+<div id="main_cnt_wrapper">
+    <div id="yjContentsBody">
+      <div class="yjContainer">
+        <span class="yjGuid"><a id="yjContentsStart" name="yjContentsStart"></a><img alt="ここから本文です" height="1" src="http://i.yimg.jp/yui/jp/tmpl/1.1.0/audionav.gif" width="1"></span>
+        <div id="yjMain">
+          <article class="section">
+            <div class="container">
+              <header class="header header--section">
+                <h2 class="text-middle">
+                  <i class="icon-movie color-gray-light"></i><%= @blog.user_name %>
+                </h2>
+              </header>
+              <h2 class="text-last">
+                  <i class="i"></i><%= @blog.country %>
+                </h2>
+              </header>
+              <div class="bussinness_content">
+                 <header class="header header--section">
+                  <h2 class="text-middle">
+                   <i class="icon-movie color-gray-light"></i>業界：業種
+                  </h2>
+                 </header>
+                  <div class="main_contents">
+                    <i class="i"></i><%= @blog.industry %>
+                  </div>
+              </div>
+              <div class="experience_content">
+                 <header class="header header--section">
+                  <h2 class="text-middle">
+                   <i class="icon-movie color-gray-light"></i>状況
+                  </h2>
+                 </header>
+                  <div class="main_contents">
+                    <i class="i"></i><%= @blog.user_status %>
+                  </div>
+              </div>
+              <div class="request_content">
+                 <header class="header header--section">
+                  <h2 class="text-middle">
+                   <i class="icon-movie color-gray-light"></i>ブログ紙面
+                 </header>
+                  <div class="main_contents">
+                    <i class="i"></i><%= @blog.body %>
+                  </div>
+              </div>
+
+              
+               <header class="header header--section">
+                <h2 class="text-middle">
+
+                  <i class="icon-movie color-gray-light"></i>みんなのレビュー
+                </h2>
+                </header>
+            </div>
+          </article>
+        </div>
+        <div id="yjSub">

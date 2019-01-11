@@ -1,0 +1,83 @@
+<div id="main_cnt_wrapper">
+    <div id="yjContentsBody">
+      <div class="yjContainer">
+        <span class="yjGuid"><a id="yjContentsStart" name="yjContentsStart"></a><img alt="ここから本文です" height="1" src="http://i.yimg.jp/yui/jp/tmpl/1.1.0/audionav.gif" width="1"></span>
+        <div id="yjMain">
+          <article class="section">
+            <div class="container">
+              <header class="header header--section">
+                <h2 class="text-middle">
+                  <i class="icon-movie color-gray-light"></i><%= @product.title %>
+                </h2>
+              </header>
+              <p style="text-align: center">
+                <img src="<%= @product.top_pictures %>" alt="<%= @product.title %>">
+              </p>
+              <div style="text-align: right">
+                <a href="/products/<%= @product.id %>/reviews/new">この作品を投稿する</a>
+              </div>
+              <h2 class="text-last">
+                  <i class="i"></i><%= @product.experience_content %>
+                </h2>
+              </header>
+              <div class="bussinness_content">
+                 <header class="header header--section">
+                  <h2 class="text-middle">
+                   <i class="icon-movie color-gray-light"></i>インターンシップ内容
+                  </h2>
+                 </header>
+                  <div class="main_contents">
+                    <i class="i"></i><%= simple_format(@product.business_content) %>
+                  </div>
+              </div>
+              <div class="experience_content">
+                 <header class="header header--section">
+                  <h2 class="text-middle">
+                   <i class="icon-movie color-gray-light"></i>身に付く力・得られる経験
+                  </h2>
+                 </header>
+                  <div class="main_contents">
+                    <i class="i"></i><%= simple_format(@product.experience_content) %>
+                  </div>
+              </div>
+              <div class="request_content">
+                 <header class="header header--section">
+                  <h2 class="text-middle">
+                   <i class="icon-movie color-gray-light"></i>こんな人を求めています
+                 </header>
+                  <div class="main_contents">
+                    <i class="i"></i><%= @product.request_content %>
+                  </div>
+              </div>
+              <div class="intern_content">
+                 <header class="header header--section">
+                  <h2 class="text-middle">
+                   <i class="icon-movie color-gray-light"></i>募集要項
+                  <div class="main_contents">
+                    <i class="i"></i><%= @product.application_requirement %>
+                  </div>
+
+              </div>
+              <div class="intern_content">
+                 <header class="header header--section">
+                  <h2 class="text-middle">
+                   <i class="icon-movie color-gray-light"></i>企業紹介
+                  <div class="main_contents">
+                    <i class="i"></i><%= @product.experience_content %>
+                  </div>
+              </div>
+              
+
+
+
+              
+               <header class="header header--section">
+                <h2 class="text-middle">
+
+                  <i class="icon-movie color-gray-light"></i>みんなのレビュー
+                </h2>
+                </header>
+            </div>
+          </article>
+        </div>
+        <div id="yjSub">

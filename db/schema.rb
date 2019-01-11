@@ -13,10 +13,24 @@
 ActiveRecord::Schema.define(version: 2018_12_15_074741) do
 
   create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "title"
-    t.string "director"
-    t.text "image_url"
-    t.integer "page"
+    t.text "title"
+    t.text "catch_copy"
+    t.text "top_pictures"
+    t.text "business_content"
+    t.text "experience_content"
+    t.text "request_content"
+    t.text "application_requirement"
+    t.string "country"
+    t.string "city"
+    t.string "period"
+    t.string "days"
+    t.string "time"
+    t.text "allowance"
+    t.text "company_introduction"
+    t.text "company_introduction_picture"
+    t.text "employees_number"
+    t.text "language"
+    t.text "manager_profile"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

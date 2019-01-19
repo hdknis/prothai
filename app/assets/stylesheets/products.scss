@@ -1,3 +1,144 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/*jqueryでの検索時のcss*/
+.is-hide {
+    display: none;
+}
+
+
+/*タイトル部分のcss*/
+.searchBox__h2{
+	  position: relative;
+    display: inline-block;
+    text-decoration: none;
+    padding: 0 30px;
+    font-size: 19px;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+    background: #51587b;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    transition: .4s;
+}
+
+/*チェックボックスのcss*/
+.searchBox__refine__check{
+  margin: 20px;
+}
+
+.searchBox__refine__check > li{
+  display: inline-block;
+  /*margin: 8px;*/
+  font-weight: bold;
+}
+
+.searchBox_block{
+  margin: 0px auto;
+  width: 180px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #ccc;
+  height: 60px;
+  float: left;
+  text-align: center;
+}
+
+.label{
+    text-align: center;
+    padding: 18px;
+    display: inline-block;
+    color: black;
+}
+
+input{
+  display: none;
+}
+
+.searchBox__refine__check > li{
+  display: inline-block;
+  margin: 10px;
+  font-weight: bold;
+}
+
+/*.searchBox__refine__tit{
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #00BCD4;
+    background: #ECECEC;
+    border-radius: 0 15px 15px 0;
+    transition: .4s;
+}*/
+
+/*.searchBox__bt{
+	padding: 0.3em 1em;
+    text-decoration: none;
+    color: #67c5ff;
+    border: solid 2px #67c5ff;
+    border-radius: 3px;
+    transition: .4s;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}*/
+
+
+/*会社カードのデザイン*/
+.card {
+  margin: 30px auto;
+  width: 250px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #ccc;
+  height: 350px;
+  float: left;
+  margin: 20px;
+}
+.card-img {
+  border-radius: 5px 5px 0 0;
+  max-width: 100%;
+  height: auto;
+}
+.card-content {
+  padding: 20px;
+}
+.card-title {
+  font-size: 15px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #333;
+}
+.card-text {
+  color: #777;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.card-link {
+  text-align: center;
+  border-top: 1px solid #eee;
+  padding: 20px;
+}
+.card-link a {
+  text-decoration: none;
+  color: #0bd;
+  margin: 0 10px;
+}
+.card-link a:hover {
+  color: #0090aa;
+}
+
+
+.thumbnail__figure span{/*文字*/
+     position: absolute;
+     top: 0;
+     right: 0;
+     /*以下装飾*/
+     color: white;
+     background: #74c1f8;
+     padding:0 2px;
+     line-height:1.5em;
+}

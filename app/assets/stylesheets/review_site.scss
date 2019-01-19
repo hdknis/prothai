@@ -3982,7 +3982,7 @@ a.btn-search:focus, a.btn-search:active, button.btn-search:focus, button.btn-sea
 }
 
 .label, .badge {
-  -webkit-box-sizing: border-box;
+ /* -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-border-radius: 1000px;
@@ -4001,7 +4001,7 @@ a.btn-search:focus, a.btn-search:active, button.btn-search:focus, button.btn-sea
   line-height: .99;
   padding: 0.4em 0.6em;
   margin-right: 0.2em;
-  margin-bottom: 0.2em
+  margin-bottom: 0.2em*/
 }
 
 .badge {
@@ -4143,7 +4143,7 @@ a.btn-search:focus, a.btn-search:active, button.btn-search:focus, button.btn-sea
 .thumbnail__figure {
   display: block;
   overflow: hidden;
-  position: relative
+  position: relative;
 }
 
 .thumbnail__figure img {

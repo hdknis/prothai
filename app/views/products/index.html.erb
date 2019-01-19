@@ -3,6 +3,7 @@
       <div class="yjContainer">
         <span class="yjGuid"><a id="yjContentsStart" name="yjContentsStart"></a><img alt="ここから本文です" height="1" src="http://i.yimg.jp/yui/jp/tmpl/1.1.0/audionav.gif" width="1"></span>
         <div id="yjMain">
+         <%= render 'common/search.html.erb' %>
           <article class="section">
             <div class="container">
               <header class="header header--section">
@@ -12,17 +13,110 @@
               </header>
               <ul class="thumbnails thumbnail--movies row grid4 js-lazy-load-images js-my-check-stats" id="list-module">
                 <% @products.each do |product| %>
-                  <li class="col">
-                    <a href="/products/<%= product.id %>"><div class="thumbnail__figure"  size ="320x180" style="background-image:url(<%= product.top_pictures %>)"></div></a>
-                    <div class="thumbnail__caption">
-                      <h3 class="text-xsmall text-overflow" title="タイトル">
-                        題名：<%= product.title %>
-                      </h3>
-                    </div>
-                  </li>
+                  <li class="card" data-category='CMS' data-tag='["<%= product.country %>","<%= product.period.to_i %>"]'>
+                   <a href="/products/<%= product.id %>"><div class="thumbnail__figure"  size ="320x180" style="background-image:url(<%= product.top_pictures %>)"><span><%= product.country %></span></div></a>
+                  <div class="card-content">
+                    <h1 class="card-title"><%= product.title %></h1>
+                     <p class="card-text">期間:<%= @periods[product.period.to_i] %></p>
+                  </div>
+                </li>
                 <% end %>
               </ul>
             </div>
+            <script>
+            //絞り込み検索機能
+              var searchBox = '.search-boxs'; // 絞り込む項目を選択するエリア
+              var listItem = '.card';   // 絞り込み対象のアイテム
+              var hideClass = 'is-hide';     // 絞り込み対象外の場合に付与されるclass名
+
+              $(function() {
+                  // 絞り込み項目を変更した時
+                  $(document).on('change', searchBox + ' input', function() {
+                    setTimeout(function(){
+                      search_filter();
+                    },1000);
+                  });
+              });
+
+              /**
+               * リストの絞り込みを行う
+               */
+              function search_filter() {
+                  check_conunt = 0
+                  // 非表示状態を解除
+                  $(listItem).removeClass(hideClass);
+                  for (var i = 0; i < $(searchBox).length; i++) {
+                      var name = $(searchBox).eq(i).find('input').attr('name');
+                      // 選択されている項目を取得
+                      var searchData = get_selected_input_items(name);
+                      // 選択されている項目がない、またはALLを選択している場合は飛ばす
+                      if(searchData.length === 0 || searchData[0] === '') {
+                          continue;
+                      }
+                      // リスト内の各アイテムをチェック
+                      for (var j = 0; j < $(listItem).length; j++) {
+                        // console.log($(listItem).length);
+                          // アイテムに設定している項目を取得
+                          //引数でタグとカテゴリをget_setting_values_in_itemまで渡している
+                          var itemData = get_setting_values_in_item($(listItem).eq(j), name);
+                          console.log(itemData);
+                          // 絞り込み対象かどうかを調べる
+                          var check = array_match_check(itemData, searchData);
+                          if(!check) {
+                            $(listItem).eq(j).addClass(hideClass);
+                          }
+                      }
+                  }
+              }
+
+              /**
+               * inputで選択されている値の一覧を取得する
+               * @param  {String} name 対象にするinputのname属性の値
+               * @return {Array}       選択されているinputのvalue属性の値
+               */
+              function get_selected_input_items(name) {
+                  var searchData = [];
+                  $('[name=' + name + ']:checked').each(function() {
+                      searchData.push($(this).val());
+                  });
+                  // console.log(searchData);
+                  return searchData;
+              }
+
+              /**
+               * リスト内のアイテムに設定している値の一覧を取得する
+               * @param  {Object} target 対象にするアイテムのjQueryオブジェクト
+               * @param  {String} data   対象にするアイテムのdata属性の名前
+               * @return {Array}         対象にするアイテムのdata属性の値
+               */
+              function get_setting_values_in_item(target,data) {
+                  var itemData = target.data(data);
+                  if(!Array.isArray(itemData)) {
+                      itemData = [itemData];
+                  }
+                  // console.log(itemData);
+                  return itemData;
+              }
+
+              /**
+               * 2つの配列内で一致する文字列があるかどうかを調べる
+               * @param  {Array} arr1 調べる配列1
+               * @param  {Array} arr2 調べる配列2
+               * @return {Boolean}    一致する値があるかどうか
+               */
+              function array_match_check(arr1, arr2) {
+                  // 絞り込み対象かどうかを調べる
+                  var arrCheck = false;
+                  for (var i = 0; i < arr1.length; i++) {
+                      if(arr2.indexOf(arr1[i]) >= 0) {
+                          arrCheck = true;
+                          break;
+                      }
+                  }
+                   // console.log(arrCheck);
+                  return arrCheck;
+              }
+            </script>
           </article>
         </div>
         <div id="yjSub">

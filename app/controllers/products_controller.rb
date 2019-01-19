@@ -1,7 +1,10 @@
 class ProductsController < ApplicationController
   def index
     # productsテーブルから最新順に作品を２０件取得する
+    @product = Product.new
     @products = Product.order('id ASC').limit(20)
+    @periods = @product.create_period
+    @countrys = @product.create_country
   end
 
   def show

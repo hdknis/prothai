@@ -1,0 +1,64 @@
+<div class="contents">
+<section class="searchBox"><div class="searchBox__inner">
+	<div class="searchBox__wrap" >
+		<h2 class="searchBox__h2">海外インターンシップを見つける</h2>
+		<form action="/internship" method="get" id="internship_form">
+	      <input type="hidden" name="mode" value="internship" />
+
+	<dl class="searchBox__refine">
+	  <dt class="searchBox__refine__tit">期間から絞り込む</dt>
+		<dd>
+		 <div class="search-boxs">
+		  <ul class="searchBox__refine__check">
+		    <% @periods.each_with_index do |period,i|%>
+			  <li>
+			    <div class="searchBox_block">
+			     <div id="change_hoge<%= i.to_i %>">
+			       <input class="check_box" type="checkbox" name='tag' value="<%= i %>" id="hoge<%= i %>">
+			         <label class="label" for="hoge<%= i %>"><%= period %></label>
+			       </input>
+			     </div>
+			    </div>
+			   </li>
+		    <% end %>
+		   </ul>
+		 </div>
+		</dd>
+	</dl>
+	<dl class="searchBox__refine">
+	   <dt class="searchBox__refine__tit">国・地域から絞り込む</dt>
+		<dd>
+		  <div class="search-boxs">
+			<ul class="searchBox__refine__check">
+			    <% @countrys.each_with_index do |country,i|%>
+				  <li>
+				  <div class="searchBox_block">
+				   <div id="change_hoge<%= i.to_i + 5 %>">
+				    <input class="check_box" type="checkbox" name='tag' value="<%= country %>" id="hoge<%= i.to_i + 5 %>">
+				      <label class="label" for="hoge<%= i.to_i + 5 %>"><%= country %></label>
+				    </input>
+				   </div>
+				  </div>
+				  </li>
+				<% end %>
+		     </ul>
+		   </div>
+		</dd>
+	</dl>
+       <script>
+        $('input[name="tag"]').change(function() {
+	     	  var val = $(this).attr('id');
+	     	  var val1 =  "#change_" + val ;
+		    if ($(this).prop('checked')) {
+		     $(val1).css({'background-color':'#67c5ff'});
+		    } else {
+		      // テキストをリセット
+		     $(val1).css({'background-color':''});
+		    }
+	     });
+		</script>
+	</form>
+	</div>
+</div>
+
+</section>

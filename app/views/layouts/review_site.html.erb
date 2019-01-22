@@ -6,6 +6,7 @@
       <link href='http://fonts.googleapis.com/css?family=Signika:700,300,400,600' rel='stylesheet' type='text/css'>
       <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
       <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
       <%= csrf_meta_tags %>
     </meta>
   </head>
@@ -15,9 +16,30 @@
         <nav class="globalnav">
           <div class="globalnav__menu">
             <ul class="gmenu">
-              <li class="logo" style="float: left">
+              <li class="title">
                 <a href="/">タイモブ</a>
               </li>
+              <li class="sub_title" >
+                <p>海外インターンシップ、海外インターンコミュニティはタイガーモブ</p>
+              </li>
+               <!--twitter-->
+            <div>
+              <a class="share_btn2 shtw" >
+             <i class="fab fa-twitter"></i>
+              </a>
+              <!--facebook-->
+              <a class="share_btn2 shfb">
+              <i class="fab fa-facebook-f"></i>
+              </a>
+              <!--googleplus-->
+              <a class="share_btn2 shgp">
+               <i class="fab fa-google-plus-g"></i>
+              </a>
+              </li>
+               <li class="logo" style="float: right;">
+                <a href="/"></a>
+              </li>
+            </div>
             </ul>
             <nav class="home_menu">
              <ul>
@@ -32,11 +54,9 @@
       </div>
       <div class="bgcolor-white pt1em pb1em" id="contents">
         <%= yield %>
-        </div>
       </div>
     </div>
   </div>
-
         <div class="copyright">
           Copyright (C) 2018  denden Corporation. All Rights Reserved.
         </div>

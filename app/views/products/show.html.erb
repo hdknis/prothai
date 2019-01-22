@@ -2,82 +2,162 @@
     <div id="yjContentsBody">
       <div class="yjContainer">
         <span class="yjGuid"><a id="yjContentsStart" name="yjContentsStart"></a><img alt="ここから本文です" height="1" src="http://i.yimg.jp/yui/jp/tmpl/1.1.0/audionav.gif" width="1"></span>
-        <div id="yjMain">
+        <div id="yjMain_sub">
+      <div class="return_button">
+          <a href="/">一覧に戻る</a>
+       </div>
           <article class="section">
             <div class="container">
-              <header class="header header--section">
-                <h2 class="text-middle">
-                  <i class="icon-movie color-gray-light"></i><%= @product.title %>
+                <h2 class="head_line">
+                  <i class=""></i><%= simple_format(@product.title) %>
                 </h2>
-              </header>
               <p style="text-align: center">
-                <img src="<%= @product.top_pictures %>" alt="<%= @product.title %>">
+                <img src="<%= @product.top_pictures %>" alt="<%= @product.title %>" width="600">
               </p>
-              <div style="text-align: right">
-                <a href="/products/<%= @product.id %>/reviews/new">この作品を投稿する</a>
-              </div>
               <h2 class="text-last">
-                  <i class="i"></i><%= @product.experience_content %>
+                  <i class=""></i><%= @product.experience_content %>
                 </h2>
               </header>
               <div class="bussinness_content">
-                 <header class="header header--section">
-                  <h2 class="text-middle">
-                   <i class="icon-movie color-gray-light"></i>インターンシップ内容
+                  <h2 class="header_text">
+                   インターンシップ内容
                   </h2>
-                 </header>
                   <div class="main_contents">
                     <i class="i"></i><%= simple_format(@product.business_content) %>
                   </div>
               </div>
               <div class="experience_content">
-                 <header class="header header--section">
-                  <h2 class="text-middle">
-                   <i class="icon-movie color-gray-light"></i>身に付く力・得られる経験
+                  <h2 class="header_text">
+                   身に付く力・得られる経験
                   </h2>
-                 </header>
                   <div class="main_contents">
-                    <i class="i"></i><%= simple_format(@product.experience_content) %>
+                    <%= simple_format(@product.experience_content) %>
                   </div>
               </div>
               <div class="request_content">
-                 <header class="header header--section">
-                  <h2 class="text-middle">
-                   <i class="icon-movie color-gray-light"></i>こんな人を求めています
-                 </header>
+                  <h2 class="header_text">
+                   こんな人を求めています
+                  </h2>
                   <div class="main_contents">
-                    <i class="i"></i><%= @product.request_content %>
+                    <i class="i"></i><%= simple_format(@product.request_content) %>
                   </div>
               </div>
               <div class="intern_content">
-                 <header class="header header--section">
-                  <h2 class="text-middle">
-                   <i class="icon-movie color-gray-light"></i>募集要項
-                  <div class="main_contents">
-                    <i class="i"></i><%= @product.application_requirement %>
+                  <h2 class="header_text">
+                   募集要項
+                  </h2>
+              <div class="main_contents">
+                  <ul class="detail_info">
+                    <li class="item">インターンシップ先国</li>
+                    <li class="item">フィリピン</li>
+                  </ul>
+                  <ul class="detail_info">
+                    <li class="item">インターンシップ先都市</li>
+                    <li class="item">セブ</li>
+                  </ul>
+                  <ul class="detail_info">
+                    <li class="item">インターンシップ期間</li>
+                    <li class="item">6ヵ月以上</li>
+                  </ul>
+                  <ul class="detail_info">
+                    <li class="item">インターンシップ日数、時間</li>
+                    <li class="item"><%= simple_format(@product.days) %></li>
+                  </ul>
+                  <ul class="detail_info">
+                    <li class="item">報酬・手当</li>
+                    <li class="item"><%= simple_format(@product.allowance) %></li>
+                  </ul>
+                  <ul class="detail_info">
+                    <li class="item">必要なスキル・資格</li>
+                    <li class="item">6ヵ月以上</li>
+                  </ul>
                   </div>
-
               </div>
               <div class="intern_content">
-                 <header class="header header--section">
-                  <h2 class="text-middle">
-                   <i class="icon-movie color-gray-light"></i>企業紹介
+                  <h2 class="header_text">
+                   企業紹介
+                  </h2>
                   <div class="main_contents">
-                    <i class="i"></i><%= @product.experience_content %>
+                    <ul class="detail_info">
+                      <li class="item">事業内容</li>
+                      <li class="item">フィリピン</li>
+                    </ul>
+                    <ul class="detail_info">
+                      <li class="item">事業内容</li>
+                      <li class="item"><%= simple_format(@product.allowance) %></li>
+                    </ul>
+                    <ul class="detail_info">
+                      <li class="item">従業員数</li>
+                      <li class="item"><%= @product.employees_number %>名</li>
+                    </ul>
+                    <ul class="detail_info">
+                      <li class="item">使用言語</li>
+                      <li class="item"><%= simple_format(@product.language) %></li>
+                    </ul>
+                    <ul class="detail_info">
+                      <li class="item">経営者プロフィール</li>
+                      <li class="item"><%= simple_format(@product.manager_profile) %></li>
+                    </ul>
+                   </div>
                   </div>
-              </div>
-              
-
-
-
-              
-               <header class="header header--section">
-                <h2 class="text-middle">
-
-                  <i class="icon-movie color-gray-light"></i>みんなのレビュー
-                </h2>
-                </header>
             </div>
           </article>
         </div>
         <div id="yjSub">
+           <aside class="section">
+            <h4 class="text-small hr-bottom--thin no-space-bottom">
+              <i class="color-gray-light"></i>関連する企業情報
+            </h4>
+            <ul class="listview listview--condensed text-small">
+              <% @relation_products.each.with_index(1) do |product, i| %>
+              <li data-cinema-id="346394" >
+                <a href="/products/<%= product.id %>">
+                  <div class="box">
+                    <div class="box__cell w40 align-center">
+                    </div>
+                    <div class="box__cell pl1em">
+                      <p class="text-xsmall no-space">
+                        <%= product.title %>
+                      </p>
+                      <img src="<%= product.top_pictures %>" alt="" width="100" height="100">
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <% end %>
+              <h4 class="text-small hr-bottom--thin no-space-bottom" style="margin-top: 100px;">
+              <i class="color-gray-light"></i>スポンサーシップ広告
+            </h4>
+            <ul class="listview listview--condensed text-small">
+               <li data-cinema-id="346394">
+                <a href="/internship/detail/239" class="detailMain__nav__internBox__article" style="height: 200px;">
+                  <div class="detailMain__nav__internBox__img detailMain__nav__internBox__img--new">
+                  </div>
+                  <div class="detailMain__nav__internBox__txt">
+                    <p class="detailMain__nav__internBox__description">
+                      <span class="detailMain__nav__internBox__country"></span>
+                    広告部分だよ〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜             </p>
+                    <p class="detailMain__nav__internBox__term">
+                      <span class="detailMain__nav__internBox__term__tit">期間</span>
+                                                                              </p>
+                  </div>
+                </a>
+              </li>
+               <li data-cinema-id="346394">
+                <a href="/internship/detail/239" class="detailMain__nav__internBox__article" style="height: 200px;">
+                  <div class="detailMain__nav__internBox__img detailMain__nav__internBox__img--new">
+                  </div>
+                  <div class="detailMain__nav__internBox__txt">
+                    <p class="detailMain__nav__internBox__description">
+                      <span class="detailMain__nav__internBox__country"></span>
+                    広告部分だよ〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜             </p>
+                    <p class="detailMain__nav__internBox__term">
+                      <span class="detailMain__nav__internBox__term__tit">期間</span>
+                                                                           </p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            </ul>
+          </aside>
+         </div>

@@ -1127,7 +1127,7 @@ img {
 
 .bgcolor-white {
   background-color: #f2f4f8;
-  color: #3b3e45
+  color: #3b3e45;
 }
 
 .color-R {
@@ -4151,16 +4151,6 @@ a.btn-search:focus, a.btn-search:active, button.btn-search:focus, button.btn-sea
   width: 100%
 }
 
-a:hover .thumbnail__figure {
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  -webkit-box-shadow: #61adcb 0px 0px 1px 2px inset;
-  -moz-box-shadow: #61adcb 0px 0px 1px 2px inset;
-  box-shadow: #61adcb 0px 0px 1px 2px inset
-}
-
 .thumbnail__caption h1, .thumbnail__caption h2, .thumbnail__caption h3, .thumbnail__caption h4, .thumbnail__caption h5, .thumbnail__caption h6, .thumbnail__caption p {
   line-height: 1.3
 }
@@ -5017,7 +5007,8 @@ a:hover .listview__element, a:hover .listview>li>a, .listview>li>a:hover, .ui-so
 
 .header--section {
   margin-bottom: 1em;
-  border-bottom: 3px solid #d7dbe2
+  border-bottom: 3px solid #d7dbe2;
+  text-align: center;
 }
 
 .hr-top {
@@ -6733,40 +6724,34 @@ label.js-stat-wish, label.js-stat-log, label.js-btn-favorite-theater {
 .globalnav__menu {
   clear: both;
   width: 100%;
-  background-color: #FF4F02;
   text-align: center
 }
 
 .globalnav__menu>ul {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   position: relative;
   width: 950px;
-  height: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   margin: 0 auto;
-  padding: 0;
   list-style: none;
-  border-left: 1px solid #8699bd;
   display: table;
   white-space: nowrap
 }
 
 .globalnav__menu>ul>li {
   display: table-cell;
-  border-right: 1px solid #8699bd;
   margin: 0;
   padding: 0;
   font-size: 14px;
-  line-height: 1;
-  width: 1%
+  width: 1%;
 }
 
 .globalnav__menu>ul>li>a {
   display: block;
   padding: 13px 10px;
   vertical-align: middle;
-  color: #f2f4f8
+  color: black;
+  font-weight: bold;
 }
 
 .globalnav__menu>ul>li>a:hover {
@@ -6953,13 +6938,15 @@ hr.yjSeparation {
 .yj950-2 #yjMain {
   float: left;
   width: 934px;
-  margin-top: 120px;
+  margin-top: 200px;
   z-index: 1;
 }
 
 .yj950-2 #yjSub {
   float: right;
-  width: 300px
+  width: 240px;
+  margin-top: 200px;
+ /* padding-right: 100px;*/
 }
 
 #contents {
@@ -7137,13 +7124,15 @@ hr.yjSeparation {
 
 .home_menu{
  border-bottom: 1px solid #ccc;
+ background-color: #67c5ff;
 }
 .home_menu ul{
  display: table;
  margin: 0 auto;
  padding: 0;
- width: 80%;
+ width: 100%;
  text-align: center;
+ border: solid black;
 }
 .home_menu ul li{
  display: table-cell;
@@ -7158,12 +7147,13 @@ hr.yjSeparation {
  width: 100%;
  padding: 10px 0;
  text-decoration: none;
- color: #FFF;
+ color: black;
+ font-weight: bold;
 }
 .home_menu ul li a:hover{
- background-color: black;
- border-bottom: 5px solid black;
+ background-color: #fff;
 }
+
 .home_menu ul li.current{
  font-weight: bold;
 }
@@ -7173,34 +7163,52 @@ hr.yjSeparation {
 }
 
 
-
-
 .globalnav{
 }
 
 .globalnav__menu {
   position: fixed;
   z-index: 2;
+  width: 100%;
+  background-color: #fff;
 }
+
 .gmenu {
-  overflow: hidden;
+  display: inline-block;
   text-align: center;
   width: 200px;
   border: none!important;
 }
 .gmenu > li {
-  float: right;
-  width: 100px!important;
   display: inline-block;
+  width: 100px!important;
   border: none!important;
+  text-align: center;
 }
-.logo a:hover {
+
+.gmanu li a li{
+  line-height: 70px;
+}
+
+.globalnav__menu li a{
+  vertical-align: middle;
+  height: 30px;
+  line-height: 30px;
+}
+
+.title a:hover {
   background: none!important;
 }
+
 .logo {
 font-family: 'Signika', sans-serif;
 font-size: 25px!important;
 }
+
+.logo a{
+  color: black;
+}
+
 .entry_button > a {
   /*border: solid 1px #fff;*/
   border-radius: 2px;
@@ -7217,4 +7225,9 @@ input, textarea {
   border: solid 1px #ccc;
   border-radius: 5px;
   font-size: 15px;
+}
+
+.title a{
+  font-size: 35px;
+  text-decoration: none;
 }

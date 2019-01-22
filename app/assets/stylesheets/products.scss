@@ -12,15 +12,11 @@
 	  position: relative;
     display: inline-block;
     text-decoration: none;
-    padding: 0 30px;
-    font-size: 19px;
-    height: 40px;
-    line-height: 40px;
     vertical-align: middle;
-    background: #51587b;
-    font-size: 20px;
-    color: rgb(255, 255, 255);
+    font-size: 40px;
+    color: black;
     transition: .4s;
+    font-weight: bold;
 }
 
 /*チェックボックスのcss*/
@@ -32,6 +28,12 @@
   display: inline-block;
   /*margin: 8px;*/
   font-weight: bold;
+}
+
+/*マウスホバー時のcss*/
+.searchBox_block:hover{
+   background-color: #67c5ff;
+
 }
 
 .searchBox_block{
@@ -61,6 +63,7 @@ input{
   margin: 10px;
   font-weight: bold;
 }
+
 
 /*.searchBox__refine__tit{
     position: relative;
@@ -98,6 +101,12 @@ input{
   float: left;
   margin: 20px;
 }
+
+.card:hover{
+ box-shadow: 0 0 10px gray;
+ transition-duration: 0.5s;
+}
+
 .card-img {
   border-radius: 5px 5px 0 0;
   max-width: 100%;
@@ -131,7 +140,6 @@ input{
   color: #0090aa;
 }
 
-
 .thumbnail__figure span{/*文字*/
      position: absolute;
      top: 0;
@@ -141,4 +149,143 @@ input{
      background: #74c1f8;
      padding:0 2px;
      line-height:1.5em;
+}
+
+/*facebook投稿ボタン*/
+
+.share_btn2{
+    display: inline-block;
+    text-decoration: none;
+    width: 50px;
+  margin:2px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 23px;
+  color:white;
+    border-radius: 12px;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    font-weight: bold;
+    transition: .3s;
+    margin:0 5px 0 5px;
+}
+.share_btn2 .fa {line-height:50px}
+.share_btn2:hover{
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+}
+.share_btn2.shtw {background: #22b8ff;}
+.share_btn2.shfb {background: #6680d8;}
+.share_btn2.shhtb {background: #49a8fb;}
+.share_btn2.shpkt {background: #ff6d82;}
+.share_btn2.shfdly {background: #7bda72;}
+.share_btn2.shgp {background: #fd6969;}
+
+
+
+/*一覧ページに戻るボタン*/
+.return_button{
+  position: absolute;
+  top: 140px;
+  display: inline-block;
+  color: black;/*文字色*/
+  font-size: 1em;/*文字サイズ*/
+  letter-spacing: 0.05em;/*字間*/
+  padding: 0.5em 1.5em;/*ボタン内の余白*/
+  border-radius: 3px;/*角の丸み*/
+  cursor: pointer;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);/*影*/
+  -webkit-tap-highlight-color: transparent;
+  transition: .3s ease-out;/*変化を緩やかに*/
+}
+
+
+
+
+
+/*会社記事詳細情報ゾーン*/
+.head_line{
+  color: black;/*文字色*/
+  padding: 0.5em 0;/*上下の余白*/
+  border-top: solid 3px #364e96;/*上線*/
+  border-bottom: solid 3px #364e96;/*下線*/
+}
+
+.main_section{
+  position: relative;
+  padding: 20px;
+  background-color: #fff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px 1px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px 1px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px 1px;
+}
+
+.sub_section{
+  position: relative;
+  padding: 20px;
+  background-color: #fff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px 1px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px 1px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px 1px;
+  width: 150px;
+}
+
+.yj950-2 #yjMain_sub {
+  float: left;
+  width: 700px;
+  margin-top: 200px;
+  /*margin-right: 100px;*/
+  z-index: 1;
+}
+
+
+.yj950-2 .sub_yjContainer {
+  width: 1150px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.yj950-2 .sub_yjContainer:before, .yj950-2 .sub_yjContainer:after {
+  content: "";
+  display: table
+}
+
+
+.yj950-2 .sub_yjContainer:after {
+  clear: both
+}
+
+
+.header_text{
+padding: 0.5em;/*文字周りの余白*/
+color: #010101;/*文字色*/
+background: #eaf3ff;/*背景色*/
+border-bottom: solid 3px #516ab6;/*下線*/
+text-align: left;
+font-size: 24px;
+}
+
+
+.detail_info {
+  /*padding: 0.5em;*//*文字周りの余白*/
+  border-bottom: solid 1px #516ab6;/*下線*/
+}
+
+.item{
+  display: inline-block;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+.item:nth-child(1){
+  width: 250px;
+  font-weight:bold;
+  font-size: 18px;
+}
+.item:nth-child(2){
+/*margin-left: 50px;*/
+width: 250px;
+font-size: 14px;
+/*text-align: center;*/
 }

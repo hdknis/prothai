@@ -7,14 +7,16 @@
           <article class="section">
             <div class="container">
               <header class="header header--section">
-                <h2 class="text-middle">
-                  <i class="icon-movie color-gray-light"></i>新着企業
+                <h2 class="searchBox__h2">
+                  海外企業一覧
                 </h2>
               </header>
               <ul class="thumbnails thumbnail--movies row grid4 js-lazy-load-images js-my-check-stats" id="list-module">
                 <% @products.each do |product| %>
                   <li class="card" data-category='CMS' data-tag='["<%= product.country %>","<%= product.period.to_i %>"]'>
+                 <figure class="thumbnail-wrapper">
                    <a href="/products/<%= product.id %>"><div class="thumbnail__figure"  size ="320x180" style="background-image:url(<%= product.top_pictures %>)"><span><%= product.country %></span></div></a>
+                 </figure>
                   <div class="card-content">
                     <h1 class="card-title"><%= product.title %></h1>
                      <p class="card-text">期間:<%= @periods[product.period.to_i] %></p>
@@ -119,4 +121,3 @@
             </script>
           </article>
         </div>
-        <div id="yjSub">

@@ -4,63 +4,162 @@
     <meta charset="utf-8">
       <title>求人情報サイト</title>
       <link href='http://fonts.googleapis.com/css?family=Signika:700,300,400,600' rel='stylesheet' type='text/css'>
+       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
       <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
       <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
       <%= csrf_meta_tags %>
     </meta>
   </head>
-  <body class="yj950-2">
-    <div id="wrapper">
-      <div id="yjContentsHeader">
-        <nav class="globalnav">
-          <div class="globalnav__menu">
-            <ul class="gmenu">
-              <li class="title">
-                <a href="/">タイモブ</a>
-              </li>
-              <li class="sub_title" >
-                <p>海外インターンシップ、海外インターンコミュニティはタイガーモブ</p>
-              </li>
-               <!--twitter-->
-            <div>
-              <a class="share_btn2 shtw" >
-             <i class="fab fa-twitter"></i>
-              </a>
-              <!--facebook-->
-              <a class="share_btn2 shfb">
-              <i class="fab fa-facebook-f"></i>
-              </a>
-              <!--googleplus-->
-              <a class="share_btn2 shgp">
-               <i class="fab fa-google-plus-g"></i>
-              </a>
-              </li>
-               <li class="logo" style="float: right;">
-                <a href="/"></a>
-              </li>
-            </div>
-            </ul>
-            <nav class="home_menu">
-             <ul>
-              <li class=”current”><a href='/'>海外インターンを見つける</a></li>
-              <li><a href='/blogs'>インターン生ブログを読む</a></li>
-              <li><a href='/static_pages/about'>タイモブとは？</a></li>
-              <li><a href='/inquirys'>お問い合わせ</a></li>
-             </ul>
-            </nav>
+  <body >
+    <header>
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+
+  <!-- Additional container -->
+  <div class="container">
+
+    <!-- Navbar brand -->
+    <a class="navbar-brand" href="/">タイモブ</a>
+
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+      aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="basicExampleNav">
+
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">海外インターンを見つける
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/blogs">インターン生ブログを読む</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/static_pages/about">タイモブとは？</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/inquirys">お問い合わせ</a>
+        </li>
+
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">何かに使う用</a>
+          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
           </div>
-        </nav>
-      </div>
-      <div class="bgcolor-white pt1em pb1em" id="contents">
-        <%= yield %>
-      </div>
-    </div>
-  </div>
-        <div class="copyright">
-          Copyright (C) 2018  denden Corporation. All Rights Reserved.
+        </li>
+
+      </ul>
+      <!-- Links -->
+
+      <form class="form-inline">
+        <div class="md-form my-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
         </div>
-      </div>
+      </form>
     </div>
+    <!-- Collapsible content -->
+
+  </div>
+  <!-- Additional container -->
+
+</nav>
+<div class="white_block">
+</div>
+    
+        <%= yield %>
+<footer class="page-footer font-small indigo pt-4 mt-4">
+
+  <!-- Footer Links -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase">Footer Content</h5>
+        <p>Here you can use rows and columns here to organize your footer content.</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+
+          <!-- Links -->
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Link 1</a>
+            </li>
+            <li>
+              <a href="#!">Link 2</a>
+            </li>
+            <li>
+              <a href="#!">Link 3</a>
+            </li>
+            <li>
+              <a href="#!">Link 4</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+
+          <!-- Links -->
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Link 1</a>
+            </li>
+            <li>
+              <a href="#!">Link 2</a>
+            </li>
+            <li>
+              <a href="#!">Link 3</a>
+            </li>
+            <li>
+              <a href="#!">Link 4</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+  <div class="container">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2018 Copyright:
+    <a href="https://mdbootstrap.com/education/bootstrap/">  denden Corporation. All Rights Reserved.</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
   </body>
 </html>

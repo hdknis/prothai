@@ -1,23 +1,40 @@
-<div id="main_cnt_wrapper">
-    <div id="yjContentsBody">
-      <div class="yjContainer">
-        <span class="yjGuid"><a id="yjContentsStart" name="yjContentsStart"></a><img alt="ここから本文です" height="1" src="http://i.yimg.jp/yui/jp/tmpl/1.1.0/audionav.gif" width="1"></span>
-        <div id="yjMain_sub">
-      <div class="return_button">
-          <a href="/">一覧に戻る</a>
-       </div>
-          <article class="section">
-            <div class="container">
-                <h2 class="head_line">
-                  <i class=""></i><%= simple_format(@product.title) %>
-                </h2>
-              <p style="text-align: center">
-                <img src="<%= @product.top_pictures %>" alt="<%= @product.title %>" width="600">
-              </p>
-              <h2 class="text-last">
+<div class="container">
+    <!--Grid row-->
+    <h2 class="head_line">
+        <i class=""></i><%= simple_format(@product.title) %>
+    </h2>
+    <div class="row">
+
+        <!--Grid column-->
+        <div class="col-md-8">
+<div class="view overlay z-depth-1-half">
+  <img src="<%= @product.top_pictures %>" class="img-fluid" alt="<%= @product.title %>">
+    <div class="mask rgba-white-light"></div>
+</div>
+
+
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-4">
+  <hr>
+   <h2 class="text-last">
                   <i class=""></i><%= @product.experience_content %>
                 </h2>
-              </header>
+
+        </div>
+        <!--Grid column-->
+
+    </div>
+    <!--Grid row-->
+
+
+    <!--Grid row-->
+    <div class="row">
+
+        <!--Grid column-->
+        <div class="col-lg-9">
               <div class="bussinness_content">
                   <h2 class="header_text">
                    インターンシップ内容
@@ -101,8 +118,10 @@
                    </div>
                   </div>
             </div>
-          </article>
-        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3">
         <div id="yjSub">
            <aside class="section">
             <h4 class="text-small hr-bottom--thin no-space-bottom">
@@ -136,7 +155,7 @@
                   <div class="detailMain__nav__internBox__txt">
                     <p class="detailMain__nav__internBox__description">
                       <span class="detailMain__nav__internBox__country"></span>
-                    広告部分だよ〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜             </p>
+                    広告部分だよ〜〜〜〜〜〜             </p>
                     <p class="detailMain__nav__internBox__term">
                       <span class="detailMain__nav__internBox__term__tit">期間</span>
                                                                               </p>
@@ -150,7 +169,7 @@
                   <div class="detailMain__nav__internBox__txt">
                     <p class="detailMain__nav__internBox__description">
                       <span class="detailMain__nav__internBox__country"></span>
-                    広告部分だよ〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜             </p>
+                    広告部分だよ〜〜〜〜〜~~             </p>
                     <p class="detailMain__nav__internBox__term">
                       <span class="detailMain__nav__internBox__term__tit">期間</span>
                                                                            </p>
@@ -161,3 +180,14 @@
             </ul>
           </aside>
          </div>
+
+
+
+        </div>
+        <!--Grid column-->
+
+    </div>
+    <!--Grid row-->
+
+</div>
+<!--Main container-->

@@ -7,7 +7,9 @@
        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+       <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
       <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+       <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
       <%= csrf_meta_tags %>
     </meta>
@@ -38,9 +40,6 @@
           <a class="nav-link" href="/">海外インターンを見つける
             <span class="sr-only">(current)</span>
           </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/blogs">インターン生ブログを読む</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/static_pages/about">タイモブとは？</a>
@@ -77,7 +76,6 @@
 </nav>
 <div class="white_block">
 </div>
-    
         <%= yield %>
 <footer class="page-footer font-small indigo pt-4 mt-4">
 
@@ -92,7 +90,9 @@
 
         <!-- Content -->
         <h5 class="text-uppercase">Footer Content</h5>
-        <p>Here you can use rows and columns here to organize your footer content.</p>
+        <p>海外インターンシップ、
+海外インターンコミュニティは
+タイガーモブ2</p>
 
       </div>
       <!-- Grid column -->
@@ -107,16 +107,16 @@
 
           <ul class="list-unstyled">
             <li>
-              <a href="#!">Link 1</a>
+              <a href="#!">海外インターンを見つける</a>
             </li>
             <li>
-              <a href="#!">Link 2</a>
+              <a href="#!">インターン経験者ブログを読む</a>
             </li>
             <li>
-              <a href="#!">Link 3</a>
+              <a href="#!">タイモブとは？</a>
             </li>
             <li>
-              <a href="#!">Link 4</a>
+              <a href="#!">お問い合わせ</a>
             </li>
           </ul>
 
@@ -131,16 +131,16 @@
 
           <ul class="list-unstyled">
             <li>
-              <a href="#!">Link 1</a>
+              <a href="#!">プライバシーポリシー</a>
             </li>
             <li>
-              <a href="#!">Link 2</a>
+              <a href="#!">サービス利用規約</a>
             </li>
             <li>
-              <a href="#!">Link 3</a>
+              <a href="#!">特定商取引法に基づく表記</a>
             </li>
             <li>
-              <a href="#!">Link 4</a>
+              <a href="#!">Q&A</a>
             </li>
           </ul>
 

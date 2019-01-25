@@ -3,7 +3,7 @@
     <h2 class="head_line">
         <i class=""></i><%= simple_format(@product.title) %>
     </h2>
-    <div class="row">
+    <div class="row show_border">
 
         <!--Grid column-->
         <div class="col-md-8">
@@ -17,12 +17,11 @@
         <!--Grid column-->
 
         <!--Grid column-->
-        <div class="col-md-4">
-  <hr>
-   <h2 class="text-last">
-                  <i class=""></i><%= @product.experience_content %>
-                </h2>
-
+        <div class="col-md-4 white-content">
+           <h2 class="text-last">
+              <i class=""></i><%= @product.experience_content %>
+          </h2>
+          <button class='btn btn-primary btn-block'>この会社のURL</button>
         </div>
         <!--Grid column-->
 
@@ -32,9 +31,8 @@
 
     <!--Grid row-->
     <div class="row">
-
-        <!--Grid column-->
         <div class="col-lg-9">
+            <div class="white-content">
               <div class="bussinness_content">
                   <h2 class="header_text">
                    インターンシップ内容
@@ -117,6 +115,7 @@
                     </ul>
                    </div>
                   </div>
+              </div>
             </div>
         <!--Grid column-->
 

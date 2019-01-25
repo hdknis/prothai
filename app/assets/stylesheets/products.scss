@@ -1,6 +1,10 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+header{
+ background-color:  #f2f4f8;
+}
+
 /*jqueryでの検索時のcss*/
 .is-hide {
     display: none;
@@ -202,6 +206,17 @@
 
 
 /*会社記事詳細情報ゾーン*/
+
+.show_border{
+   margin-bottom: 50px;
+   border: 2px solid #FFF;
+}
+
+.white-content{
+  background-color: #FFF;
+}
+
+
 .head_line{
   color: black;/*文字色*/
   padding: 0.5em 0;/*上下の余白*/
@@ -320,3 +335,101 @@ footer{
 .white_block{
   height: 100px;
 }
+
+/*スライダーcss*/
+.slider{
+    width: 100%;
+}
+.slider img{
+    height: auto;
+    width: 100%;
+}
+
+/*slick setting*/
+/*.slick-prev:before,
+.slick-next:before {
+    color: #000;
+}*/
+
+#wrap{
+  background-color: #ddd;
+  padding: 50px 0;
+}
+#slider{
+  width: 300px;
+  margin: 0 auto;
+  img{
+    width: 100%;
+  }
+}
+/*button{
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}*/
+
+
+.slide-dots{
+  width: 100%;
+  text-align: center;
+  li{
+    display: inline-block;
+    margin: 0 25px;
+    button{
+      position: relative;
+      text-indent: -9999px;
+      &:before{
+        content: '○';
+        font-size: 20px;
+        text-indent: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+    &.slick-active{
+      button:before{
+        content: '●';
+      }
+    }
+  }
+}
+
+button.slick-prev.slick-arrow{
+  display: none;
+}
+
+.slide-arrow{
+  display: none;
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+}
+.prev-arrow{
+  display: none;
+  left: -40px;
+  width: 0;
+  height: 0;
+  border-left: 0 solid transparent;
+  border-right: 15px solid #113463;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  right: 400px;
+}
+.next-arrow{
+  display: none;
+  right: -40px;
+  width: 0;
+  height: 0;
+  border-right: 0 solid transparent;
+  border-left: 15px solid #113463;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+

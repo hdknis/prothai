@@ -1,6 +1,7 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 header{
  background-color:  #f2f4f8;
 }
@@ -95,62 +96,41 @@ header{
 
 
 /*会社カードのデザイン*/
-.card {
-  width: 100%;
-  background: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px #ccc;
-  height: 300px;
- /* float: left;*/
-  margin: 20px 0px 20px 0px;
-    
-}
 
 .card:hover{
- box-shadow: 0 0 10px gray;
- transition-duration: 0.5s;
-}
-
-.card-text {
-  color: #777;
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-.card-title {
-  font-size: 15px;
-  margin-bottom: 10px;
-  text-align: center;
-  color: #333;
-}
-
-.card-img {
-  border-radius: 5px 5px 0 0;
-  max-width: 100%;
-  height: 150px;
-
-}
-
-.div.view.overlay span{/*文字*/
-     position: absolute;
-     top: 0;
-     right: 0;
-     /*以下装飾*/
-     color: white;
-     background: #74c1f8;
-     padding:0 2px;
-     line-height:1.5em;
-}
-
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl, .col-xl-auto{
-  padding-right: 0px;
-  padding-left: 0px;
+   -webkit-box-shadow: 0 4px 2px -2px #777;
+      -moz-box-shadow: 0 4px 2px -2px #777;
+           box-shadow: 0 4px 2px -2px #777;
 }
 
 .text-last{
-  font-size: 20px;
+  font-size: 18px;
+  height: 400px;
 }
 
+.card-img-top span{
+  position: absolute;
+}
+
+.sub_pic span{
+  position: absolute;
+  background-color: #67c5ff;
+  color: black;
+  top: 0;
+  left: 0;
+}
+
+.card-title{
+  font-size: 14px;
+}
+
+.card-footer{
+  font-size: 14px;
+}
+
+.top20{
+  margin-top: 20px;
+}
 /*facebook投稿ボタン*/
 
 .share_btn2{
@@ -210,6 +190,15 @@ header{
 .show_border{
    margin-bottom: 50px;
    border: 2px solid #FFF;
+   -webkit-box-shadow: 0 4px 2px -2px #777;
+       -moz-box-shadow: 0 4px 2px -2px #777;
+            box-shadow: 0 4px 2px -2px #777;
+}
+
+.shadow{
+  -webkit-box-shadow: 0 4px 2px -2px #777;
+       -moz-box-shadow: 0 4px 2px -2px #777;
+            box-shadow: 0 4px 2px -2px #777
 }
 
 .white-content{
@@ -222,6 +211,7 @@ header{
   padding: 0.5em 0;/*上下の余白*/
   border-top: solid 3px #364e96;/*上線*/
   border-bottom: solid 3px #364e96;/*下線*/
+  font-size: 20px;
 }
 
 .main_section{
@@ -336,100 +326,7 @@ footer{
   height: 100px;
 }
 
-/*スライダーcss*/
-.slider{
-    width: 100%;
+/*サイドビューに対してのcss*/
+.margin20{
+  margin: 20px;
 }
-.slider img{
-    height: auto;
-    width: 100%;
-}
-
-/*slick setting*/
-/*.slick-prev:before,
-.slick-next:before {
-    color: #000;
-}*/
-
-#wrap{
-  background-color: #ddd;
-  padding: 50px 0;
-}
-#slider{
-  width: 300px;
-  margin: 0 auto;
-  img{
-    width: 100%;
-  }
-}
-/*button{
-  margin: 0;
-  padding: 0;
-  background: none;
-  border: none;
-  border-radius: 0;
-  outline: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}*/
-
-
-.slide-dots{
-  width: 100%;
-  text-align: center;
-  li{
-    display: inline-block;
-    margin: 0 25px;
-    button{
-      position: relative;
-      text-indent: -9999px;
-      &:before{
-        content: '○';
-        font-size: 20px;
-        text-indent: 0px;
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-    }
-    &.slick-active{
-      button:before{
-        content: '●';
-      }
-    }
-  }
-}
-
-button.slick-prev.slick-arrow{
-  display: none;
-}
-
-.slide-arrow{
-  display: none;
-  position: absolute;
-  top: 50%;
-  margin-top: -15px;
-}
-.prev-arrow{
-  display: none;
-  left: -40px;
-  width: 0;
-  height: 0;
-  border-left: 0 solid transparent;
-  border-right: 15px solid #113463;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  right: 400px;
-}
-.next-arrow{
-  display: none;
-  right: -40px;
-  width: 0;
-  height: 0;
-  border-right: 0 solid transparent;
-  border-left: 15px solid #113463;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-}
-

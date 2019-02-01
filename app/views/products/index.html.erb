@@ -2,76 +2,71 @@
 <main class="mt-10">
 <!--Main container-->
 <div class="container">
-<div class="row">
-<div class="col-md-12">
-<div class="slider">
-        <div><a href="#"><img src="https://www.tigermov.com/images/uploads/slider/slider_img25c3d8980c3708.png" ></a></div>
-        <div><a href="#"><img src="https://www.tigermov.com/images/uploads/slider/slider_img15c3d88bbbb9f7.png" ></a></div>
-        <div><a href="#"><img src="https://www.tigermov.com/images/uploads/slider/slider_img35c3d8993c243a.png" ></a></div>
-        <div><a href="#"><img src="https://www.tigermov.com/images/uploads/slider/slider_img55c4917fe005ff.png" ></a></div>
-     </div>
-       <script>
-          $(function() {
-            $('.slider').slick({
-              autoplay:true,
-              autoplaySpeed:5000,
-              dots:true,
-              dotsClass: 'slide-dots',
-              arrows:false,
-              responsive:[
-        {
-            breakpoint: 1024,
-            settings:{
-                slidesToShow:3,
-            }
-        },
-        {
-            breakpoint: 768,
-            settings:{
-                slidesToShow:2,
-            }
-        },
-        {
-            breakpoint: 480,
-            settings:{
-                slidesToShow:1,
-            }
-        },
-    ]
-            });
-          });
-       </script>
- <%= render 'common/search.html.erb' %>
-</div>
-</div>
-    <!--Grid row-->
-<div class="row">
+ <div class="row">
+ <div class="col-md-12">
 
-  <!--Grid column-->
-  <% @products.each do |product| %>
-   <div class="col-lg-3 card" data-category='CMS' data-tag='["<%= product.country %>","<%= product.period.to_i %>"]'>
-              <a href="/products/<%= product.id %>">
-      <div class="view overlay">
-        <img src="<%= product.top_pictures %>" class="card-img" alt=""><span><%= product.country %></span>
-        <a href="#">
-          <div class="mask rgba-white-slight"></div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <!-- インジケータの設定 -->
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+      <!-- スライドさせる画像の設定 -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div><a href="#"><img class="img-fluid" src="https://www.tigermov.com/images/uploads/slider/slider_img25c3d8980c3708.png" ></a></div>
+          </div><!-- /.carousel-item -->
+          <div class="carousel-item">
+            <div><a href="#"><img class="img-fluid" src="https://www.tigermov.com/images/uploads/slider/slider_img15c3d88bbbb9f7.png" ></a></div>
+          </div><!-- /.carousel-item -->
+          <div class="carousel-item">
+             <div><a href="#"><img class="img-fluid" src="https://www.tigermov.com/images/uploads/slider/slider_img55c4917fe005ff.png" ></a></div>
+          </div><!-- /.carousel-item -->
+        </div><!-- /.carousel-inner -->
+      <!-- スライドコントロールの設定 -->
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">前へ</span>
         </a>
-      </div>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">次へ</span>
+        </a>
+    </div>
+   <%= render 'common/search.html.erb' %>
+  </div>
 
-                  <div class="card-content">
-                    <h1 class="card-title"><%= product.title %></h1>
-                     <p class="card-text">期間:<%= @periods[product.period.to_i] %></p>
-                  </div>
-        <!--/.Card-->
-                </a>
+  </div>
+    <!--Grid row-->
+   <div class="row">
+         <% @products.each do |product| %>
+            <div class="col-sm-6 col-md-3 search" data-category='CMS' data-tag='["<%= product.country %>","<%= product.period.to_i %>"]'>
+          <a href="/products/<%= product.id %>">
+            <div class="card top20">
+            <div class="sub_pic">
+              <img class="card-img-top" src="<%= product.top_pictures %>" alt="">
+              <span><%= product.country %></span>
+            </div>
+             <div class="card-body">
+                <h5 class="card-title">
+                <%= product.title %>
+                </h5>
+               <div class="card-footer text-black">
+                 期間:<%= @periods[product.period.to_i] %>
+               </div>
+              </div>
+            </div>
+          </a>
+          <!--/.Card-->
           </div>
-   <% end %>
-  <!--Grid column-->
-</div>
- <script>
+         <% end %>
+    <!--Grid column-->
+    </div>
+       <script>
             //絞り込み検索機能
               var searchBox = '.search-boxs'; // 絞り込む項目を選択するエリア
-              var listItem = '.card';   // 絞り込み対象のアイテム
+              var listItem = '.search';   // 絞り込み対象のアイテム
               var hideClass = 'is-hide';     // 絞り込み対象外の場合に付与されるclass名
 
               $(function() {

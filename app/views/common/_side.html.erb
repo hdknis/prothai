@@ -1,0 +1,30 @@
+        <div class="col-lg-3">
+            <h4 class="text-small hr-bottom--thin no-space-bottom">
+              <i class="color-gray-light"></i>
+              <div class="margin20">
+               関連する企業情報
+              </div>
+            </h4>
+              <% @relation_products.each.with_index(1) do |product, i| %>
+              <a href="/products/<%= product.id %>">
+            <div class="card top20">
+            <div class="sub_pic">
+              <img class="card-img-top" src="<%= product.top_pictures %>" alt="">
+              <span><%= product.country %></span>
+            </div>
+             <div class="card-body">
+                <h5 class="card-title">
+                <%= product.title %>
+                </h5>
+               <div class="card-footer text-black">
+                 期間:
+               </div>
+              </div>
+            </div>
+          </a>
+          <!--/.Card-->
+            <% end %>
+              <h4 class="text-small hr-bottom--thin no-space-bottom" style="margin-top: 100px;">
+                <i class="color-gray-light"></i>スポンサーシップ広告
+              </h4>
+          </div>

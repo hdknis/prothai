@@ -1,10 +1,22 @@
+<nav class="" aria-label="パンくずリスト">
+   <ol class="breadcrumb mb-1">
+   <li class="icon-color">
+    <%= fa_icon("map-marker-alt") %>
+    </li>
+    <li class="breadcrumb-item pankuzu"><a href="/">ホーム</a></li>
+    <li class="icon-color">
+       <%= fa_icon("arrow-circle-right") %>
+    </li>
+    <li class="breadcrumb-item pankuzu"><a href="/products/<%= @product.id %>">企業詳細ページ</a></li>
+  </ol>
+</nav>
 <div class="container">
     <!--Grid row-->
-    <div class="row">
+    <div class="row word_color">
         <div class="col-lg-9">
         <h2 class="head_line">
-        <i class=""></i><%= simple_format(@product.title) %>
-    </h2>
+         <i class=""></i><%= simple_format(@product.c_title) %>
+        </h2>
 
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <!-- インジケータの設定 -->
@@ -21,19 +33,19 @@
       <!-- スライドさせる画像の設定 -->
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <div><a href="#"><img class="img-fluid" src="https://www.tigermov.com/images/uploads/slider/slider_img25c3d8980c3708.png" ></a></div>
+            <div><a href="#"><img class="img-fluid" src="<%= @product.slider_photo1 %>" ></a></div>
           </div><!-- /.carousel-item -->
           <div class="carousel-item">
-            <div><a href="#"><img class="img-fluid" src="https://www.tigermov.com/images/uploads/slider/slider_img15c3d88bbbb9f7.png" ></a></div>
+            <div><a href="#"><img class="img-fluid" src="<%= @product.slider_photo2 %>" ></a></div>
           </div><!-- /.carousel-item -->
           <div class="carousel-item">
-             <div><a href="#"><img class="img-fluid" src="https://www.tigermov.com/images/uploads/slider/slider_img55c4917fe005ff.png" ></a></div>
+             <div><a href="#"><img class="img-fluid" src="<%= @product.slider_photo3 %>" ></a></div>
           </div><!-- /.carousel-item -->
           <div class="carousel-item">
-             <div><a href="#"><img class="img-fluid" src="https://www.tigermov.com/images/uploads/slider/slider_img55c4917fe005ff.png" ></a></div>
+             <div><a href="#"><img class="img-fluid" src="<%= @product.slider_photo4 %>" ></a></div>
           </div><!-- /.carousel-item -->
           <div class="carousel-item">
-             <div><a href="#"><img class="img-fluid" src="https://www.tigermov.com/images/uploads/slider/slider_img55c4917fe005ff.png" ></a></div>
+             <div><a href="#"><img class="img-fluid" src="<%= @product.slider_photo5 %>" ></a></div>
           </div><!-- /.carousel-item -->
         </div><!-- /.carousel-inner -->
       <!-- スライドコントロールの設定 -->
@@ -47,7 +59,7 @@
         </a>
     </div>
         <div class="white-content show_border">
-         <%= simple_format(@product.catch_copy) %>
+         <%= simple_format(@product.c_catch_copy) %>
          タグゾーン
         </div>
 
@@ -59,149 +71,182 @@
          <a class="nav-link" id="pills-info-tab" data-toggle="tab" href="#pills-info" role="tab" aria-controls="pills-info" aria-selected="false">会社情報</a>
         </li>
       </ul>
+       <div class="gray-content">
+       </div>
 
           <div class="tab-content" id="pills-tabContent">
            <div class="tab-pane fade show active" id="pills-interview" role="tabpanel" aria-labelledby="pills-interview-tab">
             <div class="white-content">
-              <div class="bussinness_content">
+              <div class="bussinness_content all_shadow">
                   <h2 class="header_text">
-                   人生のミッション・目標
+                   <%= fa_icon("chart-bar") %>人生のミッション・目標
                   </h2>
                   <div class="main_contents">
-                    <i class="i"></i>飛び抜けた人材になれ！マッキンゼーを辞めてアジアで経営に挑戦する Empag CEO 石崎優氏
+                    <i class="i"></i><%= simple_format(@product.i_mission_life) %>
                   </div>
               </div>
-              <div class="experience_content">
+              <div class="gray-content">
+              </div>
+              <div class="experience_content all_shadow">
                   <h2 class="header_text">
-                  いつ、きっかけ、どうして
+                  <%= fa_icon("history") %>きっかけとなる経験
                   </h2>
                   <div class="main_contents">
-                   《プロフィール｜石崎優氏》
-
-Empag (Thailand) Co., Ltd. CEO
-
-東京大学・大学院卒業。大学在学時に不動産ベンチャーの立ち上げとバーの運営を経験。大学院在学中に語学留学先のシアトルで発光ダイオードの特許を持つドクターの学生と出会い、技術の法人化を支援。大学院卒業後はマッキンゼーアンドカンパニーでコンサルタントとして活躍。2016年よりEmpagにCOOとして参画、2017年11月からCEO齋藤氏の退任に伴いCEOに就任。
+                   <%= simple_format(@product.i_3wmake_company) %>
                   </div>
               </div>
-              <div class="request_content">
+               <div class="gray-content">
+              </div>
+              <div class="request_content all_shadow">
                   <h2 class="header_text">
-                   現在
+                   <%= fa_icon("stopwatch") %>現在の事業
                   </h2>
                   <div class="main_contents">
-                    <i class="i"></i><%= simple_format(@product.request_content) %>
+                    <i class="i"></i><%= simple_format(@product.i_current_state) %>
                   </div>
               </div>
-              <div class="intern_content">
-                  <h2 class="header_text">
-                   難しかった点、どうやって乗り越えたか、学んだ点
-                  </h2>
-              <div class="main_contents">
-                  </div>
+               <div class="gray-content">
               </div>
-              <div class="intern_content">
+              <div class="intern_content all_shadow">
+                    <h2 class="header_text">
+                      <%= fa_icon("child") %>難しかった点、どうやって乗り越えたか、学んだ点
+                    </h2>
+                <div class="main_contents">
+                <%= simple_format(@product.i_gotover_point) %>
+                    </div>
+              </div>
+               <div class="gray-content">
+              </div>
+              <div class="intern_content all_shadow">
                   <h2 class="header_text">
-                   具体的な今後の方針
+                   <%= fa_icon("forward") %>具体的な今後の方針
                   </h2>
                   <div class="main_contents">
+                   <%= simple_format(@product.i_future_policies) %>
                    </div>
                 </div>
-                <div class="intern_content">
-                  <h2 class="header_text">
-                   学生へメッセージ
-                  </h2>
+                <div class="gray-content">
                 </div>
-                <div class="intern_content">
+                <div class="intern_content all_shadow">
                   <h2 class="header_text">
-                   本おすすめ
+                   <%= fa_icon("comments") %>学生へメッセージ
                   </h2>
+                  <div class="main_contents">
+                   <%= simple_format(@product.i_message_students) %>
+                   </div>
                 </div>
-                <div class="intern_content">
+                 <div class="gray-content">
+                 </div>
+                <div class="intern_content all_shadow">
                   <h2 class="header_text">
-                   編集者一言
+                  <%= fa_icon("book") %>本おすすめ
                   </h2>
+                  <div class="main_contents">
+                   <%= simple_format(@product.i_recommended_books) %>
+                   </div>
                 </div>
+                 <div class="gray-content">
+              </div>
+                <div class="intern_content all_shadow">
+                  <h2 class="header_text">
+                 <%= fa_icon("list-alt") %>編集者一言
+                  </h2>
+                  <div class="main_contents">
+                   <%= simple_format(@product.i_editor_word) %>
+                   </div>
+                </div>
+                 <div class="gray-content">
+              </div>
             </div>
           </div>
 
             <div class="tab-pane fade" id="pills-info" role="tabpanel" aria-labelledby="pills-info-tab">
              <div class="white-content">
-              <div class="intern_content">
+              <div class="intern_content all_shadow">
                   <h2 class="header_text">
-                   企業紹介
+                   <%= fa_icon("building") %>企業紹介
                   </h2>
                   <div class="main_contents">
                     <ul class="detail_info">
-                      <li class="item">企業名</li>
-                      <li class="item">フィリピン</li>
+                      <li class="item"><%= fa_icon("bookmark") %>企業名</li>
+                      <li class="item"><%= simple_format(@product.c_name) %></li>
                     </ul>
                     <ul class="detail_info">
-                      <li class="item">設立年</li>
-                      <li class="item"><%= simple_format(@product.allowance) %></li>
+                      <li class="item"><%= fa_icon("calendar") %>設立年</li>
+                      <li class="item"><%= simple_format(@product.c_established_year) %></li>
                     </ul>
                     <ul class="detail_info">
-                      <li class="item">社員数</li>
-                      <li class="item"><%= @product.employees_number %>名</li>
+                      <li class="item"><%= fa_icon("users") %>社員数</li>
+                      <li class="item"><%= @product.c_employees_number %>名</li>
                     </ul>
                     <ul class="detail_info">
-                      <li class="item">国</li>
-                      <li class="item"><%= simple_format(@product.language) %></li>
+                      <li class="item"><%= fa_icon("flag") %>国</li>
+                      <li class="item"><%= simple_format(@product.c_country) %></li>
                     </ul>
                     <ul class="detail_info">
-                      <li class="item">都市</li>
-                      <li class="item"><%= simple_format(@product.manager_profile) %></li>
+                      <li class="item"><%= fa_icon("university") %>都市</li>
+                      <li class="item"><%= simple_format(@product.c_city) %></li>
                     </ul>
                     <ul class="detail_info">
-                      <li class="item">社員の国籍比率</li>
-                      <li class="item"><%= simple_format(@product.manager_profile) %></li>
+                      <li class="item"><%= fa_icon("globe") %>社員の国籍比率</li>
+                      <li class="item"><%= simple_format(@product.c_employee_nationality_ratio) %></li>
                     </ul>
                     <ul class="detail_info">
-                      <li class="item">使用言語の割合</li>
-                      <li class="item"><%= simple_format(@product.manager_profile) %></li>
+                      <li class="item"><%= fa_icon("language") %>使用言語の割合</li>
+                      <li class="item"><%= simple_format(@product.c_language_used_ratio) %></li>
                     </ul>
                     <ul class="detail_info">
-                      <li class="item">手当</li>
-                      <li class="item"><%= simple_format(@product.manager_profile) %></li>
+                      <li class="item"><%= fa_icon("dollar-sign") %>手当</li>
+                      <li class="item"><%= simple_format(@product.c_salary) %></li>
                     </ul>
                     <ul class="detail_info">
-                      <li class="item">インターンシップ期間</li>
-                      <li class="item"><%= simple_format(@product.manager_profile) %></li>
+                      <li class="item"><%= fa_icon("clock") %>インターンシップ期間</li>
+                      <li class="item"><%= @periods[@product.c_period.to_i] %></li>
                     </ul>
                     <ul class="detail_info">
-                      <li class="item">インターンシップ日数、時間</li>
-                      <li class="item"><%= simple_format(@product.manager_profile) %></li>
+                      <li class="item"><%= fa_icon("calendar-alt") %>インターンシップ日数、時間</li>
+                      <li class="item"><%= simple_format(@product.c_time) %></li>
                     </ul>
                    </div>
               </div>
-               <div class="experience_content">
+              <div class="gray-content">
+              </div>
+               <div class="experience_content all_shadow">
                   <h2 class="header_text">
-                   事業内容
+                   <%= fa_icon("briefcase") %>事業内容
                   </h2>
                   <div class="main_contents">
-                    <%= simple_format(@product.experience_content) %>
+                    <%= simple_format(@product.c_business_content) %>
                   </div>
               </div>
-              <div class="experience_content">
+              <div class="gray-content">
+              </div>
+              <div class="experience_content all_shadow">
                   <h2 class="header_text">
-                   求めるスペック
+                    <%= fa_icon("user-secret") %>求めるスペック
                   </h2>
                   <div class="main_contents">
-                    <%= simple_format(@product.experience_content) %>
+                    <%= simple_format(@product.required_spec) %>
                   </div>
               </div>
-              <div class="experience_content">
+              <div class="gray-content">
+              </div>
+              <div class="experience_content all_shadow">
                   <h2 class="header_text">
-                   会社の(HP、メールアドレス（連絡手段）
+                   <%= fa_icon("envelope") %>会社の(HP、メールアドレス（連絡手段）
                   </h2>
                   <div class="main_contents">
-                    <%= simple_format(@product.experience_content) %>
+                    <%= simple_format(@product.ways_contact) %>
                   </div>
               </div>
-              <div class="experience_content">
+              <div class="gray-content">
+              </div>
+              <div class="experience_content all_shadow">
                   <h2 class="header_text">
-                   会社の実績(制作物、実績URL、動画など)
+                  <%= fa_icon("trophy") %> 会社の実績(制作物、実績URL、動画など)
                   </h2>
                   <div class="main_contents">
-                    <%= simple_format(@product.experience_content) %>
+                    <%= simple_format(@product.company_achievements) %>
                   </div>
               </div>
 

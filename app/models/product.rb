@@ -8,4 +8,12 @@ class Product < ApplicationRecord
      all_country = ["シンガポール","ベトナム","カンボジア","インドネシア","フィリピン","マレーシア","タイ","ミャンマー","イスラエル","インド","スリランカ","南アフリカ","中国","台湾","メキシコ","エストニア","オーストラリア","アメリカ"]
      return all_country
 	end
+
+	mount_uploader :slider_photo1, ImageUploader
+	mount_uploader :slider_photo2, ImageUploader
+	mount_uploader :slider_photo3, ImageUploader
+	mount_uploader :slider_photo4, ImageUploader
+	mount_uploader :slider_photo5, ImageUploader
+	mount_uploader :slider_photo6, ImageUploader
+	mount_uploader :slider_photo7, ImageUploader
 end

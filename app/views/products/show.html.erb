@@ -58,17 +58,22 @@
           <span class="sr-only">次へ</span>
         </a>
     </div>
-        <div class="white-content show_border">
+        <div class="white-content all_shadow">
          <%= simple_format(@product.c_catch_copy) %>
-         タグゾーン
         </div>
-
-        <ul class="nav nav-tabs" id="pills-tab" role="tablist">
-        <li class="nav-item">
-          <a class="nav-link active" id="pills-interview-tab" data-toggle="tab" href="#pills-interview" role="tab" aria-controls="pills-interview"  aria-selected="true">インタビュー</a>
+        <ul class="nav border_bottom">
+         <% @connect_tags.each do |connect| %>
+            <li class="nav-item tag_zone">
+              <a class="nav-link" href="#">#<%= connect.tag.name %></a>
+            </li>
+            <% end %>
+          </ul>
+        <ul class="nav nav-justified" id="pills-tab" role="tablist">
+        <li class="nav-item show_tabs show_bottom">
+          <a class="nav-link active" id="pills-interview-tab" data-toggle="tab" href="#pills-interview" role="tab" aria-controls="pills-interview"  aria-selected="true">社長インタビュー</a>
         </li>
-        <li class="nav-item">
-         <a class="nav-link" id="pills-info-tab" data-toggle="tab" href="#pills-info" role="tab" aria-controls="pills-info" aria-selected="false">会社情報</a>
+        <li class="nav-item show_tabs show_bottom">
+         <a class="nav-link" id="pills-info-tab" data-toggle="tab" href="#pills-info" role="tab" aria-controls="pills-info" aria-selected="false">会社紹介</a>
         </li>
       </ul>
        <div class="gray-content">

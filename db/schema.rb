@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_02_075141) do
+ActiveRecord::Schema.define(version: 2019_02_07_102505) do
 
   create_table "blogs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "user_name"
@@ -20,6 +20,15 @@ ActiveRecord::Schema.define(version: 2019_02_02_075141) do
     t.text "body"
     t.datetime "created_at", default: -> { "CURRENT_TIMESTAMP" }
     t.datetime "updated_at", default: -> { "CURRENT_TIMESTAMP" }
+  end
+
+  create_table "connect_tags", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "product_id"
+    t.bigint "tag_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_connect_tags_on_product_id"
+    t.index ["tag_id"], name: "index_connect_tags_on_tag_id"
   end
 
   create_table "inquiries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -63,6 +72,12 @@ ActiveRecord::Schema.define(version: 2019_02_02_075141) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "tags", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -76,4 +91,6 @@ ActiveRecord::Schema.define(version: 2019_02_02_075141) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "connect_tags", "products"
+  add_foreign_key "connect_tags", "tags"
 end

@@ -11,6 +11,10 @@ header{
     display: none;
 }
 
+.nav-item:hover{
+  background-color: rgba(255, 255, 255, .2);
+}
+
 
 /*タイトル部分のcss*/
 .searchBox__h2{
@@ -171,7 +175,7 @@ header{
 /*会社記事詳細情報ゾーン*/
 
 .show_border{
-   margin-bottom: 50px;
+  /* margin-bottom: 50px;*/
    border: 2px solid #FFF;
    -webkit-box-shadow: 0 4px 2px -2px #777;
        -moz-box-shadow: 0 4px 2px -2px #777;
@@ -203,14 +207,23 @@ header{
 
 
 .head_line{
-  color: black;/*文字色*/
-  font-weight:bold;
-  padding: 0.5em 1.0em;/*上下の余白*/
-  text-align: center;
-  border-top: solid 3px #364e96;/*上線*/
-  border-bottom: solid 3px #364e96;/*下線*/
-  font-size: 24px;
+  position: relative;
+  padding: .25em 0 .5em .75em;
+  border-left: 6px solid #4267b2;
+  font-size: 22px;
+  color: black;
 }
+
+.head_line:after{
+ position: absolute;
+  left: 0;
+  bottom: 0;
+  content: '';
+  width: 100%;
+  height: 0;
+  border-bottom: 1px solid #ccc;
+}
+
 
 .main_section{
   position: relative;
@@ -232,14 +245,14 @@ header{
 }
 
 .header_text{
-padding: 0.5em;/*文字周りの余白*/
-color: #4267b2;/*文字色*/
-background: #FFF;/*背景色*/
-border-bottom: solid 3px #516ab6;/*下線*/
-text-align: left;
-font-size: 24px;
-font-weight:bold;
-position: relative;/*fixedの場合もありますね*/
+  padding: 0.5em;/*文字周りの余白*/
+  color: #4267b2;/*文字色*/
+  background: #FFF;/*背景色*/
+  border-bottom: solid 3px #516ab6;/*下線*/
+  text-align: left;
+  font-size: 24px;
+  font-weight:bold;
+  position: relative;/*fixedの場合もありますね*/
   box-shadow: 0 3px 6px rgba(0,0,0,0.2);
   /*以下色とかの装飾*/
   padding: 17px;
@@ -291,7 +304,22 @@ footer{
 
 .list-item a{
   color: #FFF;
+  font-size: 14px;
+  text-decoration:none;
 }
+
+.list-item a:hover{
+  border-bottom: dashed 2px #9e9e9e;
+}
+
+.footer_title{
+  color: #fff;/*文字色*/
+  border-bottom: dashed 2px #9e9e9e;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 
 .member_btn{
   background-color: #FF4F50;
@@ -406,4 +434,51 @@ footer{
 
 .white-back{
   background-color: #FFF;
+}
+
+.tag_zone{
+  display: inline-block;
+  float: right;
+}
+
+.border_bottom{
+  border-bottom: solid 2px #9e9e9e;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.tag_zone{
+  font-size: 14px;
+  display: inline-block;
+    padding: 0.1em 0.3em;
+    text-decoration: none;
+    color: #4267b2;
+    border: solid 3px #4267b2;
+    border-radius: 20px;
+    transition: .4s;
+    margin: 10px;
+}
+
+.tag_zone a{
+  color: #4267b2;
+  font-weight:bold;
+}
+
+.show_tabs a{
+  color: black;
+}
+
+.show_bottom{
+    padding: 0.8em 1.5em;
+    text-decoration: none;
+    border: solid 5px #4267b2;
+    /*border-radius: 10px;*/
+    transition: .4s;
+    margin: 10px;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.show_bottom:hover{
+  background: #4267b2;
 }

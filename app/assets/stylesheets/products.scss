@@ -11,34 +11,6 @@ header{
     display: none;
 }
 
-.nav-item:hover{
-  background-color: rgba(255, 255, 255, .2);
-}
-
-
-/*タイトル部分のcss*/
-.searchBox__h2{
-	  position: relative;
-    display: inline-block;
-    text-decoration: none;
-    vertical-align: middle;
-    font-size: 40px;
-    color: black;
-    transition: .4s;
-    font-weight: bold;
-}
-
-/*チェックボックスのcss*/
-.searchBox__refine__check{
-  margin: 20px;
-}
-
-.searchBox__refine__check > li{
-  display: inline-block;
-  /*margin: 8px;*/
-  font-weight: bold;
-}
-
 /*マウスホバー時のcss*/
 .searchBox_block:hover{
    background-color: #67c5ff;
@@ -76,6 +48,8 @@ header{
 .search a{
   color: black;
 }
+
+
 
 
 /*会社カードのデザイン*/
@@ -118,61 +92,20 @@ header{
 .top100{
   margin-top: 100px;
 }
-/*facebook投稿ボタン*/
-
-.share_btn2{
-    display: inline-block;
-    text-decoration: none;
-    width: 50px;
-  margin:2px;
-    height: 50px;
-    line-height: 50px;
-    font-size: 23px;
-  color:white;
-    border-radius: 12px;
-    text-align: center;
-    vertical-align: middle;
-    overflow: hidden;
-    font-weight: bold;
-    transition: .3s;
-    margin:0 5px 0 5px;
-}
-.share_btn2 .fa {line-height:50px}
-.share_btn2:hover{
-    -webkit-transform: translateY(-5px);
-    -ms-transform: translateY(-5px);
-    transform: translateY(-5px);
-}
-.share_btn2.shtw {background: #22b8ff;}
-.share_btn2.shfb {background: #6680d8;}
-.share_btn2.shhtb {background: #49a8fb;}
-.share_btn2.shpkt {background: #ff6d82;}
-.share_btn2.shfdly {background: #7bda72;}
-.share_btn2.shgp {background: #fd6969;}
-
-
-
-/*一覧ページに戻るボタン*/
-.return_button{
-  position: absolute;
-  top: 140px;
-  display: inline-block;
-  color: black;/*文字色*/
-  font-size: 1em;/*文字サイズ*/
-  letter-spacing: 0.05em;/*字間*/
-  padding: 0.5em 1.5em;/*ボタン内の余白*/
-  border-radius: 3px;/*角の丸み*/
-  cursor: pointer;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);/*影*/
-  -webkit-tap-highlight-color: transparent;
-  transition: .3s ease-out;/*変化を緩やかに*/
-}
-
 
 
 
 
 /*会社記事詳細情報ゾーン*/
+
+.main_contents{
+  margin: 20px;
+}
+
+.main_contents p{
+  font-size: 17px;
+  line-height: 2.0em
+}
 
 .show_border{
   /* margin-bottom: 50px;*/
@@ -224,26 +157,6 @@ header{
   border-bottom: 1px solid #ccc;
 }
 
-
-.main_section{
-  position: relative;
-  padding: 20px;
-  background-color: #fff;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px 1px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px 1px;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px 1px;
-}
-
-.sub_section{
-  position: relative;
-  padding: 20px;
-  background-color: #fff;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px 1px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px 1px;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px 1px;
-  width: 150px;
-}
-
 .header_text{
   padding: 0.5em;/*文字周りの余白*/
   color: #4267b2;/*文字色*/
@@ -258,6 +171,10 @@ header{
   padding: 17px;
 }
 
+
+
+
+/*会社情報の詳細ページ*/
 
 .detail_info {
   /*padding: 0.5em;*//*文字周りの余白*/
@@ -283,6 +200,9 @@ header{
 
 
 
+
+
+/*メニューバーコンテンツ*/
 .navbar {
     position: relative;
     display: flex;
@@ -296,6 +216,32 @@ header{
 .indigo{
   background-color: #4267b2;
 }
+
+.nav-item:hover{
+  background-color: rgba(255, 255, 255, .2);
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.top-nav-collapse {
+  background-color: #24355C;
+}
+
+
+.white_block{
+  height: 100px;
+}
+
+
+
+
+
 
 /*footerコンテンツ*/
 footer{
@@ -319,7 +265,6 @@ footer{
   margin-top: 10px;
   margin-bottom: 10px;
 }
-
 
 .member_btn{
   background-color: #FF4F50;
@@ -345,22 +290,6 @@ footer{
 
 
 
-.fixed-top {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1030;
-}
-
-.top-nav-collapse {
-  background-color: #24355C;
-}
-
-
-.white_block{
-  height: 100px;
-}
 
 /*サイドビューに対してのcss*/
 .margin20{
@@ -370,6 +299,8 @@ footer{
 .word_color{
   color: #9e9e9e;
 }
+
+
 
 
 
@@ -401,18 +332,8 @@ footer{
 
 
 
-.main_contents{
-  margin: 20px;
-}
 
-.main_contents p{
-  font-size: 17px;
-  line-height: 2.0em
-}
 
-.margin-auto{
-  text-align: center;
-}
 
 
 /*パンくずCSS*/
@@ -435,6 +356,12 @@ footer{
 .white-back{
   background-color: #FFF;
 }
+
+
+
+
+
+/*タグのCSS*/
 
 .tag_zone{
   display: inline-block;

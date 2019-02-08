@@ -375,15 +375,15 @@ footer{
 }
 
 .tag_zone{
-  font-size: 14px;
-  display: inline-block;
-    padding: 0.1em 0.3em;
+    font-size: 12px;
+    display: inline-block;
+    padding: 0.1em 0.1em;
     text-decoration: none;
     color: #4267b2;
-    border: solid 3px #4267b2;
+    border: solid 2px #4267b2;
     border-radius: 20px;
     transition: .4s;
-    margin: 10px;
+    margin: 5px;
 }
 
 .tag_zone a{
@@ -408,4 +408,36 @@ footer{
 
 .show_bottom:hover{
   background: #4267b2;
+}
+
+
+
+
+/*モーダルのcss*/
+.model_bottom{
+    padding: 0.8em 1.5em;
+    text-decoration: none;
+    border: solid 5px #4267b2;
+    /*border-radius: 10px;*/
+    transition: .4s;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.model_bottom:hover{
+  background: #4267b2;
+}
+
+.con_img{
+  width: 126px;
+  height: 100px;
+}
+
+.con_body{
+
+}
+
+.con_text{
+   font-size: 14px;
 }

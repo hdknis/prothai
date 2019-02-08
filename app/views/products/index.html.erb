@@ -39,7 +39,7 @@
 
   </div>
     <!--Grid row-->
-   <div class="row">
+    <div class="row">
          <% @products.each do |product| %>
             <div class="col-sm-6 col-md-3 search" data-category='CMS' data-tag='["<%= product.c_country %>","<%= product.c_period.to_i %>"]'>
           <a href="/products/<%= product.id %>">

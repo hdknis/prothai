@@ -4,27 +4,51 @@
               <div class="margin20">
                関連する企業情報
               </div>
-            </h4>
-              <% @relation_products.each.with_index(1) do |product, i| %>
-              <a href="/products/<%= product.id %>">
-            <div class="card top20">
-            <div class="sub_pic">
-              <img class="card-img-top" src="<%= product.slider_photo1 %>" alt="">
-              <span><%= product.c_country %></span>
-            </div>
-             <div class="card-body">
-                <h5 class="card-title">
-                <%= product.c_title %>
-                </h5>
-               <div class="card-footer text-black">
-                 期間:
+              <!-- 切り替えボタンの設定 -->
+<button type="button" class="btn model_bottom" data-toggle="modal" data-target="#exampleModalLong">
+ 国別生活状況一覧
+</button>
+
+<!-- モーダルの設定 -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">国別生活状況一覧</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="modal-header">
+         <h5 class="modal-title" id="exampleModalLongTitle">それぞれの国の国旗をクリックするとその国の生活状況を見ることができます</h5>
+         </div>
+      <div class="modal-body">
+    <div class="container">
+      <div class="row">
+         <% @countrys.each do |country| %>
+            <div class="col-xs-3">
+               <div class="card margin20" style="width: 8rem;">
+                  <img class="card-img-top con_img" src="https://upload.wikimedia.org/wikipedia/commons/4/41/Flag_of_India.svg" alt="カードの画像">
+                  <div class="card-body con_body">
+                    <p class="card-text con_text"><%= country %></p>
+                  </div>
                </div>
-              </div>
             </div>
-          </a>
-          <!--/.Card-->
             <% end %>
+        </div>
+    </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+      </div>
+    </div>
+  </div>
+</div>
+            </h4>
+          <!--/.Card-->
               <h4 class="text-small hr-bottom--thin no-space-bottom" style="margin-top: 100px;">
                 <i class="color-gray-light"></i>スポンサーシップ広告
               </h4>
+              <h5>
+              今後追加していく予定です
+              </h5>
           </div>

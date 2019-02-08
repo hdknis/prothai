@@ -36,3 +36,30 @@
     height: 300px;
     width: 100%;
 }
+
+.header_text{
+  padding: 0.5em;/*文字周りの余白*/
+  color: #4267b2;/*文字色*/
+  border-bottom: solid 3px #516ab6;/*下線*/
+  text-align: left;
+  font-size: 24px;
+  font-weight:bold;
+  position: relative;/*fixedの場合もありますね*/
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  /*以下色とかの装飾*/
+  padding: 30px;
+}
+
+.all_shadow{
+  background: #FFF;/*背景色*/
+  padding:5px 10px;
+  text-decoration :none;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.2), 0 -4px 5px -2px #6d95ce inset;
+  border-radius: 2px;
+  transition: .3s;
+}
+
+.recruit_content{
+  padding-bottom: 50px;
+  background-color: #f2f4f8;
+}

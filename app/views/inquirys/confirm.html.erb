@@ -1,49 +1,47 @@
-<main class="mt-5">
+<main class="mt-5 all_top">
   <!--Main container-->
-  <div class="container">
+ <div class="container">
   <!--Grid row-->
-<div class="page-header">
-  <h1>お問い合わせ内容確認</h1>
-   <h2>下記のお問い合わせ内容でお間違いがないかを確認の上送信ボタンを押してください</h2>
-</div>
-<%= form_for @inquiry, :url => inquirys_thanks_path do |f| %>
-
-   <div class="form-group">
-      <label for="exampleInputEmail1">お名前</label>
-        <%= f.hidden_field :name %>
-       <div class="confirm_box">
-        <%= @inquiry.name %>
-       </div>
-   </div>
-
-     <div class="form-group">
-      <label for="exampleInputEmail1">Eメールアドレス</label>
-      <span class="text-danger">（必須）</span>
-        <%= f.hidden_field :email %>
-      <div class="confirm_box">
-        <%= @inquiry.email %>
+     <div class="page-header">
+       <h1>お問い合わせ内容確認</h1>
+         <h2>下記のお問い合わせ内容でお間違いがないかを確認の上送信ボタンを押してください</h2>
      </div>
-
-
-     <div class="form-group">
-      <label for="exampleInputEmail1">電話番号</label>
-      <span class="text-danger">（必須）</span>
-        <%= f.hidden_field :phone %>
-       <div class="confirm_box">
-         <%= @inquiry.phone %>
+     <%= form_for @inquiry, :url => inquirys_thanks_path do |f| %>
+       <div class="form-group">
+          <label for="exampleInputEmail1">お名前</label>
+            <%= f.hidden_field :name %>
+           <div class="confirm_box">
+            <%= @inquiry.name %>
+           </div>
        </div>
-    </div>
 
-   <div class="form-group">
-      <label for="exampleFormControlTextarea1"">お問い合わせ内容</label>
-        <%= f.hidden_field :message %>
-        <div class="confirm_box">
-          <%= simple_format(@inquiry.message) %>
+         <div class="form-group">
+          <label for="exampleInputEmail1">Eメールアドレス</label>
+          <span class="text-danger">（必須）</span>
+            <%= f.hidden_field :email %>
+          <div class="confirm_box">
+            <%= @inquiry.email %>
+         </div>
+
+
+         <div class="form-group">
+          <label for="exampleInputEmail1">電話番号</label>
+          <span class="text-danger">（必須）</span>
+            <%= f.hidden_field :phone %>
+           <div class="confirm_box">
+             <%= @inquiry.phone %>
+           </div>
         </div>
-   </div>
 
-
- <%= f.submit '送信', class: 'btn btn-primary btn-lg btn-block' %>
-<% end %>
-</div>
+       <div class="form-group">
+          <label for="exampleFormControlTextarea1"">お問い合わせ内容</label>
+            <%= f.hidden_field :message %>
+            <div class="confirm_box">
+              <%= simple_format(@inquiry.message) %>
+            </div>
+       </div>
+        <strong><%= f.submit '送信', class: 'btn btn-lg btn-block send_bottom' %></strong>
+       </div>
+     <% end %>
+  </div>
 </main>

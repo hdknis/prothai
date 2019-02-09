@@ -17,3 +17,27 @@
 	margin-top: 10px;
 	margin-bottom: 20px;
 }
+
+.send_bottom{
+  display: inline-block;
+  padding: 0.6em 1.2em;
+  text-decoration: none;
+  background: #668ad8;/*ボタン色*/
+  font-weight:bold;
+  color: #fff;
+  font-size: 25px;
+  border-bottom: solid 4px #627295;
+  border-radius: 3px;
+}
+
+.send_bottom:hover{
+	color: #fff;
+}
+
+.send_bottom:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+  border-bottom: none;
+}

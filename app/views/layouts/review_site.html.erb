@@ -23,49 +23,37 @@
   <div class="container">
 
     <!-- Navbar brand -->
-    <a class="navbar-brand" href="/">Mash Up</a>
+    <a class="navbar-brand margin_right" href="/">Mash Up</a>
 
     <!-- Collapse button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
       aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <!-- Collapsible content -->
     <div class="collapse navbar-collapse" id="basicExampleNav">
 
       <!-- Links -->
       <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-          <a class="nav-link" href="/">ホーム
-            <span class="sr-only">(current)</span>
-          </a>
+        <li class="nav-item active">
+          <a class="nav-link margin_menu" href="/"><strong>ホーム</strong></a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="/">海外インターンを見つける
-            <span class="sr-only">(current)</span>
-          </a>
-        </li>
-         <li class="nav-item active">
-          <a class="nav-link" href="/blogs">インターン記事
-            <span class="sr-only">(current)</span>
-          </a>
+          <a class="nav-link margin_menu" href="/products"><strong>海外インターンを見つける</strong></a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="/static_pages/about">Mash Upとは？</a>
+          <a class="nav-link margin_menu" href="/blogs"><strong>インターン記事</strong> </a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="/inquirys">お問い合わせ</a>
+          <a class="nav-link margin_menu" href="/inquirys"><strong>お問い合わせ</strong></a>
         </li>
       </ul>
-    </div>
+     </div>
     <!-- Collapsible content -->
 
   </div>
   <!-- Additional container -->
 </nav>
-<div class="white_block">
-</div>
         <%= yield %>
 <footer class="page-footer font-small indigo pt-4 mt-4">
 
@@ -85,7 +73,7 @@
 
           <ul class="list-unstyled">
            <li>
-              <p><span class="footer_title">Mash Upについて</span><p>
+              <p><span class="footer_title"><strong>Mash Upについて</strong></span><p>
             </li>
             <li class="list-item">
               <a href="/static_pages/about">Mash Upとは？</a>
@@ -103,10 +91,10 @@
 
           <ul class="list-unstyled">
             <li class="list-item">
-              <a href="/">海外インターンを探す</a>
+              <a href="/products">海外インターンを探す</a>
             </li>
              <li class="list-item">
-              <a href="/">インターン記事</a>
+              <a href="//blogs">インターン記事</a>
             </li>
             <li class="list-item">
               <a href="/static_pages/about">お知らせ</a>
@@ -120,7 +108,7 @@
         <!-- Grid column -->
 
         <div class="col-md-3 mb-md-0 mb-3">
-          <a class="btn btn-lg member_btn" href="/static_pages/member_recruit" role="button">メンバーを募集しています</a>
+          <a class="btn btn-lg member_btn" href="/static_pages/member_recruit" role="button"><strong>メンバーを募集しています</strong></a>
         </div>
 
     </div>

@@ -77,3 +77,7 @@ gem 'font-awesome-rails'
 gem 'carrierwave'
 gem 'cloudinary'
 
+group :production do
+  gem 'rails_12factor'
+end
+

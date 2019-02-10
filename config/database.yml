@@ -15,7 +15,7 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
   password:
-  socket: /tmp/mysql.sock
+  # socket: /tmp/mysql.sock
 
 development:
   <<: *default
@@ -51,4 +51,4 @@ production:
   <<: *default
   database: heroku_a2a00b8e73e4726
   username: b4b06b9617c712
-  password: <%= ENV['bbaff0d6'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>

@@ -51,4 +51,4 @@ production:
   <<: *default
   database: heroku_a2a00b8e73e4726
   username: b4b06b9617c712
-  password: <%= ENV['BOOK_REVIEW_DATABASE_PASSWORD'] %>
+  password: <%= ENV['PROTHAI_DATABASE_PASSWORD'] %>

@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: prothai_production
-  username: prothai
+  database: heroku_a2a00b8e73e4726
+  username: b4b06b9617c712
   password: <%= ENV['BOOK_REVIEW_DATABASE_PASSWORD'] %>

@@ -1,6 +1,6 @@
 class Product < ApplicationRecord
+	has_many :connect_tags
 	has_many :tags, through: :connect_tags
-    has_many :connect_tags
 
 	def create_period
 	 all_period = ["2～3週間","2ヶ月以上","3ヶ月以上","半年以上","約1年"]

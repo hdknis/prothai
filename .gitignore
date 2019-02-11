@@ -30,3 +30,5 @@
 config/environments/development.rb
 
 /config/database.yml
+
+/config/cloudinary.yml

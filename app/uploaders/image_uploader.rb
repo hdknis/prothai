@@ -5,7 +5,8 @@ class ImageUploader < CarrierWave::Uploader::Base
   include Cloudinary::CarrierWave
 
   # Choose what kind of storage to use for this uploader:
-  storage :file
+  # storage :file
+  process :convert => 'png'
   # storage :fog
 
   # Override the directory where uploaded files will be stored.

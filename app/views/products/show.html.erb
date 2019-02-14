@@ -25,28 +25,58 @@
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        <% if @product.slider_photo4.present? %>
           <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        <% else %>
+        <% end %>
+        <% if @product.slider_photo5.present? %>
           <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+        <% else %>
+        <% end %>
+        <% if @product.slider_photo6.present? %>
           <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+        <% else %>
+        <% end %>
+        <% if @product.slider_photo7.present? %>
           <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+        <% else %>
+        <% end %>
         </ol>
       <!-- スライドさせる画像の設定 -->
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div><a href="#"><img class="d-block w-100" src="<%= @product.slider_photo1 %>" ></a></div>
-          </div><!-- /.carousel-item -->
-          <div class="carousel-item">
-            <div><a href="#"><img class="d-block w-100" src="<%= @product.slider_photo2 %>" ></a></div>
-          </div><!-- /.carousel-item -->
-          <div class="carousel-item">
-             <div><a href="#"><img class="d-block w-100" src="<%= @product.slider_photo3 %>" ></a></div>
-          </div><!-- /.carousel-item -->
-          <div class="carousel-item">
-             <div><a href="#"><img class="d-block w-100" src="<%= @product.slider_photo4 %>" ></a></div>
-          </div><!-- /.carousel-item -->
-          <div class="carousel-item">
-             <div><a href="#"><img class="d-block w-100" src="<%= @product.slider_photo5 %>" ></a></div>
-          </div><!-- /.carousel-item -->
+                <div class="carousel-item active">
+                  <div><a href="#"><img class="d-block w-100" src="<%= @product.slider_photo1 %>" ></a></div>
+                </div><!-- /.carousel-item -->
+                <div class="carousel-item">
+                  <div><a href="#"><img class="d-block w-100" src="<%= @product.slider_photo2 %>" ></a></div>
+                </div><!-- /.carousel-item -->
+                <div class="carousel-item">
+                   <div><a href="#"><img class="d-block w-100" src="<%= @product.slider_photo3 %>" ></a></div>
+                </div><!-- /.carousel-item -->
+             <% if @product.slider_photo4.present? %>
+                <div class="carousel-item">
+                   <div><a href="#"><img class="d-block w-100" src="<%= @product.slider_photo4 %>" ></a></div>
+                </div><!-- /.carousel-item -->
+             <% else %>
+             <% end %>
+             <% if @product.slider_photo5.present? %>
+                <div class="carousel-item">
+                   <div><a href="#"><img class="d-block w-100" src="<%= @product.slider_photo5 %>" ></a></div>
+                </div><!-- /.carousel-item -->
+             <% else %>
+             <% end %>
+             <% if @product.slider_photo6.present? %>
+                <div class="carousel-item">
+                   <div><a href="#"><img class="d-block w-100" src="<%= @product.slider_photo6 %>" ></a></div>
+                </div><!-- /.carousel-item -->
+             <% else %>
+             <% end %>
+             <% if @product.slider_photo7.present? %>
+                <div class="carousel-item">
+                   <div><a href="#"><img class="d-block w-100" src="<%= @product.slider_photo7 %>" ></a></div>
+                </div><!-- /.carousel-item -->
+             <% else %>
+             <% end %>
         </div><!-- /.carousel-inner -->
       <!-- スライドコントロールの設定 -->
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -62,9 +92,9 @@
          <%= simple_format(@product.c_catch_copy) %>
         </div>
         <ul class="nav border_bottom">
-         <% @connect_tags.each do |connect| %>
+         <% @connect_tags.each.with_index(1) do |connect,i| %>
             <li class="nav-item tag_zone">
-              <a class="nav-link" href="#">#<%= connect.tag.name %></a>
+              <a class="nav-link" href="#"><%= i %>.<%= connect.tag.name %></a>
             </li>
             <% end %>
           </ul>
@@ -140,6 +170,7 @@
                    <%= simple_format(@product.i_message_students) %>
                    </div>
                 </div>
+           <% if @product.i_recommended_books.present? %>
                  <div class="gray-content">
                  </div>
                 <div class="intern_content all_shadow">
@@ -150,6 +181,8 @@
                    <%= simple_format(@product.i_recommended_books) %>
                    </div>
                 </div>
+           <% else %>
+           <% end %>
                  <div class="gray-content">
               </div>
                 <div class="intern_content all_shadow">
@@ -188,10 +221,13 @@
                       <li class="item"><%= fa_icon("flag") %>国</li>
                       <li class="item"><%= simple_format(@product.c_country) %></li>
                     </ul>
+                   <% if @product.c_city.present? %>
                     <ul class="detail_info">
                       <li class="item"><%= fa_icon("university") %>都市</li>
                       <li class="item"><%= simple_format(@product.c_city) %></li>
                     </ul>
+                   <% else %>
+                   <% end %>
                     <ul class="detail_info">
                       <li class="item"><%= fa_icon("globe") %>社員の国籍比率</li>
                       <li class="item"><%= simple_format(@product.c_employee_nationality_ratio) %></li>
@@ -226,6 +262,7 @@
               </div>
               <div class="gray-content">
               </div>
+             <% if @product.required_spec.present? %>
               <div class="experience_content all_shadow">
                   <h2 class="header_text">
                     <%= fa_icon("user-secret") %>求めるスペック
@@ -234,6 +271,8 @@
                     <%= simple_format(@product.required_spec) %>
                   </div>
               </div>
+             <% else %>
+             <% end %>
               <div class="gray-content">
               </div>
               <div class="experience_content all_shadow">
@@ -244,6 +283,7 @@
                     <%= simple_format(@product.ways_contact) %>
                   </div>
               </div>
+            <% if @product.company_achievements.present? %>
               <div class="gray-content">
               </div>
               <div class="experience_content all_shadow">
@@ -254,6 +294,8 @@
                     <%= simple_format(@product.company_achievements) %>
                   </div>
               </div>
+            <% else %>
+            <% end %>
 
               </div>
             </div>

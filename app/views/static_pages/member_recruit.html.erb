@@ -2,7 +2,7 @@
 <div class="container all_top">
     <div class="row">
         <div class="col-md-12">
-          <h2><strong><%= fa_icon("users") %>Mash Upを一緒につくるメンバーを募集しています！</strong></h2>
+          <h2><strong><i class="fal fa-people-carry"></i>Mash Upを一緒につくるメンバーを募集しています！</strong></h2>
         </div>
     </div>
     <div class="row">
@@ -14,17 +14,7 @@
                    <%= fa_icon("briefcase") %>募集ポジション
                   </h2>
                   <div class="main_contents">
-                   募集ポジション概要
-                  </div>
-                </div>
-              </div>
-              <div class="recruit_content">
-                <div class="all_shadow">
-                  <h2 class="header_text">
-                  <%= fa_icon("user-secret") %>特記事項
-                  </h2>
-                  <div class="main_contents">
-                    特記事項概要
+                   <%= simple_format(@Recruitment_content) %>
                   </div>
                 </div>
               </div>
@@ -34,7 +24,7 @@
                    <%= fa_icon("envelope") %>応募方法
                   </h2>
                   <div class="main_contents">
-                    応募方法概要
+                    <%= simple_format(@application_method) %>
                   </div>
                 </div>
               </div>

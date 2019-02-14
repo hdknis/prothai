@@ -58,19 +58,12 @@
 <footer class="page-footer font-small indigo pt-4 mt-4">
 
   <!-- Footer Links -->
-  <div class="container-fluid text-center text-md-left">
+ <div class="container mt-5 mb-4 text-center text-md-left">
+    <div class="row mt-3">
+
 
     <!-- Grid row -->
-    <div class="row">
-
-      <!-- Grid column -->
-      <div class="col-md-3 mt-md-0 mt-3">
-      </div>
-      <hr class="clearfix w-100 d-md-none pb-3 list-item">
-
-      <!-- Grid column -->
-      <div class="col-md-3 mb-md-0 mb-3">
-
+        <div class="col-md-2 col-lg-2 col-xl-2 mb-4">
           <ul class="list-unstyled">
            <li>
               <p><span class="footer_title"><strong>Mash Upについて</strong></span><p>
@@ -80,50 +73,79 @@
             </li>
             <li class="list-item">
               <a href="/static_pages/member">メンバー紹介</a>
-          </ul>
-
-        </div>
-      <!-- Grid column -->
-      <hr class="clearfix w-100 d-md-none pb-3 list-item">
-
-      <!-- Grid column -->
-      <div class="col-md-3 mb-md-0 mb-3">
-
-          <ul class="list-unstyled">
-            <li class="list-item">
-              <a href="/products">海外インターンを探す</a>
-            </li>
-             <li class="list-item">
-              <a href="/blogs">インターン記事</a>
-            </li>
-            <li class="list-item">
-              <a href="/static_pages/about">お知らせ</a>
-            </li>
-            <li class="list-item">
-              <a href="/inquirys">お問い合わせ</a>
             </li>
           </ul>
-
         </div>
+
+
+      <!-- Grid column -->
+       <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+            <ul class="list-unstyled">
+              <li class="list-item">
+                <a href="/products">海外インターンを探す</a>
+              </li>
+               <li class="list-item">
+                <a href="/blogs">インターン記事</a>
+              </li>
+              <li class="list-item">
+                <a href="/static_pages/about">お知らせ</a>
+              </li>
+              <li class="list-item">
+                <a href="/inquirys">お問い合わせ</a>
+              </li>
+            </ul>
+
+      </div>
+
+
+      <div class="col-md-2 col-lg-4 col-xl-4 mx-auto mb-4">
+       <form action="feedbacks/create" id="new_feedback" method="post">
+       <div class="mar-bottom">このサイトへのご意見をお聞かせください</div>
+        <textarea cols="35" name="body" placeholder="意見を記入する" rows="4" class="fbbox"></textarea>
+        <input type="submit" value="送信する" class="fb_btn">
+      </form>
+      <script>
+          $(function(){
+            $('#new_feedback').on('submit', function(e){
+              e.preventDefault();
+              var formData = new FormData(this);
+              var url = $(this).attr('action')
+              $.ajax({
+                url: url,
+                type: "POST",
+                data: formData,
+                dataType: 'json',
+                processData: false,
+                contentType: false
+            })
+                $('.fbbox').val('')
+                var return_fb = document.getElementById('new_feedback')
+                 return_fb.innerHTML = `<p>
+                            <strong>
+                              ご意見ありがとうございました。<br>頂いたご意見はサービス改善の参考にさせていただきます。
+
+当フォームからのご意見にはご返信いたしかねます。<br>返信が必要な場合は<a href="/inquirys">お問い合わせフォーム</a>からご連絡ください。
+
+                            </strong>
+                          </p>`
+            })
+          });
+         </script>
+      </div>
         <!-- Grid column -->
-
-        <div class="col-md-3 mb-md-0 mb-3">
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto">
           <a class="btn btn-lg member_btn" href="/static_pages/member_recruit" role="button"><strong>メンバーを募集しています</strong></a>
-        </div>
-
-    </div>
-    <!-- Grid row -->
-
-  </div>
+     </div>
   <!-- Footer Links -->
-  <div class="container">
-
+ </div>
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2019 Copyright:
-     Mash Up Corporation. All Rights Reserved.
+     <div class="footer-copyright text-center py-3">© 2019 Copyright:
+       Mash Up. All Rights Reserved.
+     </div>
+  <!-- Copyright -->
+
   </div>
-  <!-- Copyright -->
-
 </footer>
   </body>
 </html>

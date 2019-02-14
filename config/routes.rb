@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'static_pages/member'
   get 'static_pages/member_recruit'
   resources :blogs, only: :index
+  post 'feedbacks/create' => 'feedbacks#create'
   get 'inquirys' => 'inquirys#index'              # 入力画面
   get 'inquirys/confirm' => redirect("/inquirys")
   get 'inquirys/thanks' => redirect("/inquirys")

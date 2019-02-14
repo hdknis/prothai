@@ -1,0 +1,28 @@
+// Place all the styles related to the feedbacks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#new_feedback{
+  font-size: 14px;
+}
+
+#new_feedback a{
+	color: black;
+}
+
+.fb_btn{
+  margin-top: 10px;
+  display: inline-block;
+  padding: 0.5em 1.0em;
+  text-decoration: none;
+  background: #212529;/*ボタン色*/
+  color: #FFF;
+  border-radius: 5px;
+  width: 268px;
+
+}
+
+.mar-bottom{
+	margin-bottom: 10px;
+}

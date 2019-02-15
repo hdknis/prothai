@@ -6,6 +6,11 @@
   padding-top: 100px;
 }
 
+
+.search_sp{
+ display: none;
+}
+
 body{
  background-color:  #f2f4f8;
 }
@@ -18,7 +23,6 @@ body{
 /*マウスホバー時のcss*/
 .searchBox_block:hover{
    background-color: #67c5ff;
-
 }
 
 .searchBox_block{
@@ -52,6 +56,50 @@ body{
 .search a{
   color: black;
 }
+
+/*マウスホバー時検索モーダルのcss*/
+
+/*.searchBox_block_sp:hover{
+   background-color: #67c5ff;
+}*/
+
+.searchBox_block_sp{
+  margin: 0px auto;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #ccc;
+  height: 40px;
+  float: left;
+  text-align: center;
+}
+
+.label_sp{
+    text-align: center;
+    padding: 10px;
+    display: inline-block;
+    color: black;
+}
+
+.blue_zone{
+  height: 40px;
+  width: 30px;
+}
+
+.check_box{
+  display: none;
+}
+
+.searchBox__refine__check_sp > li{
+  display: inline-block;
+  font-weight: bold;
+}
+
+.search_sp a{
+  color: black;
+}
+
+
+
 
 
 
@@ -280,7 +328,7 @@ footer{
   padding: 0.5em 1em;
   color: #FFF;
   border-radius: 3px;
-  width:300px;
+  width: 80%;
 }
 
 .member_btn:hover{
@@ -419,7 +467,21 @@ footer{
   background: #4267b2;
 }
 
+/*検索モーダルのcss*/
+.sp_model_bottom{
+    padding: 0.5em 1.0em;
+    text-decoration: none;
+    border: solid 5px #4267b2;
+    /*border-radius: 10px;*/
+    transition: .4s;
+    font-size: 20px;
+    font-weight: 900;
+}
 
+.sp_model_bottom:hover{
+  background: #4267b2;
+  color: #FFF;
+}
 
 
 /*モーダルのcss*/
@@ -436,6 +498,7 @@ footer{
 
 .model_bottom:hover{
   background: #4267b2;
+  color: #FFF;
 }
 
 .con_img{

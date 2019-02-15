@@ -11,12 +11,10 @@
 		  <ul class="searchBox__refine__check">
 		    <% @periods.each_with_index do |period,i|%>
 			  <li>
-			    <div class="searchBox_block">
-			     <div id="change_hoge<%= i.to_i %>">
+			    <div id="change_hoge<%= i.to_i %>" class="searchBox_block">
 			       <input class="check_box" type="checkbox" name='tag' value="<%= i %>" id="hoge<%= i %>">
 			         <label class="label" for="hoge<%= i %>"><%= period %></label>
 			       </input>
-			     </div>
 			    </div>
 			   </li>
 		    <% end %>
@@ -31,12 +29,10 @@
 			<ul class="searchBox__refine__check">
 			    <% @countrys.each_with_index do |country,i|%>
 				  <li>
-				  <div class="searchBox_block">
-				   <div id="change_hoge<%= i.to_i + 5 %>">
+				  <div class="searchBox_block" id="change_hoge<%= i.to_i + 5 %>">
 				    <input class="check_box" type="checkbox" name='tag' value="<%= country %>" id="hoge<%= i.to_i + 5 %>">
 				      <label class="label" for="hoge<%= i.to_i + 5 %>"><%= country %></label>
 				    </input>
-				   </div>
 				  </div>
 				  </li>
 				<% end %>

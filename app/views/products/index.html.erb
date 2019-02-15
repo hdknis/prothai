@@ -7,7 +7,27 @@
  <div class="row">
 
  <div class="col-md-12">
-   <%= render 'common/search.html.erb' %>
+    <div class="search_pc">
+      <%= render 'common/search.html.erb' %>
+    </div>
+    <div class="search_sp">
+      <%= render 'common/searchsp.html.erb'%>
+    </div>
+<script>
+$(window).on('load resize', function(){
+  var winW = $(window).width();
+  var devW = 767;
+  if (winW <= devW) {
+    $(".search_sp").css({'display':'block'});
+    $(".search_pc").css({'display':'none'});
+    //767px以下の時の処理
+  } else {
+    $(".search_pc").css({'display':'block'});
+    $(".search_sp").css({'display':'none'});
+    //768pxより大きい時の処理
+  }
+});
+</script>
   </div>
   </div>
     <!--Grid row-->

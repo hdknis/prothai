@@ -1,0 +1,80 @@
+  <button type="button" class="btn btn-lg btn-block sp_model_bottom" data-toggle="modal" data-target="#exampleModalLong">
+               <i class="fal fa-ballot-check"></i>検索条件を選択する
+              </button>
+
+<!-- モーダルの設定 -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title" id="exampleModalLongTitle">検索条件一覧</h5>
+         <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
+           <span aria-hidden="true"></span>
+         </button>
+       </div>
+       <div class="modal-body">
+          <div class="container">
+            <div class="row">
+               <form action="/internship" method="get" id="internship_form">
+        <input type="hidden" name="mode" value="internship" />
+
+  <dl class="searchBox__refine">
+    <dt class="searchBox__refine__tit">期間から絞り込む</dt>
+    <dd>
+     <div class="search-boxs">
+      <ul class="searchBox__refine__check_sp">
+        <% @periods.each_with_index do |period,i|%>
+        <li>
+          <div id="change_hogesp<%= i.to_i %>" class="searchBox_block_sp">
+             <input class="check_box" type="checkbox" name='tag' value="<%= i %>" id="hogesp<%= i %>">
+               <label class="label_sp" for="hogesp<%= i %>"><%= period %></label>
+             </input>
+          </div>
+         </li>
+        <% end %>
+       </ul>
+     </div>
+    </dd>
+  </dl>
+  <dl class="searchBox__refine">
+    <dt class="searchBox__refine__tit">国・地域から絞り込む</dt>
+    <dd>
+      <div class="search-boxs">
+      <ul class="searchBox__refine__check_sp">
+          <% @countrys.each_with_index do |country,i|%>
+          <li>
+          <div id="change_hogesp<%= i.to_i + 5 %>" class="searchBox_block_sp">
+            <input class="check_box change_hogesp<%= i.to_i + 5 %>" type="checkbox" name='tag' value="<%= country %>" id="hogesp<%= i.to_i + 5 %>">
+              <label class="label_sp" for="hogesp<%= i.to_i + 5 %>"><%= country %></label>
+            </input>
+          </div>
+          </li>
+        <% end %>
+         </ul>
+       </div>
+    </dd>
+  </dl>
+       <script>
+        $('input[name="tag"]').change(function() {
+          var val = $(this).attr('id');
+          console.log(val);
+          var val1 =  "#change_" + val ;
+          console.log(val1);
+        if ($(this).prop('checked')) {
+         $(val1).css({'background-color':'#67c5ff'});
+        } else {
+          // テキストをリセット
+         $(val1).css({'background-color':''});
+        }
+       });
+    </script>
+  </form>
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+          </div>
+       </div>
+     </div>
+   </div>
+</div>

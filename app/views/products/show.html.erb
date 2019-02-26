@@ -100,79 +100,78 @@
           <div class="tab-content" id="pills-tabContent">
            <div class="tab-pane fade show active" id="pills-interview" role="tabpanel" aria-labelledby="pills-interview-tab">
             <div class="white-content">
-              <div class="bussinness_content content_box">
-                  <h2 class="header_text">
-                   <%= fa_icon("chart-bar") %>人生のミッション・目標
-                  </h2>
-                  <div class="main_contents">
-                    <i class="i"></i><%= simple_format(@product.i_mission_life) %>
-                  </div>
-              </div>
-              <div class="experience_content content_box">
-                  <h2 class="header_text">
-                  <%= fa_icon("history") %>きっかけとなる経験
-                  </h2>
-                  <div class="main_contents">
-                   <%= simple_format(@product.i_3wmake_company) %>
-                  </div>
-              </div>
-              <div class="request_content content_box">
-                  <h2 class="header_text">
-                   <%= fa_icon("stopwatch") %>現在の事業
-                  </h2>
-                  <div class="main_contents">
-                    <i class="i"></i><%= simple_format(@product.i_current_state) %>
-                  </div>
-              </div>
-              <div class="intern_content content_box">
+                <div class="bussinness_content content_box">
                     <h2 class="header_text">
-                      <%= fa_icon("child") %>難しかった点、どうやって乗り越えたか、学んだ点
+                     <%= fa_icon("chart-bar") %>人生のミッション・目標
                     </h2>
-                <div class="main_contents">
-                <%= simple_format(@product.i_gotover_point) %>
+                    <div class="main_contents">
+                      <i class="i"></i><%= simple_format(@product.i_mission_life) %>
                     </div>
-              </div>
-              <div class="intern_content content_box">
-                  <h2 class="header_text">
-                   <%= fa_icon("forward") %>具体的な今後の方針
-                  </h2>
-                  <div class="main_contents">
-                   <%= simple_format(@product.i_future_policies) %>
-                   </div>
+                </div>
+                <div class="experience_content content_box">
+                    <h2 class="header_text">
+                    <%= fa_icon("history") %>きっかけとなる経験
+                    </h2>
+                    <div class="main_contents">
+                     <%= simple_format(@product.i_3wmake_company) %>
+                    </div>
+                </div>
+                <div class="request_content content_box">
+                    <h2 class="header_text">
+                     <%= fa_icon("stopwatch") %>現在の事業
+                    </h2>
+                    <div class="main_contents">
+                      <i class="i"></i><%= simple_format(@product.i_current_state) %>
+                    </div>
                 </div>
                 <div class="intern_content content_box">
-                  <h2 class="header_text">
-                   <%= fa_icon("comments") %>学生へメッセージ
-                  </h2>
+                      <h2 class="header_text">
+                        <%= fa_icon("child") %>難しかった点、どうやって乗り越えたか、学んだ点
+                      </h2>
                   <div class="main_contents">
-                   <%= simple_format(@product.i_message_students) %>
-                   </div>
+                  <%= simple_format(@product.i_gotover_point) %>
+                      </div>
                 </div>
-           <% if @product.i_recommended_books.present? %>
                 <div class="intern_content content_box">
-                  <h2 class="header_text">
-                  <%= fa_icon("book") %>本おすすめ
-                  </h2>
-                  <div class="main_contents">
-                   <%= simple_format(@product.i_recommended_books) %>
-                   </div>
-                </div>
-           <% else %>
-           <% end %>
-                <div class="intern_content content_box">
-                  <h2 class="header_text">
-                 <%= fa_icon("list-alt") %>編集者一言
-                  </h2>
-                  <div class="main_contents">
-                   <%= simple_format(@product.i_editor_word) %>
-                   </div>
-                </div>
+                    <h2 class="header_text">
+                     <%= fa_icon("forward") %>具体的な今後の方針
+                    </h2>
+                    <div class="main_contents">
+                     <%= simple_format(@product.i_future_policies) %>
+                     </div>
+                  </div>
+                  <div class="intern_content content_box">
+                    <h2 class="header_text">
+                     <%= fa_icon("comments") %>学生へメッセージ
+                    </h2>
+                    <div class="main_contents">
+                     <%= simple_format(@product.i_message_students) %>
+                     </div>
+                  </div>
+             <% if @product.i_recommended_books.present? %>
+                  <div class="intern_content content_box">
+                    <h2 class="header_text">
+                    <%= fa_icon("book") %>本おすすめ
+                    </h2>
+                    <div class="main_contents">
+                     <%= simple_format(@product.i_recommended_books) %>
+                     </div>
+                  </div>
+             <% else %>
+             <% end %>
+                  <div class="intern_content content_box">
+                    <h2 class="header_text">
+                   <%= fa_icon("list-alt") %>編集者一言
+                    </h2>
+                    <div class="main_contents">
+                     <%= simple_format(@product.i_editor_word) %>
+                     </div>
+                  </div>
             </div>
           </div>
 
             <div class="tab-pane fade" id="pills-info" role="tabpanel" aria-labelledby="pills-info-tab">
-             <div class="white-content">
-              <div class="intern_content all_shadow">
+               <div class="intern_content all_shadow">
                   <h2 class="header_text">
                    <%= fa_icon("building") %>企業紹介
                   </h2>
@@ -221,55 +220,53 @@
                       <li class="item"><%= simple_format(@product.c_time) %></li>
                     </ul>
                    </div>
-              </div>
-              <div class="gray-content">
-              </div>
-               <div class="experience_content all_shadow">
-                  <h2 class="header_text">
-                   <%= fa_icon("briefcase") %>事業内容
-                  </h2>
-                  <div class="main_contents">
-                    <%= simple_format(@product.c_business_content) %>
-                  </div>
-              </div>
-              <div class="gray-content">
-              </div>
-             <% if @product.required_spec.present? %>
-              <div class="experience_content all_shadow">
-                  <h2 class="header_text">
-                    <%= fa_icon("user-secret") %>求めるスペック
-                  </h2>
-                  <div class="main_contents">
-                    <%= simple_format(@product.required_spec) %>
-                  </div>
-              </div>
-             <% else %>
-             <% end %>
-              <div class="gray-content">
-              </div>
-              <div class="experience_content all_shadow">
-                  <h2 class="header_text">
-                   <%= fa_icon("envelope") %>会社の(HP、メールアドレス（連絡手段）
-                  </h2>
-                  <div class="main_contents">
-                    <%= simple_format(@product.ways_contact) %>
-                  </div>
-              </div>
-            <% if @product.company_achievements.present? %>
-              <div class="gray-content">
-              </div>
-              <div class="experience_content all_shadow">
-                  <h2 class="header_text">
-                  <%= fa_icon("trophy") %> 会社の実績(制作物、実績URL、動画など)
-                  </h2>
-                  <div class="main_contents">
-                    <%= simple_format(@product.company_achievements) %>
-                  </div>
-              </div>
-            <% else %>
-            <% end %>
-
-              </div>
+               </div>
+               <div class="gray-content">
+               </div>
+                <div class="experience_content all_shadow">
+                   <h2 class="header_text">
+                    <%= fa_icon("briefcase") %>事業内容
+                   </h2>
+                   <div class="main_contents">
+                     <%= simple_format(@product.c_business_content) %>
+                   </div>
+               </div>
+                <div class="gray-content">
+                </div>
+               <% if @product.required_spec.present? %>
+                <div class="experience_content all_shadow">
+                    <h2 class="header_text">
+                      <%= fa_icon("user-secret") %>求めるスペック
+                    </h2>
+                    <div class="main_contents">
+                      <%= simple_format(@product.required_spec) %>
+                    </div>
+                </div>
+               <% else %>
+               <% end %>
+                <div class="gray-content">
+                </div>
+                <div class="experience_content all_shadow">
+                    <h2 class="header_text">
+                     <%= fa_icon("envelope") %>会社の(HP、メールアドレス（連絡手段）
+                    </h2>
+                    <div class="main_contents">
+                      <%= simple_format(@product.ways_contact) %>
+                    </div>
+                </div>
+              <% if @product.company_achievements.present? %>
+                <div class="gray-content">
+                </div>
+                <div class="experience_content all_shadow">
+                    <h2 class="header_text">
+                    <%= fa_icon("trophy") %> 会社の実績(制作物、実績URL、動画など)
+                    </h2>
+                    <div class="main_contents">
+                      <%= simple_format(@product.company_achievements) %>
+                    </div>
+                </div>
+              <% else %>
+              <% end %>
             </div>
         </div>
       </div>

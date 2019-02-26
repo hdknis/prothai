@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_14_041016) do
+ActiveRecord::Schema.define(version: 2019_02_15_095844) do
 
   create_table "blogs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "user_name"
@@ -29,6 +29,14 @@ ActiveRecord::Schema.define(version: 2019_02_14_041016) do
     t.datetime "updated_at", null: false
     t.index ["product_id"], name: "index_connect_tags_on_product_id"
     t.index ["tag_id"], name: "index_connect_tags_on_tag_id"
+  end
+
+  create_table "countries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "cost_information"
+    t.text "flag_pic"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "feedbacks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

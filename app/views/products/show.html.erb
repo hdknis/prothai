@@ -76,7 +76,7 @@
           <span class="sr-only">次へ</span>
         </a>
     </div>
-        <div class="white-content all_shadow">
+        <div class="white-content content_box">
          <%= simple_format(@product.c_catch_copy) %>
         </div>
         <ul class="nav border_bottom">
@@ -100,7 +100,7 @@
           <div class="tab-content" id="pills-tabContent">
            <div class="tab-pane fade show active" id="pills-interview" role="tabpanel" aria-labelledby="pills-interview-tab">
             <div class="white-content">
-              <div class="bussinness_content all_shadow">
+              <div class="bussinness_content content_box">
                   <h2 class="header_text">
                    <%= fa_icon("chart-bar") %>人生のミッション・目標
                   </h2>
@@ -108,9 +108,7 @@
                     <i class="i"></i><%= simple_format(@product.i_mission_life) %>
                   </div>
               </div>
-              <div class="gray-content">
-              </div>
-              <div class="experience_content all_shadow">
+              <div class="experience_content content_box">
                   <h2 class="header_text">
                   <%= fa_icon("history") %>きっかけとなる経験
                   </h2>
@@ -118,9 +116,7 @@
                    <%= simple_format(@product.i_3wmake_company) %>
                   </div>
               </div>
-               <div class="gray-content">
-              </div>
-              <div class="request_content all_shadow">
+              <div class="request_content content_box">
                   <h2 class="header_text">
                    <%= fa_icon("stopwatch") %>現在の事業
                   </h2>
@@ -128,9 +124,7 @@
                     <i class="i"></i><%= simple_format(@product.i_current_state) %>
                   </div>
               </div>
-               <div class="gray-content">
-              </div>
-              <div class="intern_content all_shadow">
+              <div class="intern_content content_box">
                     <h2 class="header_text">
                       <%= fa_icon("child") %>難しかった点、どうやって乗り越えたか、学んだ点
                     </h2>
@@ -138,9 +132,7 @@
                 <%= simple_format(@product.i_gotover_point) %>
                     </div>
               </div>
-               <div class="gray-content">
-              </div>
-              <div class="intern_content all_shadow">
+              <div class="intern_content content_box">
                   <h2 class="header_text">
                    <%= fa_icon("forward") %>具体的な今後の方針
                   </h2>
@@ -148,9 +140,7 @@
                    <%= simple_format(@product.i_future_policies) %>
                    </div>
                 </div>
-                <div class="gray-content">
-                </div>
-                <div class="intern_content all_shadow">
+                <div class="intern_content content_box">
                   <h2 class="header_text">
                    <%= fa_icon("comments") %>学生へメッセージ
                   </h2>
@@ -159,9 +149,7 @@
                    </div>
                 </div>
            <% if @product.i_recommended_books.present? %>
-                 <div class="gray-content">
-                 </div>
-                <div class="intern_content all_shadow">
+                <div class="intern_content content_box">
                   <h2 class="header_text">
                   <%= fa_icon("book") %>本おすすめ
                   </h2>
@@ -171,9 +159,7 @@
                 </div>
            <% else %>
            <% end %>
-                 <div class="gray-content">
-              </div>
-                <div class="intern_content all_shadow">
+                <div class="intern_content content_box">
                   <h2 class="header_text">
                  <%= fa_icon("list-alt") %>編集者一言
                   </h2>
@@ -181,8 +167,6 @@
                    <%= simple_format(@product.i_editor_word) %>
                    </div>
                 </div>
-                 <div class="gray-content">
-              </div>
             </div>
           </div>
 

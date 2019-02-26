@@ -33,20 +33,34 @@ $(window).on('load resize', function(){
     <!--Grid row-->
     <div class="row">
          <% @products.each do |product| %>
-            <div class="col-sm-6 col-md-3 search" data-category='CMS' data-tag='["<%= product.c_country %>","<%= product.c_period.to_i %>"]'>
+            <div class="col-sm-6 col-md-4 search" data-category='CMS' data-tag='["<%= product.c_country %>","<%= product.c_period.to_i %>"]'>
           <a href="/products/<%= product.id %>">
             <div class="card top20">
             <div class="sub_pic">
-              <img class="img-thumbnail" src="<%= product.slider_photo1 %>" alt="">
-              <span><%= product.c_country %></span>
+               <img class="img-thumbnail" src="<%= product.slider_photo1 %>" alt="">
+               <span><%= product.c_country %></span>
             </div>
              <div class="card-body">
-                <h5 class="card-title">
-                <%= simple_format(product.c_title) %>
-                </h5>
-               <div class="card-footer text-black">
-                 期間:<%= @periods[product.c_period.to_i] %>
-               </div>
+                <div class="card-title">
+                   <strong><%= simple_format(product.c_title) %></strong>
+                </div>
+                 <div class="card-title">
+                   <table class="media-card_table">
+                      <tr class="card_C_name">
+                       <th>会社名</th>
+                         <td><span class="word_color"><%= product.c_name %></span></td>
+                       </tr>
+                       <tr class="card_C_priod">
+                         <th>期間</th>
+                         <td><span class="word_color"><%= @periods[product.c_period.to_i] %></span></td>
+                      </tr>
+                   </table>
+                 </div>
+                 <% product.connect_tags.each do |connect_tag| %>
+                  <li class="tag_zone_index">
+                   <a class="" href="#"><%= connect_tag.tag.name %></a>
+                   </li>
+                 <% end %>
               </div>
             </div>
           </a>
@@ -150,7 +164,7 @@ $(window).on('load resize', function(){
               }
             </script>
 <!--Grid row-->
-</div>
+    </div>
 <!--Main container-->
 </main>
 <!--Main layout-->

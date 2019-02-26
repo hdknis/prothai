@@ -53,6 +53,7 @@ body{
   font-weight: bold;
 }
 
+
 .search a{
   color: black;
 }
@@ -101,10 +102,11 @@ body{
 
 
 
-
-
-
 /*会社カードのデザイン*/
+
+.card{
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);/*影*/
+}
 
 .card:hover{
    -webkit-box-shadow: 0 4px 2px -2px #777;
@@ -112,29 +114,58 @@ body{
            box-shadow: 0 4px 2px -2px #777;
 }
 
-.text-last{
-  font-size: 18px;
-  height: 400px;
+.card-body a {
+  text-decoration: none;
+}
+
+.search a {
+  text-decoration: none;
 }
 
 .card-img-top span{
   position: absolute;
 }
 
+.media-card_table{
+  width: 100%;
+}
+
+.card_C_name{
+ text-align: center;
+ border-top: solid 1px #9e9e9e;
+ border-bottom: solid 1px #9e9e9e;
+ font-size: 10px;
+}
+
+.card_C_name th {
+  background-color: #4267b2;
+  color: white;
+  padding: 5px;
+  width: 80px;
+}
+
+.card_C_priod{
+  text-align: center;
+  border-bottom: solid 1px #9e9e9e;
+  font-size: 10px;
+}
+
+.card_C_priod th {
+  background-color: #4267b2;
+  color: white;
+  padding: 5px;
+}
 .sub_pic span{
   position: absolute;
-  background-color: #67c5ff;
-  color: black;
-  top: 0;
-  left: 0;
+  background-color: #4267b2;
+  padding: 8px;
+  color: #FFF;
+  top: 5px;
+  left: 5px;
 }
 
 .card-title{
-  font-size: 14px;
-}
-
-.card-footer{
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .top20{
@@ -145,11 +176,29 @@ body{
   margin-top: 100px;
 }
 
+.tag_zone_index{
+ display: inline-block;
+ text-decoration: none;
+ color: #4267b2;
+ border: solid 2px #4267b2;
+    border-radius: 5px;
+    font-size: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 5px;
+}
+
+.tag_zone_index a{
+  color: #9e9e9e;
+}
+
+
+
 
 
 
 /*会社記事詳細情報ゾーン*/
-
 .main_contents{
   margin: 20px;
 }
@@ -175,6 +224,7 @@ body{
 
 .white-content{
   background-color: #FFF;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
 }
 
 .gray-content{
@@ -186,6 +236,13 @@ body{
   padding:5px 10px;
   text-decoration :none;
   box-shadow: 0 2px 2px rgba(0,0,0,0.2), 0 -4px 5px -2px #6d95ce inset;
+  border-radius: 2px;
+  transition: .3s;
+}
+
+.content_box{
+  padding:5px 10px;
+  text-decoration :none;
   border-radius: 2px;
   transition: .3s;
 }
@@ -213,7 +270,7 @@ body{
   padding: 0.5em;/*文字周りの余白*/
   color: #4267b2;/*文字色*/
   background: #FFF;/*背景色*/
-  border-bottom: solid 3px #516ab6;/*下線*/
+  border: solid 3px #516ab6;/*下線*/
   text-align: left;
   font-size: 24px;
   font-weight:bold;
@@ -229,7 +286,6 @@ body{
 /*会社情報の詳細ページ*/
 
 .detail_info {
-  /*padding: 0.5em;*//*文字周りの余白*/
   border-bottom: solid 1px #516ab6;/*下線*/
 }
 
@@ -505,11 +561,6 @@ footer{
   width: 110px;
   height: 100px;
 }
-
-.con_body{
-
-}
-
 .con_text{
    font-size: 14px;
 }

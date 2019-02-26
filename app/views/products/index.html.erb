@@ -48,11 +48,11 @@ $(window).on('load resize', function(){
                    <table class="media-card_table">
                       <tr class="card_C_name">
                        <th>会社名</th>
-                         <td><span class="word_color"><%= product.c_name %></span></td>
+                         <td><span class="dark"><%= product.c_name %></span></td>
                        </tr>
                        <tr class="card_C_priod">
                          <th>期間</th>
-                         <td><span class="word_color"><%= @periods[product.c_period.to_i] %></span></td>
+                         <td><span class="dark"><%= @periods[product.c_period.to_i] %></span></td>
                       </tr>
                    </table>
                  </div>

@@ -48,6 +48,16 @@
         <li class="nav-item active">
           <a class="nav-link margin_menu" href="/inquirys"><strong><i class="far fa-user-headset"></i>お問い合わせ</strong></a>
         </li>
+         <% if user_signed_in? %>
+        <div class="user_nav grid-6">
+            <ul class="user__info">
+              <li>
+               <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+              </li>
+            </ul>
+        </div>
+      <% else %>
+      <% end %>
       </ul>
      </div>
     <!-- Collapsible content -->

@@ -14,6 +14,7 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
     @relation_products = Product.order('id ASC').limit(5)
+    @countries = Country.order('id ASC').limit(20)
     @connect_tags = @product.connect_tags
   end
 end

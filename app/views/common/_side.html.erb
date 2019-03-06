@@ -24,13 +24,13 @@
                   </div>
                    <div class="modal-body">
                       <div class="container">
-                        <div class="row">
-                           <% @countrys.each do |country| %>
+                       <div class="row">
+                           <% @countries.each do |country| %>
                               <div class="col-xs-3">
                                  <div class="card margin20" style="width: 7rem;">
-                                    <img class="card-img-top con_img" src="https://upload.wikimedia.org/wikipedia/commons/4/41/Flag_of_India.svg" alt="カードの画像">
+                                    <img class="card-img-top con_img" src="country.flag_pic" alt="">
                                     <div class="card-body con_body">
-                                      <p class="card-text con_text"><%= country %></p>
+                                      <p class="card-text con_text"></p>
                                     </div>
                                  </div>
                               </div>

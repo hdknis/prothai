@@ -26,13 +26,15 @@
                       <div class="container">
                        <div class="row">
                            <% @countries.each do |country| %>
-                              <div class="col-xs-3">
+                              <div class="col-xs-3 search">
+                              <a href="/countries/<%= country.id %>">
                                  <div class="card margin20" style="width: 7rem;">
-                                    <img class="card-img-top con_img" src="country.flag_pic" alt="">
+                                    <img class="card-img-top con_img border" src="<%= country.flag_pic %>" alt="">
                                     <div class="card-body con_body">
-                                      <p class="card-text con_text"></p>
+                                      <p class="card-text con_text"><%= country.name %></p>
                                     </div>
                                  </div>
+                              </a>
                               </div>
                               <% end %>
                           </div>

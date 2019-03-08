@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_15_095844) do
+ActiveRecord::Schema.define(version: 2019_03_06_080915) do
 
   create_table "blogs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "user_name"
@@ -33,6 +33,17 @@ ActiveRecord::Schema.define(version: 2019_02_15_095844) do
 
   create_table "countries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
+    t.text "feature"
+    t.text "rent"
+    t.text "food_expenses"
+    t.text "total"
+    t.text "ticket"
+    t.text "types_of_visas"
+    t.text "find_residence_info"
+    t.text "community_info"
+    t.text "youtuber_info"
+    t.text "detail_info"
+    t.text "about_movement"
     t.text "cost_information"
     t.text "flag_pic"
     t.datetime "created_at", null: false
@@ -50,38 +61,56 @@ ActiveRecord::Schema.define(version: 2019_02_15_095844) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "periods", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "period", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "c_title", null: false
+    t.text "c_title", null: false
     t.text "c_catch_copy", null: false
     t.string "c_name", null: false
-    t.string "c_established_year", null: false
-    t.string "c_employees_number", null: false
+    t.string "c_established_year"
+    t.text "c_employees_number", null: false
     t.string "c_country", null: false
+    t.integer "country_id", null: false
     t.string "c_city"
-    t.string "c_employee_nationality_ratio", null: false
-    t.integer "c_period", null: false
-    t.string "c_time", null: false
-    t.string "c_language_used_ratio", null: false
+    t.text "c_employee_nationality_ratio", null: false
+    t.text "c_period_text"
+    t.integer "period_id", null: false
+    t.text "c_time", null: false
+    t.text "c_language_used_ratio", null: false
     t.text "c_salary", null: false
     t.text "c_business_content", null: false
     t.text "required_spec"
     t.text "company_achievements"
     t.text "ways_contact", null: false
-    t.text "slider_photo1", null: false
-    t.text "slider_photo2", null: false
-    t.text "slider_photo3", null: false
+    t.text "slider_photo1"
+    t.text "slider_photo2"
+    t.text "slider_photo3"
     t.text "slider_photo4"
     t.text "slider_photo5"
     t.text "slider_photo6"
     t.text "slider_photo7"
-    t.text "i_mission_life", null: false
-    t.text "i_3wmake_company", null: false
-    t.text "i_current_state", null: false
-    t.text "i_gotover_point", null: false
-    t.text "i_future_policies", null: false
-    t.text "i_message_students", null: false
+    t.text "title_i_mission_life"
+    t.text "i_mission_life"
+    t.text "title_i_3wmake_company"
+    t.text "i_3wmake_company"
+    t.text "title_i_current_state"
+    t.text "i_current_state"
+    t.text "title_i_gotover_point"
+    t.text "i_gotover_point"
+    t.text "title_i_future_policies"
+    t.text "i_future_policies"
+    t.text "title_i_message_students"
+    t.text "i_message_students"
+    t.text "title_i_recommended_books"
     t.text "i_recommended_books"
-    t.text "i_editor_word", null: false
+    t.text "title_i_editor_word"
+    t.text "i_editor_word"
+    t.string "recruitment_stop_flag"
+    t.string "interviewed_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

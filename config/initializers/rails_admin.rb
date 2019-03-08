@@ -7,7 +7,6 @@ RailsAdmin.config do |config|
     warden.authenticate! scope: :user
   end
   config.current_user_method(&:current_user)
-
   ## == Cancan ==
   config.authorize_with :cancan
 
@@ -31,9 +30,11 @@ RailsAdmin.config do |config|
       field :c_established_year
       field :c_employees_number
       field :c_country
+      field :country_id
       field :c_city
       field :c_employee_nationality_ratio
-      field :c_period
+      field :c_period_text
+      field :period_id
       field :c_time
       field :c_language_used_ratio
       field :c_salary
@@ -48,14 +49,33 @@ RailsAdmin.config do |config|
       field :slider_photo5, :carrierwave
       field :slider_photo6, :carrierwave
       field :slider_photo7, :carrierwave
+
+      field :title_i_mission_life
       field :i_mission_life
+
+      field :title_i_3wmake_company
       field :i_3wmake_company
+
+      field :title_i_current_state
       field :i_current_state
+
+      field :title_i_gotover_point
       field :i_gotover_point
+
+      field :title_i_future_policies
       field :i_future_policies
+
+      field :title_i_message_students
       field :i_message_students
+
+      field :title_i_recommended_books
       field :i_recommended_books
+      
+      field :title_i_editor_word
       field :i_editor_word
+
+      field :recruitment_stop_flag
+      field :interviewed_name
     end
   end
 

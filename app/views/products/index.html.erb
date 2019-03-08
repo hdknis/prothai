@@ -47,12 +47,12 @@
     <!--Grid row-->
     <div class="row">
          <% @products.each do |product| %>
-            <div class="col-sm-6 col-md-4 search" data-category='CMS' data-tag='["<%= product.c_country %>","<%= product.c_period.to_i %>"]'>
+            <div class="col-sm-6 col-md-4 search" data-category='CMS' data-tag='["<%= product.country.name %>","<%= product.period.id %>"]'>
           <a href="/products/<%= product.id %>">
             <div class="card top20">
             <div class="sub_pic">
                <img class="img-thumbnail" src="<%= product.slider_photo1 %>" alt="">
-               <span><%= product.c_country %></span>
+               <span><%= product.country.name %></span>
             </div>
              <div class="card-body">
                 <div class="card-title">
@@ -66,7 +66,7 @@
                        </tr>
                        <tr class="card_C_priod">
                          <th>期間</th>
-                         <td><span class="dark"><%= @periods[product.c_period.to_i] %></span></td>
+                         <td><span class="dark"><%= product.period.period %></span></td>
                       </tr>
                    </table>
                  </div>

@@ -102,7 +102,7 @@
             <div class="white-content">
                 <div class="bussinness_content content_box">
                     <h2 class="header_text">
-                     <%= fa_icon("chart-bar") %>人生のミッション・目標
+                     <%= fa_icon("chart-bar") %><%= @product.title_i_mission_life %>
                     </h2>
                     <div class="main_contents">
                       <i class="i"></i><%= simple_format(@product.i_mission_life) %>
@@ -110,7 +110,7 @@
                 </div>
                 <div class="experience_content content_box">
                     <h2 class="header_text">
-                    <%= fa_icon("history") %>きっかけとなる経験
+                    <%= fa_icon("history") %><%= @product.title_i_3wmake_company %>
                     </h2>
                     <div class="main_contents">
                      <%= simple_format(@product.i_3wmake_company) %>
@@ -118,7 +118,7 @@
                 </div>
                 <div class="request_content content_box">
                     <h2 class="header_text">
-                     <%= fa_icon("stopwatch") %>現在の事業
+                     <%= fa_icon("stopwatch") %><%= @product.title_i_current_state %>
                     </h2>
                     <div class="main_contents">
                       <i class="i"></i><%= simple_format(@product.i_current_state) %>
@@ -126,7 +126,7 @@
                 </div>
                 <div class="intern_content content_box">
                       <h2 class="header_text">
-                        <%= fa_icon("child") %>難しかった点、どうやって乗り越えたか、学んだ点
+                        <%= fa_icon("child") %><%= @product.title_i_gotover_point %>
                       </h2>
                   <div class="main_contents">
                   <%= simple_format(@product.i_gotover_point) %>
@@ -134,7 +134,7 @@
                 </div>
                 <div class="intern_content content_box">
                     <h2 class="header_text">
-                     <%= fa_icon("forward") %>具体的な今後の方針
+                     <%= fa_icon("forward") %><%= @product.title_i_future_policies %>
                     </h2>
                     <div class="main_contents">
                      <%= simple_format(@product.i_future_policies) %>
@@ -142,7 +142,7 @@
                   </div>
                   <div class="intern_content content_box">
                     <h2 class="header_text">
-                     <%= fa_icon("comments") %>学生へメッセージ
+                     <%= fa_icon("comments") %><%= @product.title_i_message_students %>
                     </h2>
                     <div class="main_contents">
                      <%= simple_format(@product.i_message_students) %>
@@ -151,7 +151,7 @@
              <% if @product.i_recommended_books.present? %>
                   <div class="intern_content content_box">
                     <h2 class="header_text">
-                    <%= fa_icon("book") %>本おすすめ
+                    <%= fa_icon("book") %><%= @product.title_i_recommended_books %>
                     </h2>
                     <div class="main_contents">
                      <%= simple_format(@product.i_recommended_books) %>
@@ -161,7 +161,7 @@
              <% end %>
                   <div class="intern_content content_box">
                     <h2 class="header_text">
-                   <%= fa_icon("list-alt") %>編集者一言
+                   <%= fa_icon("list-alt") %><%= @product.title_i_editor_word %>
                     </h2>
                     <div class="main_contents">
                      <%= simple_format(@product.i_editor_word) %>
@@ -190,7 +190,7 @@
                     </ul>
                     <ul class="detail_info">
                       <li class="item"><%= fa_icon("flag") %>国</li>
-                      <li class="item"><%= simple_format(@product.c_country) %></li>
+                      <li class="item"><%= simple_format(@product.country.name) %></li>
                     </ul>
                    <% if @product.c_city.present? %>
                     <ul class="detail_info">
@@ -213,7 +213,7 @@
                     </ul>
                     <ul class="detail_info">
                       <li class="item"><%= fa_icon("clock") %>インターンシップ期間</li>
-                      <li class="item"><%= @periods[@product.c_period.to_i] %></li>
+                      <li class="item"><%= simple_format(@product.c_period_text) %></li>
                     </ul>
                     <ul class="detail_info">
                       <li class="item"><%= fa_icon("calendar-alt") %>インターンシップ日数、時間</li>

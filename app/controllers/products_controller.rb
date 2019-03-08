@@ -2,9 +2,9 @@ class ProductsController < ApplicationController
   before_action :create_info , only: [:index, :show]
 
   def create_info
-    @product = Product.new
-    @periods = @product.create_period
-    @countrys = @product.create_country
+    @product = Product.order('id ASC').limit(20)
+    @periods = Period.order('id ASC')
+    @countrys = Country.order('id ASC')
   end
 
   def index

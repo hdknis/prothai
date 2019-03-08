@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 2019_03_06_080915) do
     t.text "detail_info"
     t.text "about_movement"
     t.text "cost_information"
+    t.text "other"
     t.text "flag_pic"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

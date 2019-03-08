@@ -14,6 +14,7 @@ class CreateCountries < ActiveRecord::Migration[5.2]
       t.text :detail_info
       t.text :about_movement
       t.text :cost_information
+      t.text :other
       t.text :flag_pic
       t.timestamps
     end

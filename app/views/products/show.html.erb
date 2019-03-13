@@ -94,6 +94,12 @@
          <a class="nav-link" id="pills-info-tab" data-toggle="tab" href="#pills-info" role="tab" aria-controls="pills-info" aria-selected="false">会社紹介</a>
         </li>
       </ul>
+    <% if @product.recruitment_stop_flag == "TURE" %>
+      <div class="flag_sign">
+           <p>この企業は現在インターン募集を停止しています</p>
+         </div>
+    <% else %>
+    <% end %>
        <div class="gray-content">
        </div>
 
@@ -163,6 +169,10 @@
                     <h2 class="header_text">
                    <%= fa_icon("list-alt") %><%= @product.title_i_editor_word %>
                     </h2>
+                    <div class="main_contents">
+                    <%= fa_icon("person-dolly-empty") %>インタビューした人
+                     <%= simple_format(@product.interviewed_name) %>
+                     </div>
                     <div class="main_contents">
                      <%= simple_format(@product.i_editor_word) %>
                      </div>

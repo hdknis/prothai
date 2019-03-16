@@ -284,19 +284,16 @@ RailsAdmin.config do |config|
       LABEL_id = '国ID'
       LABEL_name = '国の名前'
       LABEL_flag_pic = '国の写真'
+      LABEL_show_pic = '詳細ページでの写真'
       LABEL_feature = '国の特徴'
       LABEL_rent = '家賃'
       LABEL_food_expenses = '食費'
-      LABEL_total = '合計'
       LABEL_ticket = '航空券'
       LABEL_types_of_visas = 'ピザの種類'
-      LABEL_find_residence_info = '住居を探すときにおすすめなサイト'
       LABEL_community_info = '日本人コミュニティーの紹介'
-      LABEL_youtuber_info = 'YOUTUBERの紹介'
+      LABEL_find_residence_info = '住居を探すときにおすすめなサイト'
       LABEL_detail_info = '詳細な情報が知りたい方へ'
       LABEL_other = 'その他'
-      LABEL_about_movement = 'その他3'
-      LABEL_cost_information = 'その他2'
       LABEL_created_at = '作成日時'
       LABEL_updated_at = '更新日時'
 
@@ -307,19 +304,16 @@ RailsAdmin.config do |config|
         end
         field :name do label LABEL_name end
         field :flag_pic, :carrierwave do label LABEL_flag_pic end
+        field :show_pic, :carrierwave do label LABEL_flag_pic end
         field :feature do label LABEL_feature end
         field :rent do label LABEL_rent end
         field :food_expenses do label LABEL_food_expenses end
-        field :total do label LABEL_total end
         field :ticket do label LABEL_ticket end
         field :types_of_visas do label LABEL_types_of_visas end
-        field :find_residence_info do label LABEL_find_residence_info end
         field :community_info do label LABEL_community_info end
-        field :youtuber_info do label LABEL_youtuber_info end
+        field :find_residence_info do label LABEL_find_residence_info end
         field :detail_info do label LABEL_detail_info end
         field :other do label LABEL_other end
-        field :about_movement do label LABEL_about_movement end
-        field :cost_information do label LABEL_cost_information end
         field :created_at do
           label LABEL_created_at
         end
@@ -329,21 +323,18 @@ RailsAdmin.config do |config|
       end
 
       edit do
-        field :name do label LABEL_name end
+       field :name do label LABEL_name end
         field :flag_pic, :carrierwave do label LABEL_flag_pic end
+        field :show_pic, :carrierwave do label LABEL_flag_pic end
         field :feature do label LABEL_feature end
         field :rent do label LABEL_rent end
         field :food_expenses do label LABEL_food_expenses end
-        field :total do label LABEL_total end
         field :ticket do label LABEL_ticket end
         field :types_of_visas do label LABEL_types_of_visas end
-        field :find_residence_info do label LABEL_find_residence_info end
         field :community_info do label LABEL_community_info end
-        field :youtuber_info do label LABEL_youtuber_info end
+        field :find_residence_info do label LABEL_find_residence_info end
         field :detail_info do label LABEL_detail_info end
         field :other do label LABEL_other end
-        field :about_movement do label LABEL_about_movement end
-        field :cost_information do label LABEL_cost_information end
       end
 
       show do
@@ -352,19 +343,16 @@ RailsAdmin.config do |config|
         end
         field :name do label LABEL_name end
         field :flag_pic, :carrierwave do label LABEL_flag_pic end
+        field :show_pic, :carrierwave do label LABEL_flag_pic end
         field :feature do label LABEL_feature end
         field :rent do label LABEL_rent end
         field :food_expenses do label LABEL_food_expenses end
-        field :total do label LABEL_total end
         field :ticket do label LABEL_ticket end
         field :types_of_visas do label LABEL_types_of_visas end
-        field :find_residence_info do label LABEL_find_residence_info end
         field :community_info do label LABEL_community_info end
-        field :youtuber_info do label LABEL_youtuber_info end
+        field :find_residence_info do label LABEL_find_residence_info end
         field :detail_info do label LABEL_detail_info end
         field :other do label LABEL_other end
-        field :about_movement do label LABEL_about_movement end
-        field :cost_information do label LABEL_cost_information end
         field :created_at do
           label LABEL_created_at
         end

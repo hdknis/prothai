@@ -86,14 +86,17 @@
             </li>
             <% end %>
           </ul>
+      <% if @product.title_i_mission_life.present? && @product.title_i_3wmake_company.present? && @product.title_i_current_state && @product.title_i_gotover_point.present?  && @product.title_i_future_policies && @product.title_i_message_students && @product.title_i_editor_word %>
         <ul class="nav" id="pills-tab" role="tablist">
         <li class="nav-item show_tabs show_bottom">
-          <a class="nav-link active" id="pills-interview-tab" data-toggle="tab" href="#pills-interview" role="tab" aria-controls="pills-interview"  aria-selected="true">社長インタビュー</a>
+         <a class="nav-link active" id="pills-info-tab" data-toggle="tab" href="#pills-info" role="tab" aria-controls="pills-info" aria-selected="false">会社紹介</a>
         </li>
         <li class="nav-item show_tabs show_bottom">
-         <a class="nav-link" id="pills-info-tab" data-toggle="tab" href="#pills-info" role="tab" aria-controls="pills-info" aria-selected="false">会社紹介</a>
+          <a class="nav-link" id="pills-interview-tab" data-toggle="tab" href="#pills-interview" role="tab" aria-controls="pills-interview"  aria-selected="true">社長インタビュー</a>
         </li>
       </ul>
+      <% else %>
+      <% end %>
     <% if @product.recruitment_stop_flag == "TURE" %>
       <div class="flag_sign">
            <p>この企業は現在インターン募集を停止しています</p>
@@ -102,10 +105,10 @@
     <% end %>
        <div class="gray-content">
        </div>
-
           <div class="tab-content" id="pills-tabContent">
-           <div class="tab-pane fade show active" id="pills-interview" role="tabpanel" aria-labelledby="pills-interview-tab">
+           <div class="tab-pane fade" id="pills-interview" role="tabpanel" aria-labelledby="pills-interview-tab">
             <div class="white-content">
+            <% if @product.title_i_mission_life.present? %>
                 <div class="bussinness_content content_box">
                     <h2 class="header_text">
                      <%= fa_icon("chart-bar") %><%= @product.title_i_mission_life %>
@@ -114,6 +117,9 @@
                       <i class="i"></i><%= simple_format(@product.i_mission_life) %>
                     </div>
                 </div>
+            <% else %>
+            <% end %>
+            <% if @product.title_i_3wmake_company.present? %>
                 <div class="experience_content content_box">
                     <h2 class="header_text">
                     <%= fa_icon("history") %><%= @product.title_i_3wmake_company %>
@@ -122,6 +128,9 @@
                      <%= simple_format(@product.i_3wmake_company) %>
                     </div>
                 </div>
+            <% else %>
+            <% end %>
+            <% if @product.title_i_current_state.present? %>
                 <div class="request_content content_box">
                     <h2 class="header_text">
                      <%= fa_icon("stopwatch") %><%= @product.title_i_current_state %>
@@ -130,6 +139,9 @@
                       <i class="i"></i><%= simple_format(@product.i_current_state) %>
                     </div>
                 </div>
+            <% else %>
+            <% end %>
+            <% if @product.title_i_gotover_point.present? %>
                 <div class="intern_content content_box">
                       <h2 class="header_text">
                         <%= fa_icon("child") %><%= @product.title_i_gotover_point %>
@@ -138,6 +150,9 @@
                   <%= simple_format(@product.i_gotover_point) %>
                       </div>
                 </div>
+            <% else %>
+             <% end %>
+            <% if @product.title_i_future_policies.present? %>
                 <div class="intern_content content_box">
                     <h2 class="header_text">
                      <%= fa_icon("forward") %><%= @product.title_i_future_policies %>
@@ -146,6 +161,9 @@
                      <%= simple_format(@product.i_future_policies) %>
                      </div>
                   </div>
+            <% else %>
+             <% end %>
+            <% if @product.title_i_message_students.present? %>
                   <div class="intern_content content_box">
                     <h2 class="header_text">
                      <%= fa_icon("comments") %><%= @product.title_i_message_students %>
@@ -154,6 +172,8 @@
                      <%= simple_format(@product.i_message_students) %>
                      </div>
                   </div>
+             <% else %>
+             <% end %>
              <% if @product.i_recommended_books.present? %>
                   <div class="intern_content content_box">
                     <h2 class="header_text">
@@ -180,7 +200,7 @@
             </div>
           </div>
 
-            <div class="tab-pane fade" id="pills-info" role="tabpanel" aria-labelledby="pills-info-tab">
+            <div class="tab-pane fade show active" id="pills-info" role="tabpanel" aria-labelledby="pills-info-tab">
                <div class="intern_content all_shadow">
                   <h2 class="header_text">
                    <%= fa_icon("building") %>企業紹介

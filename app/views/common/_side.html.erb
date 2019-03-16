@@ -26,17 +26,20 @@
                       <div class="container">
                        <div class="row">
                            <% @countries.each do |country| %>
-                              <div class="col-xs-3 search">
-                              <a href="/countries/<%= country.id %>">
-                                 <div class="card margin20" style="width: 7rem;">
-                                    <img class="card-img-top con_img border" src="<%= country.flag_pic %>" alt="">
-                                    <div class="card-body con_body">
-                                      <p class="card-text con_text"><%= country.name %></p>
-                                    </div>
-                                 </div>
-                              </a>
-                              </div>
-                              <% end %>
+                             <% if country.feature.present? && country.flag_pic.present? && country.show_pic.present? && country.rent.present? && country.food_expenses.present? && country.ticket.present? %>
+                               <div class="col-xs-3 search">
+                                  <a href="/countries/<%= country.id %>">
+                                     <div class="card margin20" style="width: 7rem;">
+                                        <img class="card-img-top con_img border" src="<%= country.flag_pic %>" alt="">
+                                        <div class="card-body con_body">
+                                          <p class="card-text con_text"><%= country.name %></p>
+                                        </div>
+                                     </div>
+                                  </a>
+                               </div>
+                             <% else %>
+                             <% end %>
+                            <% end %>
                           </div>
                       </div>
                       <div class="modal-footer">

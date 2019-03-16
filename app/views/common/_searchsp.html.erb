@@ -24,13 +24,16 @@
      <div class="search-boxs">
       <ul class="searchBox__refine__check_sp">
         <% @periods.each do |period| %>
-        <li>
-          <div id="change_hogesp<%= period.id %>" class="searchBox_block_sp">
-             <input class="check_box" type="checkbox" name='tag' value="<%= period.id %>" id="hogesp<%= period.id %>">
-               <label class="label_sp" for="hogesp<%= period.id %>"><%= period.period %></label>
-             </input>
-          </div>
-         </li>
+        <% if period.products.present? %>
+          <li>
+            <div id="change_hogesp<%= period.id %>" class="searchBox_block_sp">
+               <input class="check_box" type="checkbox" name='tag' value="<%= period.id %>" id="hogesp<%= period.id %>">
+                 <label class="label_sp" for="hogesp<%= period.id %>"><%= period.period %></label>
+               </input>
+            </div>
+           </li>
+        <% else %>
+        <% end %>
         <% end %>
        </ul>
      </div>
@@ -42,13 +45,16 @@
       <div class="search-boxs">
       <ul class="searchBox__refine__check_sp">
           <% @countrys.each do |country|%>
-          <li>
-          <div id="change_hogesp<%= country.id + 5 %>" class="searchBox_block_sp">
-            <input class="check_box change_hogesp<%= country.id + 5 %>" type="checkbox" name='tag' value="<%= country.name %>" id="hogesp<%= country.id + 5 %>">
-              <label class="label_sp" for="hogesp<%= country.id + 5 %>"><%= country.name %></label>
-            </input>
-          </div>
-          </li>
+           <% if country.products.present? %>
+            <li>
+              <div id="change_hogesp<%= country.id + 5 %>" class="searchBox_block_sp">
+                <input class="check_box change_hogesp<%= country.id + 5 %>" type="checkbox" name='tag' value="<%= country.name %>" id="hogesp<%= country.id + 5 %>">
+                  <label class="label_sp" for="hogesp<%= country.id + 5 %>"><%= country.name %></label>
+                </input>
+              </div>
+            </li>
+           <% else %>
+         <% end %>
         <% end %>
          </ul>
        </div>

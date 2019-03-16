@@ -10,6 +10,7 @@
 		 <div class="search-boxs">
 		  <ul class="searchBox__refine__check">
 		    <% @periods.each do |period| %>
+		     <% if period.products.present? %>
 			  <li>
 			    <div id="change_hoge<%= period.id %>" class="searchBox_block">
 			       <input class="check_box" type="checkbox" name='tag' value="<%= period.id %>" id="hoge<%= period.id %>">
@@ -17,6 +18,8 @@
 			       </input>
 			    </div>
 			   </li>
+             <% else %>
+             <% end %>
 		    <% end %>
 		   </ul>
 		 </div>
@@ -28,13 +31,16 @@
 		  <div class="search-boxs">
 			<ul class="searchBox__refine__check">
 			    <% @countrys.each do |country|%>
-				  <li>
-				  <div class="searchBox_block" id="change_hoge<%= country.id + 5 %>">
-				    <input class="check_box" type="checkbox" name='tag' value="<%= country.name %>" id="hoge<%= country.id + 5 %>">
-				      <label class="label" for="hoge<%= country.id + 5 %>"><%= country.name %></label>
-				    </input>
-				  </div>
-				  </li>
+			     <% if country.products.present? %>
+				    <li>
+					  <div class="searchBox_block" id="change_hoge<%= country.id + 5 %>">
+					    <input class="check_box" type="checkbox" name='tag' value="<%= country.name %>" id="hoge<%= country.id + 5 %>">
+					      <label class="label" for="hoge<%= country.id + 5 %>"><%= country.name %></label>
+					    </input>
+					  </div>
+				    </li>
+                <% else %>
+                <% end %>
 				<% end %>
 		     </ul>
 		   </div>

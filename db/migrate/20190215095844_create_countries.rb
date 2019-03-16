@@ -5,17 +5,14 @@ class CreateCountries < ActiveRecord::Migration[5.2]
       t.text :feature
       t.text :rent
       t.text :food_expenses
-      t.text :total
       t.text :ticket
       t.text :types_of_visas
       t.text :find_residence_info
       t.text :community_info
-      t.text :youtuber_info
       t.text :detail_info
-      t.text :about_movement
-      t.text :cost_information
       t.text :other
       t.text :flag_pic
+      t.text :show_pic
       t.timestamps
     end
   end

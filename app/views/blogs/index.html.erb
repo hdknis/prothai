@@ -1,25 +1,57 @@
  <main class="mt-5 all_top">
 <!--Main container-->
-<div class="container">
-<div class="row">
- <div class="col-md-12">
- </div>
-</div>
     <!--Grid row-->
-  <div class="row">
-   <div class="temporary_word">
-     <div class="all_shadow">
-       <h2 class="header_text">
-         <%= fa_icon("exclamation-triangle") %>現在準備中です
-       </h2>
-      <div class="main_contents">
-       インターン記事は随時更新していく予定です。<br>
-       またこのサイトに記事を載せたい方絶賛募集中なので<br>書きたいと思った方は<a href="/inquirys">お問い合わせページ</a>よりお問い合わせの方よろしくお願いします。
-      </div>
-     </div>
-   </div>
-</div>
+      <div class="container all_shadow">
+                      <h2 class="header_text">
+                       <%= fa_icon("plane") %>国別生活情報一覧
+                      </h2>
+                      <div class="show_contents">
+                       <div class="row">
+                         <% @countries.each do |country| %>
+                            <div class="col-sm-6 col-md-4 search">
+                          <a href="/countries/<%= country.id %>">
+                            <div class="card top20">
+                            <div class="sub_pic">
+                               <img class="img-thumbnail" src="<%= country.show_pic %>" alt="">
+                               <span><%= country.name %></span>
+                            </div>
+                             <div class="card-body">
+                                 <div class="card-title">
+                                   <table class="media-card_table">
+                                      <tr class="card_C_name">
+                                       <th><%= country.name %>の特徴</th>
+                                         <td><span class="dark word_type"><%= simple_format(country.feature) %></span></td>
+                                       </tr>
+                                   </table>
+                                 </div>
+                              </div>
+                            </div>
+                          </a>
+                          <!--/.Card-->
+                          </div>
+                         <% end %>
+                        <!--Grid column-->
+                        </div>
+                  </div>
+        </div>
+
+      <hr class="my-5">
+
+        <div class="container all_shadow">
+           <div class="temporary_word">
+               <h2 class="header_text">
+                 <%= fa_icon("exclamation-triangle") %>他のコンテンツは現在準備中です
+               </h2>
+              <div class="word_contents">
+               他のコンテンツは随時更新していく予定です。<br>
+               またこのサイトに記事を載せたい方絶賛募集中なので<br>書きたいと思った方は<a href="/inquirys">お問い合わせページ</a>よりお問い合わせの方よろしくお願いします。
+              </div>
+           </div>
+        </div>
 <!--Main container-->
+
+   <hr class="my-5">
+
 </main>
 <!--Main layout-->
 

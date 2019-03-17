@@ -1,6 +1,20 @@
+/*content系*/
+
+.show_contents{
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.word_contents{
+  margin:20px;
+}
+
+
+
+
 .all_shadow{
   background: #FFF;/*背景色*/
-  padding:5px 10px;
+  padding: 25px;
   text-decoration :none;
   box-shadow: 0 3px 6px rgba(0,0,0,0.2);
   border-radius: 2px;
@@ -10,6 +24,7 @@
 
 .card_side{
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);/*影*/
+  border-radius: 0rem;
 }
 
 .card_side:hover{
@@ -69,5 +84,6 @@
 }
 
 .card-title{
-  font-size: 15px;
+  font-size: 17px;
+  line-height: 1.0em
 }

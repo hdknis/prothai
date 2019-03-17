@@ -112,6 +112,7 @@ body{
 
 .card{
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);/*影*/
+  border-radius: 0rem;
 }
 
 .card:hover{
@@ -170,10 +171,6 @@ body{
   left: 5px;
 }
 
-.card-title{
-  font-size: 15px;
-}
-
 .top20{
   margin-top: 20px;
 }
@@ -206,12 +203,7 @@ body{
 
 /*会社記事詳細情報ゾーン*/
 .main_contents{
-  margin: 20px;
-}
-
-.main_contents p{
-  font-size: 17px;
-  line-height: 2.0em
+  margin-top: 10px;
 }
 
 .show_border{
@@ -265,17 +257,18 @@ body{
 }
 
 .header_text{
-  padding: 0.5em;/*文字周りの余白*/
   color: #4267b2;/*文字色*/
   background: #FFF;/*背景色*/
-  border: solid 3px #516ab6;/*下線*/
   text-align: left;
-  font-size: 24px;
+  font-size: 28px;
   font-weight:bold;
-  position: relative;/*fixedの場合もありますね*/
-  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  /*box-shadow: 0 3px 6px rgba(0,0,0,0.2);*/
   /*以下色とかの装飾*/
-  padding: 17px;
+  padding: 25px;
+  color: #494949;/*文字色*/
+  background: transparent;/*背景透明に*/
+  border-left: solid 5px #7db4e6;/*左線*/
+  margin-top: 0.5em;
 }
 
 .flag_sign {
@@ -307,12 +300,12 @@ body{
   padding-bottom: 0.5em;
 }
 .item:nth-child(1){
-  width: 250px;
+  width: 220px;
   font-size: 16px;
 }
 .item:nth-child(2){
-  width: 250px;
-  font-size: 18px;
+  width: 220px;
+  font-size: 14px;
   font-weight:bold;
   color: #333333;
 }

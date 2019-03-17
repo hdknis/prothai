@@ -26,123 +26,125 @@
 
 </div>
 <main class="mt-5">
-    <div class="container">
-        <section id="best-features">
-                <div class="recruit_content">
-               <div class="all_shadow">
+    <div class="container all_shadow">
                   <h2 class="header_text">
-                   <%= fa_icon("plane") %>Mash UPとは？
-                  </h2>
-                  <div class="main_contents">
-                   【”世界”をもっと身近に！】というミッションを達成するために、<br>
-立ち上げた海外インターのWEBメディアです。
-                  </div>
-                </div>
-              </div>
-        </section>
-
-        <!--Section: Best Features-->
-        <section id="best-features">
-                <div class="recruit_content">
-               <div class="all_shadow">
-                  <h2 class="header_text">
-                   <%= fa_icon("plane") %>海外インターンとは？
+                   <%= fa_icon("file-user") %>社長インタビュー一覧
                   </h2>
                   <div class="main_contents">
                    <div class="row">
-                     <div class="col-lg-6 col-md-12">
-                       aaaaaaa
-                     </div>
-                     <div class="col-lg-6 col-md-12">
-                       aaaaaaa
-                     </div>
-                   </div>
+                     <% @products.each do |product| %>
+                        <div class="col-sm-6 col-md-4 search" data-category='CMS' data-tag='["<%= product.country.name %>","<%= product.period.id %>"]'>
+                      <a href="/products/<%= product.id %>">
+                        <div class="card top20">
+                        <div class="sub_pic">
+                           <img class="img-thumbnail" src="<%= product.slider_photo1 %>" alt="">
+                           <span><%= product.country.name %></span>
+                        </div>
+                         <div class="card-body">
+                            <div class="card-title">
+                               <strong><%= simple_format(product.c_title) %></strong>
+                            </div>
+                             <div class="card-title">
+                               <table class="media-card_table">
+                                  <tr class="card_C_name">
+                                   <th>会社名</th>
+                                     <td><span class="dark"><%= product.c_name %></span></td>
+                                   </tr>
+                                   <tr class="card_C_priod">
+                                     <th>期間</th>
+                                     <td><span class="dark"><%= product.period.period %></span></td>
+                                  </tr>
+                               </table>
+                             </div>
+                             <% product.connect_tags.each do |connect_tag| %>
+                              <li class="tag_zone_index">
+                               <a class="" href="#"><%= connect_tag.tag.name %></a>
+                               </li>
+                             <% end %>
+                          </div>
+                        </div>
+                      </a>
+                      <!--/.Card-->
+                      </div>
+                     <% end %>
+                    <!--Grid column-->
+                    </div>
                   </div>
-                </div>
-              </div>
-        </section>
+                   <a href="products"><div class="btn btn-lg btn-block index_page_btn margin_btn">他の社長インタビューを見に行く</div></a>
+    </div>
+
+        <hr class="my-5">
+
+        <!--Section: Best Features-->
+        <div class="container all_shadow">
+                  <h2 class="header_text">
+                   <%= fa_icon("flag-alt") %>国別生活情報一覧
+                  </h2>
+                  <div class="main_contents">
+                   <div class="row">
+                     <% @countries.each do |country| %>
+                        <div class="col-sm-6 col-md-4 search">
+                      <a href="/countries/<%= country.id %>">
+                        <div class="card top20">
+                        <div class="sub_pic">
+                           <img class="img-thumbnail" src="<%= country.show_pic %>" alt="">
+                           <span><%= country.name %></span>
+                        </div>
+                         <div class="card-body">
+                             <div class="card-title">
+                               <table class="media-card_table">
+                                  <tr class="card_C_name">
+                                   <th><%= country.name %>の特徴</th>
+                                     <td><span class="dark word_type"><%= simple_format(country.feature) %></span></td>
+                                   </tr>
+                               </table>
+                             </div>
+                          </div>
+                        </div>
+                      </a>
+                      <!--/.Card-->
+                      </div>
+                     <% end %>
+                    <!--Grid column-->
+                    </div>
+                  </div>
+                  <a href="blogs"><div class="btn btn-lg btn-block index_page_btn margin_btn">他の国別情報を見に行く</div></a>
+          </div>
         <!--Section: Best Features-->
 
         <hr class="my-5">
 
         <!--Section: Examples-->
-        <section id="examples">
-         <div class="recruit_content">
-                <div class="all_shadow">
-                  <h2 class="header_text">
-                  <%= fa_icon("check-square") %>海外インターンに関する記事・体験談・口コミなど
+        <div class="container all_shadow_cla">
+                  <h2 class="header_text_cla">
+                   <%= fa_icon("fire-alt") %>クラウドファンディング挑戦中!!!
                   </h2>
-                  <div class="main_contents">
-                    現在準備中です
-                  </div>
-                  </h2>
-                </div>
-              </div>
-         <div class="decision_process">
-                <div class="all_shadow">
-                  <div class="main_contents">
-                    １,目的
-                  </div>
-                  </h2>
-                </div>
-              </div>
-            <div class="risize_arrow">
-               <%= fa_icon("arrow-down") %>
-            </div>
-         <div class="decision_process">
-                <div class="all_shadow">
-                  <div class="main_contents">
-                    ２,情報
-                  </div>
-                  </h2>
-                </div>
-              </div>
-             <div class="risize_arrow">
-               <%= fa_icon("arrow-down") %>
-            </div>
-        <div class="decision_process">
-                <div class="all_shadow">
-                  <div class="main_contents">
-                    ３,手段
-                  </div>
-                  </h2>
-                </div>
-              </div>
-
-
-
-        </section>
+                  <div class="cla_contents">
+                     <div class="cla_title"><%= fa_icon("fist-raised") %>海外インターンの情報を発信するWEBメディア『MashUp』をより良い物に！！</div>
+                        <div class="embed-responsive embed-responsive-16by9">
+                          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/UhUqiHWKSzc?modestbranding=1&showinfo=0&controls=0" frameborder="0"  allowfullscreen></iframe>
+                        </div>
+                        <div class="cla_body">
+                         【”世界”をもっと身近に！】をミッションに掲げた海外インターン・ボランティアのWEBメディア『MashUp』をより良くしたいです。<br>具体的には、協力企業を集めるために東南アジアでの営業を計画しています。<br>そのための資金を集めるためにクラウドファンディングに挑戦します！
+                         <br>どうぞご支援よろしくお願いします。
+                        </div>
+                      </div>
+                   <a href="https://camp-fire.jp/projects/view/128502"><div class="btn btn-lg btn-block index_page_btn margin_btn">詳細はこちらから</div></a>
+        </div>
         <!--Section: Examples-->
 
         <hr class="my-5">
 
         <!--Section: Gallery-->
-        <section id="gallery">
-         <div class="recruit_content">
-                <div class="all_shadow">
-                  <h2 class="header_text">
-                   <%= fa_icon("table") %>媒体の選択
-                  </h2>
-                  <div class="main_contents">
-                    マトリクス写真を載せる
-                  </div>
-                </div>
-              </div>
-
-
-
-        </section>
+       <div class="container all_shadow">
+           <h2 class="header_text">
+             <%= fa_icon("poll-people") %>企業様が不足しています
+           </h2>
+          <div class="word_contents">
+           詳しくは<a href="/inquirys">お問い合わせページ</a>よりご連絡よろしくお願いします。
+          </div>
+       </div>
         <!--Section: Gallery-->
-
         <hr class="my-5">
-
-        <!--Section: Contact-->
-        <section id="contact">
-
-
-
-        </section>
-        <!--Section: Contact-->
-
     </div>
 </main>

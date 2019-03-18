@@ -2,7 +2,7 @@ class StaticPagesController < ApplicationController
 
 	def home
 	  @products = Product.order('id ASC').limit(3)
-	  @countries = Country.order('id ASC').limit(3)
+	  @countries = Country.where.not(show_pic: nil, flag_pic: nil).limit(3)
 	end
 
 	def about

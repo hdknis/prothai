@@ -1,0 +1,43 @@
+<div class="container all_shadow">
+  <h2 class="header_text">
+   <%= fa_icon("flag-alt") %>国別生活情報一覧
+  </h2>
+  <div class="main_contents">
+   <div class="row">
+     <% @countries.each do |country| %>
+        <div class="col-sm-6 col-md-4 search">
+      <a href="/countries/<%= country.id %>">
+        <div class="card top20">
+        <div class="sub_pic">
+           <img class="img-thumbnail" src="<%= country.show_pic %>" alt="">
+           <span><%= country.name %></span>
+        </div>
+         <div class="card-body">
+             <div class="card-title">
+               <table class="media-card_table">
+                  <tr class="card_C_name">
+                   <th><%= country.name %>の特徴</th>
+                     <td class="word_type">
+                       <span class="dark">
+                       <%= truncate(country.feature, length: 50) do %>
+                          <a href="/countries/<%= country.id %>">
+                              <div class="btn btn-block con_page_btn">
+                                 続きを読む
+                               </div>
+                          </a>
+                       <% end %>
+                       </span>
+
+                     </td>
+                   </tr>
+               </table>
+             </div>
+          </div>
+        </div>
+      </a>
+      <!--/.Card-->
+      </div>
+     <% end %>
+    <!--Grid column-->
+    </div>
+  </div>

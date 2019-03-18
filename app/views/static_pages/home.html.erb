@@ -75,41 +75,10 @@
 
         <hr class="my-5">
 
-        <!--Section: Best Features-->
-        <div class="container all_shadow">
-                  <h2 class="header_text">
-                   <%= fa_icon("flag-alt") %>国別生活情報一覧
-                  </h2>
-                  <div class="main_contents">
-                   <div class="row">
-                     <% @countries.each do |country| %>
-                        <div class="col-sm-6 col-md-4 search">
-                      <a href="/countries/<%= country.id %>">
-                        <div class="card top20">
-                        <div class="sub_pic">
-                           <img class="img-thumbnail" src="<%= country.show_pic %>" alt="">
-                           <span><%= country.name %></span>
-                        </div>
-                         <div class="card-body">
-                             <div class="card-title">
-                               <table class="media-card_table">
-                                  <tr class="card_C_name">
-                                   <th><%= country.name %>の特徴</th>
-                                     <td><span class="dark word_type"><%= simple_format(country.feature) %></span></td>
-                                   </tr>
-                               </table>
-                             </div>
-                          </div>
-                        </div>
-                      </a>
-                      <!--/.Card-->
-                      </div>
-                     <% end %>
-                    <!--Grid column-->
-                    </div>
-                  </div>
-                  <a href="blogs"><div class="btn btn-lg btn-block index_page_btn margin_btn">他の国別情報を見に行く</div></a>
-          </div>
+        <!--Section: 国別情報小出し部分-->
+        <%= render 'common/countryinfo.html.erb' %>
+          <a href="blogs"><div class="btn btn-lg btn-block index_page_btn margin_btn">他の国別情報を見に行く</div></a>
+        </div>
         <!--Section: Best Features-->
 
         <hr class="my-5">

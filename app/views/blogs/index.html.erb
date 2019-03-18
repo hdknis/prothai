@@ -1,39 +1,8 @@
  <main class="mt-5 all_top">
 <!--Main container-->
     <!--Grid row-->
-      <div class="container all_shadow">
-                      <h2 class="header_text">
-                       <%= fa_icon("plane") %>国別生活情報一覧
-                      </h2>
-                      <div class="show_contents">
-                       <div class="row">
-                         <% @countries.each do |country| %>
-                            <div class="col-sm-6 col-md-4 search">
-                          <a href="/countries/<%= country.id %>">
-                            <div class="card top20">
-                            <div class="sub_pic">
-                               <img class="img-thumbnail" src="<%= country.show_pic %>" alt="">
-                               <span><%= country.name %></span>
-                            </div>
-                             <div class="card-body">
-                                 <div class="card-title">
-                                   <table class="media-card_table">
-                                      <tr class="card_C_name">
-                                       <th><%= country.name %>の特徴</th>
-                                         <td><span class="dark word_type"><%= simple_format(country.feature) %></span></td>
-                                       </tr>
-                                   </table>
-                                 </div>
-                              </div>
-                            </div>
-                          </a>
-                          <!--/.Card-->
-                          </div>
-                         <% end %>
-                        <!--Grid column-->
-                        </div>
-                  </div>
-        </div>
+      <%= render 'common/countryinfo.html.erb' %>
+      </div>
 
       <hr class="my-5">
 

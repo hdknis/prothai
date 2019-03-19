@@ -1,12 +1,12 @@
 class ApplicationController < ActionController::Base
 	layout 'review_site'
+	before_action :ensure_domain
 	protect_from_forgery with: :exception
 	def after_sign_out_path_for(resource)
      rails_admin_path
     end
 
   #herokuapp.comから独自ドメインへリダイレクト
-  before_filter :ensure_domain
   FQDN = 'mash-up1221.com'
   # redirect correct server from herokuapp domain for SEO
   def ensure_domain

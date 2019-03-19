@@ -1,11 +1,11 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  #google-analytics
+  GA.tracker = "UA-136492396-1"
   # Code is not reloaded between requests.
   config.cache_classes = true
 
-  #google-analytics
-  GA.tracker = "UA-136492396-1"
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers

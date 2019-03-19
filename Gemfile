@@ -76,7 +76,6 @@ gem 'cancan'
 gem 'font-awesome-rails'
 gem 'carrierwave'
 gem 'cloudinary'
-gem 'rack-rewrite'
 
 group :production do
   gem 'rails_12factor'

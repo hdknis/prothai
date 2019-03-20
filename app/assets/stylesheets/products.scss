@@ -209,10 +209,14 @@ body{
 /*会社記事詳細情報ゾーン*/
 .main_contents{
   margin: 10px;
-  font-size: 14px;
-
+  font-size: 17px;
+  line-height: 200%
 }
 
+.con_contents{
+  margin: 10px;
+  font-size: 17px;
+}
 .show_border{
   /* margin-bottom: 50px;*/
    border: 2px solid #FFF;

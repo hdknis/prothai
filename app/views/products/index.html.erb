@@ -70,10 +70,11 @@
                       </tr>
                    </table>
                  </div>
-                 <% product.connect_tags.each do |connect_tag| %>
+                 <% product.connect_tags.each_with_index do |connect_tag,i| %>
                   <li class="tag_zone_index">
                    <a class="" href="#"><%= connect_tag.tag.name %></a>
                    </li>
+                   <%  break if i== 3 %>
                  <% end %>
               </div>
             </div>

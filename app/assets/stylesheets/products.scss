@@ -276,6 +276,35 @@ body{
   margin-top: 0.5em;
 }
 
+@media only screen and (min-width: 1500px) {
+  .header_text {
+   font-size: 28px;
+  }
+  .head_line{
+   font-size: 22px;
+  }
+}
+
+/* タブレット用のCSS */
+@media only screen and (min-width : 768px) and (max-width : 1200px) {
+  .header_text {
+   font-size: 22px;
+  }
+  .head_line{
+   font-size: 20px;
+  }
+}
+
+/* スマホ用のCSS */
+@media only screen and (max-width: 479px) {
+  .header_text {
+   font-size: 18px;
+  }
+  .head_line{
+   font-size: 18px;
+  }
+}
+
 .flag_sign {
     padding: 0.5em 1.0em;
     margin:  0.4em 0.8em;

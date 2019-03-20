@@ -209,6 +209,7 @@ body{
 /*会社記事詳細情報ゾーン*/
 .main_contents{
   margin-top: 10px;
+  font-size: 14px;
 }
 
 .show_border{
@@ -249,6 +250,8 @@ body{
   border-left: 6px solid #4267b2;
   font-size: 22px;
   color: black;
+  color: #222;
+  font-weight:bold;
 }
 
 .head_line:after{
@@ -450,7 +453,7 @@ footer{
 }
 
 .word_color{
-  color: #555555  ;
+  color: #222;
 }
 
 

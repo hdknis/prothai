@@ -3,11 +3,15 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .cover-img {
-  height: 600px;
+  height: 550px;
   width: 100%;
   display: table;
   background-size: cover;
   background-image:linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('https://res.cloudinary.com/ho9upjx8x/image/upload/v1550732852/mash_up_routine/colorful-1974699_1920.png');
+}
+
+.pic_top{
+  margin-top: 30px;
 }
 
 .cover-text{

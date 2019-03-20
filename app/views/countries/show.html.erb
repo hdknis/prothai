@@ -1,42 +1,41 @@
 <style type="text/css">
-#countory_pic {
-    background: url("<%= @country.show_pic %>")no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    color: #FFF;
+.countory_pic {
+  height: 550px;
+  width: 100%;
+  display: table;
+  background-size: cover;
+  background-image:linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('<%= @country.show_pic %>');
+}
+
+@media only screen and (min-width: 1500px) {
+  .countory_pic {
+    height: 800px;
+  }
+}
+
+/* タブレット用のCSS */
+@media only screen and (min-width : 768px) and (max-width : 1200px) {
+  .countory_pic {
     height: 500px;
+  }
+}
+
+/* スマホ用のCSS */
+@media only screen and (max-width: 479px) {
+  .countory_pic {
+    height: 300px;
+  }
 }
 </style>
-<div id="countory_pic" class="view">
-
-  <div class="mask rgba-black-strong">
-
-        <div class="container-fluid d-flex align-items-center justify-content-center">
-
-            <div class="row d-flex justify-content-center text-center">
-
-                <div class="col-md-12">
-
-                    <!-- Heading -->
-                    <h2 class="display-4 font-weight-bold white-text pt-5 mb-2">国別生活状況まとめ</h2>
-
-                    <!-- Divider -->
-                    <hr class="hr-light">
-
-                    <!-- Description -->
-                    <h4 class="display-5 white-text my-8"><%= @country.name %>編</h4>
-                </div>
-
-            </div>
-
-        </div>
-
+<div class="img-fluid">
+    <div class="col-xs-12 countory_pic">
+      <div class="cover-text text-center">
+        <div><p>国別生活状況まとめ</p></div>
+        <div class="cover-subtext"><p><%= @country.name %>編</p></div>
+      </div>
     </div>
-
 </div>
-<div class="container all_top">
+<div class="container sm_top">
     <!--Grid row-->
     <div class="row word_color">
         <div class="col-lg-9">

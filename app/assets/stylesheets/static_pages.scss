@@ -1,16 +1,62 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.cover-img {
+  height: 600px;
+  display: table;
+  width: 100%;
+  background-size: cover;
+}
+
+.cover-text{
+  color: #fff;
+  font-size: 60px
+}
+
+/* ワイドスクリーン用のCSS */
+@media only screen and (min-width: 1500px) {
+  .cover-img {
+    height: 800px;
+  }
+  .cover-text p{
+    font-size: 50px;
+  }
+}
+
+/* タブレット用のCSS */
+@media only screen and (min-width : 768px) and (max-width : 1200px) {
+  .cover-img {
+    height: 500px;
+  }
+}
+
+/* スマホ用のCSS */
+@media only screen and (max-width: 479px) {
+  .cover-img {
+    height: 300px;
+  }
+  .cover-text p{
+    font-size: 26px;
+  }
+}
+
+.cover-text {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
 .mask{
   height: 100%;
 }
 /*homeのcss*/
 #intro {
-    background: url("http://lh3.googleusercontent.com/mOaLAnuO-dj_xVqxRMpCoT84gAiwMO6lLV96TAbg3cvKvKqkfTFpjRYbDu4qqXaUNVnpjnnTASA5wi53un4mLllSGpnR21PCLiJBR3dseop7TKVpxHABCTZqWX68XHYYvnHqm9RrW__IA6CMeUZJ0jaJLpzLuUGqnq9N59ra9ECmO4Tv-BYRq6I1mjuhzazzLMQ-zjE4SDLRKo9FdnS72Xw0ykdDLpLjYGEmwHbY_m9jaC60M4CYMBVn_h02DCSl14WcjidLrfAXirUWwiz1RrQjohN6LYT7Y1Xku3UoJXVOX70c_9sG3eUa1GvQA9iujFM18iAyA25QDyuOx5RzKGxwuGJCFU1_BsYVxygg_slOrOeyP6OkNkul-CArBOXXyLmEm_4wh1t31O88KA9-WOgs8iqDep6bnhja10cEeKS-VVRO8o4RagUE451bV_zsHI3sf-MwSxxj6vOGzs1ZXdJxkqPh9aJE7k_pi8dO3oC1jeqpHESbn3cwPWy-RYIKPO05k8za1RuLKqrJvKYGtZdj6ZobH3FM1RBScctIld16MEGIWy1cbeV3-zj5QkmzO_5p6YWvKIIxdOQ0TqzMJajVHG3iPTJRAGNiYAADxupM8Bokufi0me4ddtzVD62kISqPG4d6DFNK9DdLjRqb5kCLwZbIX_A=w300-h500-no")no-repeat center center fixed;
-    /*-webkit-background-size: cover;
+    background: url("https://res.cloudinary.com/ho9upjx8x/image/upload/v1550732852/mash_up_routine/colorful-1974699_1920.png")no-repeat center center fixed;
+    -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;*/
+    background-size: cover;
     color: #FFF;
     height: 500px;
 }

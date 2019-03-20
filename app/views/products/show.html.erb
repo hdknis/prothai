@@ -111,7 +111,7 @@
             <% if @product.title_i_mission_life.present? %>
                 <div class="bussinness_content content_box">
                     <h2 class="header_text">
-                     <%= fa_icon("chart-bar") %><%= @product.title_i_mission_life %>
+                     <%= fa_icon("chart-bar") %><%= simple_format(@product.title_i_mission_life) %>
                     </h2>
                     <div class="main_contents">
                       <i class="i"></i><%= simple_format(@product.i_mission_life) %>
@@ -122,7 +122,7 @@
             <% if @product.title_i_3wmake_company.present? %>
                 <div class="experience_content content_box">
                     <h2 class="header_text">
-                    <%= fa_icon("history") %><%= @product.title_i_3wmake_company %>
+                    <%= fa_icon("history") %><%= @simple_format(product.title_i_3wmake_company) %>
                     </h2>
                     <div class="main_contents">
                      <%= simple_format(@product.i_3wmake_company) %>
@@ -133,7 +133,7 @@
             <% if @product.title_i_current_state.present? %>
                 <div class="request_content content_box">
                     <h2 class="header_text">
-                     <%= fa_icon("stopwatch") %><%= @product.title_i_current_state %>
+                     <%= fa_icon("stopwatch") %><%= simple_format(@product.title_i_current_state) %>
                     </h2>
                     <div class="main_contents">
                       <i class="i"></i><%= simple_format(@product.i_current_state) %>
@@ -144,7 +144,7 @@
             <% if @product.title_i_gotover_point.present? %>
                 <div class="intern_content content_box">
                       <h2 class="header_text">
-                        <%= fa_icon("child") %><%= @product.title_i_gotover_point %>
+                        <%= fa_icon("child") %><%= simple_format(@product.title_i_gotover_point) %>
                       </h2>
                   <div class="main_contents">
                   <%= simple_format(@product.i_gotover_point) %>
@@ -155,7 +155,7 @@
             <% if @product.title_i_future_policies.present? %>
                 <div class="intern_content content_box">
                     <h2 class="header_text">
-                     <%= fa_icon("forward") %><%= @product.title_i_future_policies %>
+                     <%= fa_icon("forward") %><%= simple_format(@product.title_i_future_policies) %>
                     </h2>
                     <div class="main_contents">
                      <%= simple_format(@product.i_future_policies) %>
@@ -166,7 +166,7 @@
             <% if @product.title_i_message_students.present? %>
                   <div class="intern_content content_box">
                     <h2 class="header_text">
-                     <%= fa_icon("comments") %><%= @product.title_i_message_students %>
+                     <%= fa_icon("comments") %><%= simple_format(@product.title_i_message_students) %>
                     </h2>
                     <div class="main_contents">
                      <%= simple_format(@product.i_message_students) %>
@@ -177,7 +177,7 @@
              <% if @product.i_recommended_books.present? %>
                   <div class="intern_content content_box">
                     <h2 class="header_text">
-                    <%= fa_icon("book") %><%= @product.title_i_recommended_books %>
+                    <%= fa_icon("book") %><%= simple_format(@product.title_i_recommended_books) %>
                     </h2>
                     <div class="main_contents">
                      <%= simple_format(@product.i_recommended_books) %>
@@ -187,7 +187,7 @@
              <% end %>
                   <div class="intern_content content_box">
                     <h2 class="header_text">
-                   <%= fa_icon("list-alt") %><%= @product.title_i_editor_word %>
+                   <%= fa_icon("list-alt") %><%= simple_format(@product.title_i_editor_word) %>
                     </h2>
                     <div class="main_contents">
                     <%= fa_icon("person-dolly-empty") %>インタビューした人

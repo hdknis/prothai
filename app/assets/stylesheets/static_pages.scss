@@ -4,14 +4,21 @@
 
 .cover-img {
   height: 600px;
-  display: table;
   width: 100%;
+  display: table;
   background-size: cover;
+  background-image:linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('https://res.cloudinary.com/ho9upjx8x/image/upload/v1550732852/mash_up_routine/colorful-1974699_1920.png');
 }
 
 .cover-text{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
   color: #fff;
   font-size: 60px
+}
+.cover-subtext{
+  font-size: 40px
 }
 
 /* ワイドスクリーン用のCSS */
@@ -21,6 +28,9 @@
   }
   .cover-text p{
     font-size: 50px;
+  }
+  .cover-subtext p{
+    font-size: 30px;
   }
 }
 
@@ -37,14 +47,11 @@
     height: 300px;
   }
   .cover-text p{
-    font-size: 26px;
+    font-size: 32px;
   }
-}
-
-.cover-text {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
+  .cover-subtext p{
+    font-size: 18px;
+  }
 }
 
 .mask{

@@ -122,7 +122,7 @@
             <% if @product.title_i_3wmake_company.present? %>
                 <div class="experience_content content_box">
                     <h2 class="header_text">
-                    <%= fa_icon("history") %><%= @simple_format(product.title_i_3wmake_company) %>
+                    <%= fa_icon("history") %><%= simple_format(@product.title_i_3wmake_company) %>
                     </h2>
                     <div class="main_contents">
                      <%= simple_format(@product.i_3wmake_company) %>

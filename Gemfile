@@ -76,7 +76,7 @@ gem 'cancan'
 gem 'font-awesome-rails'
 gem 'carrierwave'
 gem 'cloudinary'
-gem 'google-analytics-rails'
+gem 'google-analytics-rails', '~> 1.1', '>= 1.1.1'
 
 group :production do
   gem 'rails_12factor'

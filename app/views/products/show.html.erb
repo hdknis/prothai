@@ -166,7 +166,7 @@
             <% if @product.title_i_message_students.present? %>
                   <div class="intern_content content_box">
                     <h2 class="header_text">
-                     <%= fa_icon("comments") %><%= simple_format(@product.title_i_message_students) %>
+                     <%= fa_icon("comments") %><%= @product.title_i_message_students %>
                     </h2>
                     <div class="main_contents">
                      <%= simple_format(@product.i_message_students) %>

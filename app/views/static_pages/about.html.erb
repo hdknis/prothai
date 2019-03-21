@@ -13,7 +13,8 @@
                     <!-- Divider -->
 
                     <!-- Description -->
-                    <h4 class="white-text my-8 font_subsite">海外インターンを通して人生に新たな１ページを刻もう</h4>
+                    <h4 class="white-text my-8 font_subsite">【”世界”をもっと身近に！】というミッションを達成するために<br>      立ち上げた海外インターンのWEBメディアです
+                    </h4>
                 </div>
 
             </div>
@@ -56,7 +57,7 @@
 
       // 4. The API will call this function when the video player is ready.
       function onPlayerReady(event) {
-        event.target.mute();
+        event.target.setVolume(0);
         event.target.playVideo();
       }
 
@@ -74,127 +75,87 @@
       }
     </script>
 
-<main class="mt-5">
-    <div class="container">
-        <section id="best-features">
-                <div class="recruit_content">
-               <div class="all_shadow">
+               <div class="container all_shadow sm_top">
                   <h2 class="header_text">
                    <%= fa_icon("plane") %>Mash UPとは？
                   </h2>
                   <div class="main_contents">
-                   <img src="https://res-console.cloudinary.com/ho9upjx8x/thumbnails/v1/image/upload/v1550933031/bWFzaF91cF9yb3V0aW5lL01hc2h1cOOBqOOBr1_lhpnnnJ8=/grid" class="img-fluid">
+                   <img src="https://res.cloudinary.com/ho9upjx8x/image/upload/v1553150360/mash_up_routine/%E3%83%9E%E3%83%83%E3%82%B7%E3%83%A5%E3%82%A2%E3%83%83%E3%83%95%E3%82%9A%E5%86%99%E7%9C%9F.png" class="img-fluid">
                   </div>
                 </div>
-              </div>
-        </section>
 
         <!--Section: Best Features-->
-        <section id="best-features">
-                <div class="recruit_content">
-               <div class="all_shadow">
+
+        <hr class="my-5">
+
+
+
+         <div class="container all_shadow">
+             <h2 class="header_text">
+                <%= fa_icon("plane") %>MashUpの特徴
+             </h2>
+              <div class="main_contents">
+                <img src="https://res.cloudinary.com/ho9upjx8x/image/upload/v1553159006/mash_up_routine/908f7e4f138502741f6e47a6a58f7ef5.png" class="img-fluid">
+              </div>
+         </div>
+
+         <hr class="my-5">
+
+        <!--Section: Examples-->
+            <div class="container all_shadow">
                   <h2 class="header_text">
-                   <%= fa_icon("plane") %>海外インターンとは？
+                  <%= fa_icon("check-square") %>提供しているコンテンツ
                   </h2>
                   <div class="main_contents">
-                   <div class="row">
-                     <div class="col-lg-5 col-md-12">
-                       <div class="about_box">
-                     </div>
-                     <div class="col-lg-2 col-md-12">
-                       矢印＝！
-                     </div>
-                     <div class="col-lg-5 col-md-12">
-                      <div class="about_box">
-                     </div>
-                     </div>
+                  <div class="sm_header_text">
+                    ①海外インターン・ボランティア・各国の生活費情報
+                    <a href="blogs"><div class="btn btn-lg btn-block index_page_btn margin_btn">詳しくはこちらから</div></a>
+                  </div>
+                  <div class="sm_header_text">
+                    ②経営者インタビュー＆インターンシップ募集情報
+                    <a href="products"><div class="btn btn-lg btn-block index_page_btn margin_btn">詳しくはこちらから</div></a>
+                  </div>
+                  <h2 class="sm_header_text">
+                    ③海外インターンに関する記事・体験談・口コミなど
+                  </h2>
+                    <div class="temporary_word">
+                      <div class="main_contents">
+                      <%= fa_icon("exclamation-triangle") %>このコンテンツは現在準備中です<br>
+                       このサイトに記事を載せたい方絶賛募集中なので<br>書きたいと思った方は<a href="/inquirys">お問い合わせページ</a>よりお問い合わせの方よろしくお願いします。
+                      </div>
                    </div>
                   </div>
-                </div>
-              </div>
-        </section>
-        <!--Section: Best Features-->
+            </div>
 
-        <hr class="my-5">
+      <hr class="my-5">
 
         <!--Section: Examples-->
-        <section id="examples">
-         <div class="recruit_content">
-                <div class="all_shadow">
-                  <h2 class="header_text">
-                  <%= fa_icon("check-square") %>海外インターンに関する記事・体験談・口コミなど
-                  </h2>
-                  <div class="main_contents">
-                    現在準備中です
-                  </div>
-                  </h2>
-                </div>
-              </div>
-         <div class="decision_process">
-                <div class="all_shadow">
-                  <div class="main_contents">
-                    １,目的
-                  </div>
-                  </h2>
-                </div>
-              </div>
-            <div class="risize_arrow">
-               <%= fa_icon("arrow-down") %>
+            <div class="container all_shadow">
+               <ul class="detail_info">
+                      <li class="item"><%= fa_icon("globe") %>団体名</li>
+                      <li class="item">任意団体MashUp</li>
+                    </ul>
+                    <ul class="detail_info">
+                      <li class="item"><%= fa_icon("language") %>URL</li>
+                      <li class="item">https://mash-up1221.com/</li>
+                    </ul>
+                    <ul class="detail_info">
+                      <li class="item"><%= fa_icon("user-lock") %>活動内容</li>
+                      <li class="item">Webメディア運営</li>
+                    </ul>
+                    <ul class="detail_info">
+                      <li class="item"><%= fa_icon("user-tie") %>創立者</li>
+                      <li class="item">島 勇一</li>
+                    </ul>
+                    <ul class="detail_info">
+                      <li class="item"><%= fa_icon("calendar-alt") %>設立日</li>
+                      <li class="item">2018年12月21日</li>
+                    </ul>
+                    <ul class="detail_info">
+                      <li class="item"><%= fa_icon("users") %>メンバー数</li>
+                      <li class="item">9名</li>
+                    </ul>
+                   </div>
             </div>
-         <div class="decision_process">
-                <div class="all_shadow">
-                  <div class="main_contents">
-                    ２,情報
-                  </div>
-                  </h2>
-                </div>
-              </div>
-             <div class="risize_arrow">
-               <%= fa_icon("arrow-down") %>
-            </div>
-        <div class="decision_process">
-                <div class="all_shadow">
-                  <div class="main_contents">
-                    ３,手段
-                  </div>
-                  </h2>
-                </div>
-              </div>
-
-
-
-        </section>
-        <!--Section: Examples-->
-
-        <hr class="my-5">
-
-        <!--Section: Gallery-->
-        <section id="gallery">
-         <div class="recruit_content">
-                <div class="all_shadow">
-                  <h2 class="header_text">
-                   <%= fa_icon("table") %>媒体の選択
-                  </h2>
-                  <div class="main_contents">
-                    マトリクス写真を載せる
-                  </div>
-                </div>
-              </div>
-
-
-
-        </section>
-        <!--Section: Gallery-->
-
-        <hr class="my-5">
-
-        <!--Section: Contact-->
-        <section id="contact">
-
-
-
-        </section>
-        <!--Section: Contact-->
 
     </div>
-</main>

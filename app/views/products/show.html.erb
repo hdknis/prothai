@@ -86,16 +86,18 @@
             </li>
             <% end %>
           </ul>
-      <% if @product.title_i_mission_life.present? && @product.title_i_3wmake_company.present? && @product.title_i_current_state && @product.title_i_gotover_point.present?  && @product.title_i_future_policies && @product.title_i_message_students && @product.title_i_editor_word %>
+      <% if @product.title_i_mission_life.present? && @product.title_i_3wmake_company.present? && @product.title_i_current_state.present? && @product.title_i_gotover_point.present?  && @product.title_i_future_policies.present? && @product.title_i_message_students.present? && @product.title_i_editor_word.present? %>
+        <!-- インタビュー記事があった時の処理 -->
         <ul class="nav" id="pills-tab" role="tablist">
-        <li class="nav-item show_tabs show_bottom">
-         <a class="nav-link active" id="pills-info-tab" data-toggle="tab" href="#pills-info" role="tab" aria-controls="pills-info" aria-selected="false">会社紹介</a>
+        <li class="nav-item show_tabs show_bottom  active">
+          <a class="nav-link" id="pills-interview-tab" data-toggle="tab" href="#pills-interview" role="tab" aria-controls="pills-interview"  aria-selected="true">社長インタビュー</a>
         </li>
         <li class="nav-item show_tabs show_bottom">
-          <a class="nav-link" id="pills-interview-tab" data-toggle="tab" href="#pills-interview" role="tab" aria-controls="pills-interview"  aria-selected="true">社長インタビュー</a>
+         <a class="nav-link" id="pills-info-tab" data-toggle="tab" href="#pills-info" role="tab" aria-controls="pills-info" aria-selected="false">会社紹介</a>
         </li>
       </ul>
       <% else %>
+       <!-- インタビュー記事がなかった時の処理 -->
       <% end %>
     <% if @product.recruitment_stop_flag == "TURE" %>
       <div class="flag_sign">
@@ -106,7 +108,13 @@
        <div class="gray-content">
        </div>
           <div class="tab-content" id="pills-tabContent">
-           <div class="tab-pane fade" id="pills-interview" role="tabpanel" aria-labelledby="pills-interview-tab">
+         <% if @product.title_i_mission_life.present? && @product.title_i_3wmake_company.present? && @product.title_i_current_state.present? && @product.title_i_gotover_point.present?  && @product.title_i_future_policies.present? && @product.title_i_message_students.present? && @product.title_i_editor_word.present? %>
+           <!-- インタビュー記事があった時の処理 -->
+           <div class="tab-pane fade active show" id="pills-interview" role="tabpanel" aria-labelledby="pills-interview-tab">
+          <% else %>
+           <!-- インタビュー記事がなかった時の処理 -->
+            <div class="tab-pane fade" id="pills-interview" role="tabpanel" aria-labelledby="pills-interview-tab">
+          <% end %>
             <div class="white-content">
             <% if @product.title_i_mission_life.present? %>
                 <div class="bussinness_content content_box">
@@ -199,8 +207,13 @@
                   </div>
             </div>
           </div>
-
-            <div class="tab-pane fade show active" id="pills-info" role="tabpanel" aria-labelledby="pills-info-tab">
+    <% if @product.title_i_mission_life.present? && @product.title_i_3wmake_company.present? && @product.title_i_current_state.present? && @product.title_i_gotover_point.present?  && @product.title_i_future_policies.present? && @product.title_i_message_students.present? && @product.title_i_editor_word.present? %>
+                <!-- インタビュー記事があった時の処理 -->
+               <div class="tab-pane fade" id="pills-info" role="tabpanel" aria-labelledby="pills-info-tab">
+              <% else %>
+                <!-- インタビュー記事がなかった時の処理 -->
+                <div class="tab-pane fade active show" id="pills-info" role="tabpanel" aria-labelledby="pills-info-tab">
+              <% end %>
                <div class="intern_content all_shadow">
                   <h2 class="header_text">
                    <%= fa_icon("building") %>企業紹介

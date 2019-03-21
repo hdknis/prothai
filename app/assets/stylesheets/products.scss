@@ -189,12 +189,14 @@ body{
  text-decoration: none;
  color: #4267b2;
  border: solid 2px #4267b2;
-    border-radius: 5px;
-    font-size: 10px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    padding: 5px;
+ border-radius: 5px;
+ font-size: 10px;
+ overflow: hidden;
+ text-overflow: ellipsis;
+ white-space: nowrap;
+ padding: 5px;
+ line-height: 100%
+
 }
 
 .tag_zone_index a{

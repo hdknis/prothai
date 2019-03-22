@@ -68,6 +68,7 @@ RailsAdmin.config do |config|
       LABEL_slider_photo5 = '写真5(スライダーの5枚目になります)'
       LABEL_slider_photo6 = '写真6(スライダーの6枚目になります)'
       LABEL_slider_photo7 = '写真7(スライダーの7枚目になります)'
+      LABEL_preprofile = '社長プロフィール'
       LABEL_title_i_mission_life = '人生のミッション・目標 のタイトル'
       LABEL_i_mission_life = '人生のミッション・目標'
       LABEL_title_i_3wmake_company = 'いつ、きっかけ、どうしてのタイトル'
@@ -119,6 +120,7 @@ RailsAdmin.config do |config|
         field :slider_photo5, :carrierwave do label LABEL_slider_photo5 end
         field :slider_photo6, :carrierwave do label LABEL_slider_photo6 end
         field :slider_photo7, :carrierwave do label LABEL_slider_photo7 end
+        field :preprofile do label LABEL_preprofile end
         field :title_i_mission_life do label LABEL_title_i_mission_life end
         field :i_mission_life do label LABEL_i_mission_life end
         field :title_i_3wmake_company do label LABEL_title_i_3wmake_company end
@@ -171,6 +173,7 @@ RailsAdmin.config do |config|
         field :slider_photo5, :carrierwave do label LABEL_slider_photo5 end
         field :slider_photo6, :carrierwave do label LABEL_slider_photo6 end
         field :slider_photo7, :carrierwave do label LABEL_slider_photo7 end
+        field :preprofile do label LABEL_preprofile end
         field :title_i_mission_life do label LABEL_title_i_mission_life end
         field :i_mission_life do label LABEL_i_mission_life end
         field :title_i_3wmake_company do label LABEL_title_i_3wmake_company end
@@ -217,6 +220,7 @@ RailsAdmin.config do |config|
         field :slider_photo5 do label LABEL_slider_photo5 end
         field :slider_photo6 do label LABEL_slider_photo6 end
         field :slider_photo7 do label LABEL_slider_photo7 end
+        field :preprofile do label LABEL_preprofile end
         field :title_i_mission_life do label LABEL_title_i_mission_life end
         field :i_mission_life do label LABEL_i_mission_life end
         field :title_i_3wmake_company do label LABEL_title_i_3wmake_company end

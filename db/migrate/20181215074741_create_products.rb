@@ -1,6 +1,6 @@
 class CreateProducts < ActiveRecord::Migration[5.2]
   def change
-    create_table :products do |t|
+    create_table :products, options: 'ROW_FORMAT=DYNAMIC' do |t|
       t.text :c_title , null: false
       t.text :c_catch_copy , null: false
       t.string :c_name , null: false
@@ -34,6 +34,7 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.text :slider_photo7
 
       ## interview
+      t.text :preprofile
       ##人生のミッション
       t.text :title_i_mission_life
       t.text :i_mission_life

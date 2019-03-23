@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_22_063135) do
+ActiveRecord::Schema.define(version: 2019_03_06_080915) do
 
   create_table "blogs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "user_name"
@@ -63,9 +63,10 @@ ActiveRecord::Schema.define(version: 2019_03_22_063135) do
     t.string "period", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "preprofile"
   end
 
-  create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.text "c_title", null: false
     t.text "c_catch_copy", null: false
     t.string "c_name", null: false
@@ -91,6 +92,7 @@ ActiveRecord::Schema.define(version: 2019_03_22_063135) do
     t.text "slider_photo5"
     t.text "slider_photo6"
     t.text "slider_photo7"
+    t.text "preprofile"
     t.text "title_i_mission_life"
     t.text "i_mission_life"
     t.text "title_i_3wmake_company"
@@ -111,7 +113,6 @@ ActiveRecord::Schema.define(version: 2019_03_22_063135) do
     t.string "interviewed_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "preprofile"
   end
 
   create_table "tags", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

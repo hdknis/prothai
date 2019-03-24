@@ -167,14 +167,6 @@ body{
   color: white;
   padding: 5px;
 }
-.sub_pic span{
-  position: absolute;
-  background-color: #4267b2;
-  padding: 8px;
-  color: #FFF;
-  top: 5px;
-  left: 5px;
-}
 
 .top20{
   margin-top: 20px;
@@ -470,9 +462,10 @@ footer{
 /*記事投稿者のためのcss*/
 .sm_black{
   color: black;
-  font-size: 14px;
+  font-size: 18px;
   font-weight:bold;
 }
+
 .bold{
   font-weight:bold;
 }
@@ -480,7 +473,7 @@ footer{
 .bi_black{
   font-weight:bold;
   color: black;
-  font-size: 18px;
+  font-size: 20px;
   margin: 5px;
 }
 

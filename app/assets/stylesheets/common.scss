@@ -76,11 +76,16 @@
   color: white;
   padding: 5px;
 }
+
+
 .sub_pic span{
-  position: absolute;
-  background-color: #4267b2;
-  padding: 8px;
+  opacity: 0.85;
+  background-color: #5d7fb9;
+  font-weight:bold;
   color: #FFF;
+  position: absolute;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);/*影*/
+  padding: 8px;
   top: 5px;
   left: 5px;
 }

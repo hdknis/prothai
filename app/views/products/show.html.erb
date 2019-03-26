@@ -204,6 +204,7 @@
                   </div>
              <% else %>
              <% end %>
+             <% if @product.title_i_editor_word.present? %>
                   <div class="intern_content content_box">
                     <h2 class="header_text">
                    <%= fa_icon("list-alt") %><%= @product.title_i_editor_word %>
@@ -216,6 +217,8 @@
                      <%= simple_format(@product.i_editor_word) %>
                      </div>
                   </div>
+             <% else %>
+             <% end %>
             </div>
           </div>
     <% if @product.title_i_mission_life.present? && @product.title_i_3wmake_company.present? && @product.title_i_current_state.present? && @product.title_i_message_students.present? %>

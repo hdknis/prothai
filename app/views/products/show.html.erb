@@ -105,6 +105,12 @@
          </div>
     <% else %>
     <% end %>
+     <a class="btn-social-long-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://mash-up1221.com/products/<%= @product.id %>">
+         <i class="fab fa-facebook-square"></i>
+       </a>
+       <a class="btn-social-long-twitter" href="http://twitter.com/share?url=https://mash-up1221.com/products/<%= @product.id %>">
+       <i class="fab fa-twitter-square"></i>
+       </a>
        <div class="gray-content">
        </div>
           <div class="tab-content" id="pills-tabContent">
@@ -326,7 +332,17 @@
               <% end %>
             </div>
         </div>
+        <div class="gray-content">
+       </div>
+      <div>
+       <a class="btn-social-long-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://mash-up1221.com/products/<%= @product.id %>">
+         <i class="fab fa-facebook-square"></i>
+       </a>
+       <a class="btn-social-long-twitter" href="http://twitter.com/share?url=https://mash-up1221.com/products/<%= @product.id %>">
+       <i class="fab fa-twitter-square"></i>
+       </a>
       </div>
+     </div>
         <!--Grid column-->
      <%= render 'common/side.html.erb' %>
     </div>

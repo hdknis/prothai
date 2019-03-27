@@ -614,18 +614,19 @@ footer{
 
 /*シェアボタン、いいねボタン系*/
 .btn-social-long-facebook {
+  text-align: center;
   color: #FFF;/*文字・アイコン色*/
   border-radius: 7px;/*角丸に*/
   display: inline-block;
   height: 50px;/*高さ*/
-  width: 190px;/*幅*/
+  width: 140px;/*幅*/
   text-align: center;/*中身を中央寄せ*/
   font-size: 25px;/*文字のサイズ*/
   line-height: 50px;/*高さと合わせる*/
-  vertical-align: middle;/*垂直中央寄せ*/
   background: #4966a0;
   overflow: hidden;/*はみ出た部分を隠す*/
   text-decoration:none;/*下線は消す*/
+  margin: 8px;
 }
 
 .btn-social-long-facebook .fa-facebook {
@@ -650,7 +651,7 @@ footer{
   border-radius: 7px;/*角丸に*/
   display: inline-block;
   height: 50px;/*高さ*/
-  width: 190px;/*幅*/
+  width: 140px;/*幅*/
   text-align: center;/*中身を中央寄せ*/
   font-size: 25px;/*文字のサイズ*/
   line-height: 50px;/*高さと合わせる*/
@@ -658,6 +659,7 @@ footer{
   background: #1da1f3;
   overflow: hidden;/*はみ出た部分を隠す*/
   text-decoration:none;/*下線は消す*/
+  margin: 8px;
 }
 
 .btn-social-long-twitter .fa-twitter {
@@ -668,10 +670,5 @@ footer{
 .btn-social-long-twitter span {
   display:inline-block;
   transition: .5s;
-}
-
-.btn-social-long-twitter:hover span {
-  -webkit-transform: rotateX(360deg);
-  transform: rotateX(360deg);
 }
 

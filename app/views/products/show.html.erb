@@ -105,12 +105,18 @@
          </div>
     <% else %>
     <% end %>
-     <a class="btn-social-long-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://mash-up1221.com/products/<%= @product.id %>">
+      <ul class="nav" id="pills-tab" role="tablist">
+        <li class="">
+          <a class="btn-social-long-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://mash-up1221.com/products/<%= @product.id %>">
          <i class="fab fa-facebook-square"></i>
        </a>
-       <a class="btn-social-long-twitter" href="http://twitter.com/share?url=https://mash-up1221.com/products/<%= @product.id %>">
+        </li>
+        <li class="">
+         <a class="btn-social-long-twitter" href="http://twitter.com/share?url=https://mash-up1221.com/products/<%= @product.id %>">
        <i class="fab fa-twitter-square"></i>
        </a>
+        </li>
+      </ul>
        <div class="gray-content">
        </div>
           <div class="tab-content" id="pills-tabContent">
@@ -335,12 +341,18 @@
         <div class="gray-content">
        </div>
       <div>
-       <a class="btn-social-long-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://mash-up1221.com/products/<%= @product.id %>">
+       <ul class="nav" id="pills-tab" role="tablist">
+        <li class="nav-item">
+          <a class="btn-social-long-facebook btn-block" href="https://www.facebook.com/sharer/sharer.php?u=https://mash-up1221.com/products/<%= @product.id %>">
          <i class="fab fa-facebook-square"></i>
        </a>
-       <a class="btn-social-long-twitter" href="http://twitter.com/share?url=https://mash-up1221.com/products/<%= @product.id %>">
+        </li>
+        <li class="nav-item">
+         <a class="btn-social-long-twitter btn-block" href="http://twitter.com/share?url=https://mash-up1221.com/products/<%= @product.id %>">
        <i class="fab fa-twitter-square"></i>
        </a>
+        </li>
+      </ul>
       </div>
      </div>
         <!--Grid column-->

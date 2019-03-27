@@ -29,7 +29,10 @@
                                <table class="media-card_table">
                                   <tr class="card_C_name">
                                    <th>会社名</th>
-                                     <td><span class="dark"><%= product.c_name %></span></td>
+                                     <td>
+                                      <%= truncate(product.c_name, length: 30) do %>
+                                      <% end %>
+                                     </td>
                                    </tr>
                                </table>
                              </div>

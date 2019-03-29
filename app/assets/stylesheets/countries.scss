@@ -9,6 +9,7 @@
   background: transparent;/*背景透明に*/
   border-left: solid 5px #7db4e6;/*左線*/
   margin-top: 0.5em;
+  font-size: 30px;
 }
 
 .countory_item{
@@ -39,11 +40,17 @@
   .countory_pic {
     height: 500px;
   }
+  .countory_header_text{
+    font-size: 26px;
+  }
 }
 
 /* スマホ用のCSS */
 @media only screen and (max-width: 479px) {
   .countory_pic {
     height: 300px;
+  }
+   .countory_header_text{
+    font-size: 24px;
   }
 }

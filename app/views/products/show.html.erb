@@ -11,8 +11,14 @@
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+         <% if @product.slider_photo2.present? %>
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <% else %>
+        <% end %>
+        <% if @product.slider_photo3.present? %>
           <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        <% else %>
+        <% end %>
         <% if @product.slider_photo4.present? %>
           <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
         <% else %>
@@ -35,12 +41,18 @@
                 <div class="carousel-item active">
                   <div><a href="#"><img class="d-block w-100" src="<%= @product.slider_photo1 %>" ></a></div>
                 </div><!-- /.carousel-item -->
+             <% if @product.slider_photo2.present? %>
                 <div class="carousel-item">
                   <div><a href="#"><img class="d-block w-100" src="<%= @product.slider_photo2 %>" ></a></div>
                 </div><!-- /.carousel-item -->
+             <% else %>
+             <% end %>
+             <% if @product.slider_photo3.present? %>
                 <div class="carousel-item">
                    <div><a href="#"><img class="d-block w-100" src="<%= @product.slider_photo3 %>" ></a></div>
                 </div><!-- /.carousel-item -->
+             <% else %>
+             <% end %>
              <% if @product.slider_photo4.present? %>
                 <div class="carousel-item">
                    <div><a href="#"><img class="d-block w-100" src="<%= @product.slider_photo4 %>" ></a></div>
@@ -82,7 +94,7 @@
         <ul class="nav border_bottom">
          <% @connect_tags.each.with_index(1) do |connect,i| %>
             <li class="nav-item tag_zone">
-              <a class="nav-link" href="#"><%= i %>.<%= connect.tag.name %></a>
+              <span><%= i %>.<%= connect.tag.name %></span>
             </li>
             <% end %>
           </ul>

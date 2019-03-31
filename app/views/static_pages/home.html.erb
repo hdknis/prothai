@@ -38,7 +38,7 @@
                              </div>
                              <% product.connect_tags.each_with_index do |connect_tag,i| %>
                               <li class="tag_zone_index">
-                               <a class="" href="#"><%= connect_tag.tag.name %></a>
+                               <%= connect_tag.tag.name %>
                                </li>
                                <%  break if i== 2 %>
                              <% end %>

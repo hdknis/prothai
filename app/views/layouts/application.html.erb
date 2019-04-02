@@ -3,36 +3,163 @@
   <head>
     <meta charset="utf-8">
       <title>Mash Up</title>
-      <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link href='http://fonts.googleapis.com/css?family=Signika:700,300,400,600' rel='stylesheet' type='text/css'>
+       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+       <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+       <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-6jHF7Z3XI3fF4XZixAuSu0gGKrXwoX/w3uFPxC56OtjChio7wtTGJWRW53Nhx6Ev" crossorigin="anonymous">
       <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+      <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+      <script defer src="https://pro.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-I3Hhe9TkmlsxzooTtbRzdeLbmkFQE9DVzX/19uTZfHk1zn/uWUyk+a+GyrHyseSq" crossorigin="anonymous"></script>
       <%= csrf_meta_tags %>
+      <%= analytics_init if Rails.env.production? %>
+      <div id="fb-root"></div>
+     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v3.2"></script>
+     <div id="fb-root"></div>
     </meta>
   </head>
-  <body class="yj950-2">
-    <div id="wrapper">
-      <div id="yjContentsHeader">
-        <nav class="globalnav">
-          <div class="globalnav__menu">
-            <ul class="gmenu">
-              <li class="logo" style="float: left">
-                <a href="/">Mash Up</a>
+  <body>
+   <header>
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+
+  <!-- Additional container -->
+  <div class="container">
+
+    <!-- Navbar brand -->
+    <a class="navbar-brand margin_right" href="/">Mash Up</a>
+
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+      aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="basicExampleNav">
+
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link margin_menu" href="/"><strong><i class="fas fa-home"></i>ホーム</strong></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link margin_menu" href="/static_pages/about"><i class="fas fa-newspaper"></i>Mash Upとは</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link margin_menu" href="/products"><strong><i class="fal fa-search-plus"></i>社長インタビューを見つける</strong></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link margin_menu" href="/blogs"><strong><i class="fal fa-newspaper"></i>インターン記事</strong> </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link margin_menu" href="/inquirys"><strong><i class="far fa-user-headset"></i>お問い合わせ</strong></a>
+        </li>
+         <% if user_signed_in? %>
+        <div class="user_nav grid-6">
+            <ul class="user__info">
+              <li>
+               <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
               </li>
             </ul>
-          </div>
-        </nav>
+        </div>
+      <% else %>
+      <% end %>
+      </ul>
+     </div>
+    <!-- Collapsible content -->
+
+  </div>
+  <!-- Additional container -->
+</nav>
+        <%= yield %>
+</header>
+<footer class="page-footer font-small indigo pt-4 mt-4">
+
+  <!-- Footer Links -->
+ <div class="container text-center">
+    <div class="row mt-3">
+
+
+    <!-- Grid row -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mb-4">
+          <ul class="list-unstyled">
+           <li>
+              <p><span class="footer_title"><strong>Mash Upについて</strong></span><p>
+            </li>
+            <li class="list-item">
+              <a href="/static_pages/about">Mash Upとは？</a>
+            </li>
+            <li class="list-item">
+              <a href="/static_pages/member"><i class="fas fa-users"></i>メンバー紹介</a>
+            </li>
+          </ul>
+        </div>
+
+
+      <!-- Grid column -->
+       <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <ul class="list-unstyled">
+              <li class="list-item">
+                <a href="/products"><i class="fas fa-search-plus"></i>社長インタビューを見つける</a>
+              </li>
+              <li class="list-item">
+                <a href="/blogs"><i class="fas fa-newspaper"></i>インターン記事</a>
+              </li>
+              <li class="list-item">
+                <a href="/inquirys"><i class="fas fa-user-headset"></i>お問い合わせ</a>
+              </li>
+            </ul>
       </div>
 
-            <% if notice %>
-              <p class="alert alert-success"><%= notice %></p>
-            <% end %>
-            <% if alert %>
-              <p class="alert alert-danger"><%= alert %></p>
-            <% end %>
 
-            <%= yield %>
+      <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
+       <form action="feedbacks/create" id="new_feedback" method="post">
+       <div class="mar-bottom"><i class="fal fa-file-signature"></i>このサイトへのご意見をお聞かせください</div>
+        <textarea cols="35" name="body" placeholder="意見を記入する" rows="4" class="fbbox"></textarea>
+        <input type="submit" value="送信する" class="fb_btn">
+      </form>
+      <script>
+          $(function(){
+            $('#new_feedback').on('submit', function(e){
+              e.preventDefault();
+              var formData = new FormData(this);
+              var url = $(this).attr('action')
+              $.ajax({
+                url: url,
+                type: "POST",
+                data: formData,
+                dataType: 'json',
+                processData: false,
+                contentType: false
+            })
+                $('.fbbox').val('')
+                var return_fb = document.getElementById('new_feedback')
+                 return_fb.innerHTML = `<p>
+                            <strong>
+                              ご意見ありがとうございました。<br>頂いたご意見はサービス改善の参考にさせていただきます。
 
-</body>
+当フォームからのご意見にはご返信いたしかねます。<br>返信が必要な場合は<a href="/inquirys">お問い合わせフォーム</a>からご連絡ください。
+
+                            </strong>
+                          </p>`
+            })
+          });
+         </script>
+      </div>
+        <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto">
+          <a class="btn btn-lg member_btn" href="/static_pages/member_recruit" role="button">
+          <strong><i class="fal fa-people-carry"></i>Mash Up運営メンバーを<br>募集しています</strong>
+          </a>
+     </div>
+  <!-- Footer Links -->
+ </div>
+  <!-- Copyright -->
+     <div class="footer-copyright text-center py-3">© 2019 Copyright:
+       Mash Up. All Rights Reserved.
+     </div>
+  <!-- Copyright -->
+</footer>
+  </body>
 </html>

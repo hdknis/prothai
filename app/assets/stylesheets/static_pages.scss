@@ -2,6 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+
+/* ワイドスクリーン用のCSS */
+
+
 .cover-img {
   height: 550px;
   width: 100%;
@@ -44,7 +49,8 @@
   font-size: 30px
 }
 
-/* ワイドスクリーン用のCSS */
+
+
 @media only screen and (min-width: 1500px) {
   .cover-img {
     height: 800px;
@@ -98,47 +104,14 @@
   }
 }
 
-.mask{
-  height: 100%;
-}
-/*homeのcss*/
-#intro {
-    background: url("https://res.cloudinary.com/ho9upjx8x/image/upload/v1550732852/mash_up_routine/colorful-1974699_1920.png")no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    color: #FFF;
-    height: 500px;
-}
-
-#intro_brack{
-  -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    color: #FFF;
-    position: relative;
-}
-
-.font_site{
-  font-size: 400%;
-}
 
 .font_subsite{
   font-size: 250%;
 }
 
-@media (max-width: 768px) {
-  .font_site {
-    /*padding-bottom: 100px;*/
-    font-size: 150%;
-  }
-}
 
 @media (max-width: 768px) {
   .font_subsite {
-   /* padding-bottom: 100px;*/
     font-size: 100%;
   }
 }
@@ -190,6 +163,15 @@
   padding: 5px;
   margin-top: 20px;
 }
+
+
+
+
+
+
+
+
+
 
 
 /*クラウドファンディング専用css*/
@@ -249,53 +231,12 @@
   font-size: 16px;
 }
 
-.video_word{
-  font-family: serif;
-  color: black;
-  font-size: 600%;
-  position: absolute;
-  left: 31%;
-  top: 300px;
-  z-index: 1;
-}
-
-.video_mask{
-  width:100%;
-  height: 100%;
-  z-index: 1;
-  position: absolute;
-  top: 10px;
-}
-
-.risize_arrow{
-  text-align: center;
-  font-size: 70px;
-}
-
-.decision_process{
-  background-color: #f2f4f8;
-}
 
 
-.rgba-black-strong, .rgba-black-strong:after {
-    background-color: rgba(0,0,0,.7);
-    padding-top: 100px;
-}
 
-.text-middle{
-	position: relative;
-    display: inline-block;
-    text-decoration: none;
-    padding: 0 30px;
-    font-size: 19px;
-    height: 40px;
-    line-height: 40px;
-    vertical-align: middle;
-    background: #51587b;
-    font-size: 20px;
-    color: rgb(255, 255, 255);
-    transition: .4s;
-}
+
+
+/*メンバー情報のcss*/
 
 .member_card {
     position: relative;
@@ -323,9 +264,4 @@
 
 .member_card-text{
   font-size: 12px;
-}
-
-
-.recruit_content{
-  background-color: #f2f4f8;
 }

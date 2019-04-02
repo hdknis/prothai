@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-	layout 'review_site'
 	before_action :ensure_domain
 	protect_from_forgery with: :exception
 	def after_sign_out_path_for(resource)

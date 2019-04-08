@@ -77,7 +77,7 @@
                         <%= simple_format(@country.find_residence_info) %>
                       </div>
                        <h2 class="countory_header_text">
-                          <%= fa_icon("american-sign-language-interpreting") %>タイの日本人コミュニティーの紹介
+                          <%= fa_icon("american-sign-language-interpreting") %><%= @country.name %>の日本人コミュニティーの紹介
                       </h2>
                       <div class="main_contents">
                         <%= simple_format(@country.community_info) %>

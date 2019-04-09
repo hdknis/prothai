@@ -8,7 +8,7 @@ class ProductsController < ApplicationController
   end
 
   def index
-    @products = Product.order('id ASC').where.not(slider_photo1: nil,interviewed_name: "尾石隆行").limit(20)
+    @products = Product.order('id ASC').where.not(slider_photo1: nil).limit(20)
   end
 
   def show

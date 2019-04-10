@@ -1,7 +1,7 @@
 class StaticPagesController < ApplicationController
 
 	def home
-	  @products = Product.where.not(slider_photo1: nil,interviewed_name: "尾石隆行").limit(3)
+	  @products = Product.where.not(slider_photo1: nil).limit(3)
 	  @countries = Country.where.not(show_pic: nil, flag_pic: nil).limit(3)
 	end
 

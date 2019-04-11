@@ -77,6 +77,7 @@ gem 'font-awesome-rails'
 gem 'carrierwave'
 gem 'cloudinary'
 gem 'google-analytics-rails'
+gem 'rails_autolink'
 
 group :production do
   gem 'rails_12factor'

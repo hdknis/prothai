@@ -205,6 +205,13 @@ body{
   line-height: 200%
 }
 
+.pro_contents{
+  margin: 10px;
+  font-size: 17px;
+  line-height: 200%;
+  word-wrap: break-word;
+}
+
 .con_contents{
   margin: 10px;
   font-size: 17px;
@@ -337,13 +344,33 @@ body{
   width: 220px;
   font-size: 16px;
 }
+
 .item:nth-child(2){
-  width: 220px;
+  width: 470px;
   font-size: 14px;
   font-weight:bold;
-  color: #333333;
 }
 
+
+@media only screen and (min-width: 1500px) {
+
+}
+
+/* タブレット用のCSS */
+@media only screen and (min-width : 768px) and (max-width : 1200px) {
+  .item:nth-child(2){
+  width: 280px;
+  word-wrap: break-word;
+ }
+}
+
+/* スマホ用のCSS */
+@media only screen and (max-width: 479px) {
+  .item:nth-child(2){
+  width: 220px;
+  word-wrap: break-word;
+ }
+}
 
 
 /*サイドビューに対してのcss*/

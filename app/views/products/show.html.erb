@@ -146,7 +146,7 @@
                      <%= fa_icon("user-tie") %>社長プロフィール
                     </h2>
                     <div class="main_contents">
-                      <i class="i"></i><%= simple_format(@product.preprofile) %>
+                      <i class="i"></i><%= auto_link(simple_format(@product.preprofile), html: {target: '_blank'}) %>
                     </div>
                 </div>
             <% else %>
@@ -157,7 +157,7 @@
                      <%= fa_icon("chart-bar") %><%= @product.title_i_mission_life %>
                     </h2>
                     <div class="main_contents">
-                      <i class="i"></i><%= simple_format(@product.i_mission_life) %>
+                      <i class="i"></i><%= auto_link(simple_format(@product.i_mission_life), html: {target: '_blank'}) %>
                     </div>
                 </div>
             <% else %>
@@ -168,7 +168,7 @@
                     <%= fa_icon("history") %><%= @product.title_i_3wmake_company %>
                     </h2>
                     <div class="main_contents">
-                     <%= simple_format(@product.i_3wmake_company) %>
+                     <%= auto_link(simple_format(@product.i_3wmake_company), html: {target: '_blank'}) %>
                     </div>
                 </div>
             <% else %>
@@ -179,7 +179,7 @@
                      <%= fa_icon("stopwatch") %><%= @product.title_i_current_state %>
                     </h2>
                     <div class="main_contents">
-                      <i class="i"></i><%= simple_format(@product.i_current_state) %>
+                      <i class="i"></i><%= auto_link(simple_format(@product.i_current_state), html: {target: '_blank'}) %>
                     </div>
                 </div>
             <% else %>
@@ -190,7 +190,7 @@
                         <%= fa_icon("child") %><%= @product.title_i_gotover_point %>
                       </h2>
                   <div class="main_contents">
-                  <%= simple_format(@product.i_gotover_point) %>
+                  <%= auto_link(simple_format(@product.i_gotover_point), html: {target: '_blank'}) %>
                       </div>
                 </div>
             <% else %>
@@ -201,7 +201,7 @@
                      <%= fa_icon("forward") %><%= @product.title_i_future_policies %>
                     </h2>
                     <div class="main_contents">
-                     <%= simple_format(@product.i_future_policies) %>
+                     <%= auto_link(simple_format(@product.i_future_policies), html: {target: '_blank'}) %>
                      </div>
                   </div>
             <% else %>
@@ -212,7 +212,7 @@
                      <%= fa_icon("comments") %><%= @product.title_i_message_students %>
                     </h2>
                     <div class="main_contents">
-                     <%= simple_format(@product.i_message_students) %>
+                     <%= auto_link(simple_format(@product.i_message_students), html: {target: '_blank'}) %>
                      </div>
                   </div>
              <% else %>
@@ -223,7 +223,7 @@
                     <%= fa_icon("book") %><%= @product.title_i_recommended_books %>
                     </h2>
                     <div class="main_contents">
-                     <%= simple_format(@product.i_recommended_books) %>
+                     <%= auto_link(simple_format(@product.i_recommended_books), html: {target: '_blank'}) %>
                      </div>
                   </div>
              <% else %>
@@ -238,7 +238,7 @@
                      <%= simple_format(@product.interviewed_name) %>
                      </div>
                     <div class="main_contents">
-                     <%= simple_format(@product.i_editor_word) %>
+                     <%= auto_link(simple_format(@product.i_editor_word), html: {target: '_blank'}) %>
                      </div>
                   </div>
              <% else %>
@@ -308,8 +308,8 @@
                    <h2 class="header_text">
                     <%= fa_icon("briefcase") %>事業内容
                    </h2>
-                   <div class="main_contents">
-                     <%= simple_format(@product.c_business_content) %>
+                   <div class="pro_contents">
+                     <%= auto_link(simple_format(@product.c_business_content), html: {target: '_blank'}) %>
                    </div>
                </div>
                 <div class="gray-content">
@@ -319,7 +319,7 @@
                     <h2 class="header_text">
                       <%= fa_icon("user-secret") %>求める人物像
                     </h2>
-                    <div class="main_contents">
+                    <div class="pro_contents">
                       <%= simple_format(@product.required_spec) %>
                     </div>
                 </div>
@@ -331,8 +331,8 @@
                     <h2 class="header_text">
                      <%= fa_icon("envelope") %>会社の連絡先
                     </h2>
-                    <div class="main_contents">
-                      <%= simple_format(@product.ways_contact) %>
+                    <div class="pro_contents">
+                      <%= auto_link(simple_format(@product.ways_contact), html: {target: '_blank'}) %>
                     </div>
                 </div>
               <% if @product.company_achievements.present? %>
@@ -342,8 +342,8 @@
                     <h2 class="header_text">
                     <%= fa_icon("trophy") %> 会社の実績
                     </h2>
-                    <div class="main_contents">
-                      <%= simple_format(@product.company_achievements) %>
+                    <div class="pro_contents">
+                      <%= auto_link(simple_format(@product.company_achievements), html: {target: '_blank'}) %>
                     </div>
                 </div>
               <% else %>

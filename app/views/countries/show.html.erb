@@ -54,39 +54,39 @@
                       </h2>
                         <div class="detail_info">
                           <div class="countory_item"><%= fa_icon("home-alt") %>家賃</div>
-                          <div class="countory_item"><%= simple_format(@country.rent) %></div>
+                          <div class="countory_item"><%= auto_link(simple_format(@country.rent), html: {target: '_blank'}) %></div>
                         </div>
                         <div class="detail_info">
                           <div class="countory_item"><%= fa_icon("utensils") %>食費</div>
-                          <div class="countory_item"><%= simple_format(@country.food_expenses) %></div>
+                          <div class="countory_item"><%= auto_link(simple_format(@country.food_expenses), html: {target: '_blank'}) %></div>
                         </div>
                         <div class="detail_info">
                           <div class="countory_item"><%= fa_icon("ticket") %>航空券</div>
-                          <div class="countory_item"><%= simple_format(@country.ticket) %></div>
+                          <div class="countory_item"><%= auto_link(simple_format(@country.ticket), html: {target: '_blank'}) %></div>
                         </div>
                       <h2 class="countory_header_text">
                           <%= fa_icon("ballot-check") %>ビザの種類に関して
                       </h2>
                       <div class="main_contents">
-                        <%= simple_format(@country.types_of_visas) %>
+                        <%= auto_link(simple_format(@country.types_of_visas), html: {target: '_blank'}) %>
                       </div>
                        <h2 class="countory_header_text">
                           <%= fa_icon("hotel") %>住居を探すときにおすすめなサイト
                       </h2>
                       <div class="main_contents">
-                        <%= simple_format(@country.find_residence_info) %>
+                        <%= auto_link(simple_format(@country.find_residence_info), html: {target: '_blank'}) %>
                       </div>
                        <h2 class="countory_header_text">
                           <%= fa_icon("american-sign-language-interpreting") %><%= @country.name %>の日本人コミュニティーの紹介
                       </h2>
                       <div class="main_contents">
-                        <%= simple_format(@country.community_info) %>
+                        <%= auto_link(simple_format(@country.community_info), html: {target: '_blank'}) %>
                       </div>
                        <h2 class="countory_header_text">
                           <%= fa_icon("calendar-week") %>詳細な情報が知りたい方へ
                       </h2>
                       <div class="main_contents">
-                        <%= simple_format(@country.detail_info) %>
+                        <%= auto_link(simple_format(@country.detail_info), html: {target: '_blank'}) %>
                       </div>
                       <div class="main_contents">
                         ＊「他にもこんなコミュニティー・助けになる情報あるよ」という方は<a href="/inquirys">お問い合わせフォーム</a>からご連絡ください。

@@ -1,7 +1,8 @@
 class StaticPagesController < ApplicationController
 
 	def home
-	  @products = Product.where.not(slider_photo1: nil).limit(3)
+	  @products = Product.where.not(slider_photo1: nil,id: 42).limit(3)
+	  # @spn_product = Product.find(42)
 	  @countries = Country.where.not(show_pic: nil, flag_pic: nil).limit(3)
 	end
 
@@ -31,4 +32,8 @@ class StaticPagesController < ApplicationController
 			      の３点を記入の上、お問い合わせ内容に希望している職種の入力をお願いします。
 			      追って、こちらから連絡をさせて頂きます。'
 	end
+
+	# def parners
+	#   @spn_product = Product.find(42)
+ #    end
 end

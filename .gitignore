@@ -28,7 +28,7 @@
 
 # Ignore emailadress.
 config/environments/development.rb
-/config/environments/production.rb
+config/environments/production.rb
 
 /config/database.yml
 

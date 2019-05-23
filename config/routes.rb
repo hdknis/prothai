@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'static_pages/about'
   get 'static_pages/member'
   get 'static_pages/member_recruit'
+  get 'static_pages/parners'
   resources :blogs, only: :index
   post 'feedbacks/create' => 'feedbacks#create'
   get 'inquirys' => 'inquirys#index'              # 入力画面

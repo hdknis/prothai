@@ -229,7 +229,53 @@
 }
 
 
+/*パートナーズサイト*/
+.name_center{
+  text-align: center;
+}
 
+
+.par_header_text{
+  color: #4267b2;/*文字色*/
+  background: #FFF;/*背景色*/
+  font-size: 28px;
+  font-weight:bold;
+  /*box-shadow: 0 3px 6px rgba(0,0,0,0.2);*/
+  /*以下色とかの装飾*/
+  padding: 25px;
+  color: #494949;/*文字色*/
+  background: transparent;/*背景透明に*/
+  margin-top: 0.5em;
+}
+
+@media only screen and (min-width: 1500px) {
+  .par_header_text {
+   font-size: 28px;
+  }
+  .par_head_line{
+   font-size: 22px;
+  }
+}
+
+/* タブレット用のCSS */
+@media only screen and (min-width : 768px) and (max-width : 1200px) {
+  .par_header_text {
+   font-size: 22px;
+  }
+  .par_head_line{
+   font-size: 20px;
+  }
+}
+
+/* スマホ用のCSS */
+@media only screen and (max-width: 479px) {
+  .par_header_text {
+   font-size: 18px;
+  }
+  .par_head_line{
+   font-size: 18px;
+  }
+}
 
 
 

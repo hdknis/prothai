@@ -1,0 +1,131 @@
+<style type="text/css">
+.countory_pic {
+  height: 750px;
+  width: 100%;
+  display: table;
+  background-size: cover;
+  background-image:linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('https://res.cloudinary.com/ho9upjx8x/image/upload/v1556106655/cheers-839865_1280.jpg');
+}
+
+@media only screen and (min-width: 1500px) {
+  .countory_pic {
+    height: 800px;
+  }
+}
+
+/* タブレット用のCSS */
+@media only screen and (min-width : 768px) and (max-width : 1200px) {
+  .countory_pic {
+    height: 500px;
+  }
+}
+
+/* スマホ用のCSS */
+@media only screen and (max-width: 479px) {
+  .countory_pic {
+    height: 300px;
+  }
+}
+</style>
+<div class="img-fluid">
+    <div class="col-xs-12 countory_pic">
+      <div class="cover-text text-center">
+        <div><p>パートナーズページ</p></div>
+        <div class="cover-subtext"><p>Mash Upを支援してくれている方々を掲載しているページになります</p></div>
+      </div>
+    </div>
+</div>
+         <div class="gray-content">
+       </div>
+
+        <!--Section: Examples-->
+            <div class="container all_shadow">
+                  <h2 class="header_text">
+                  <%= fa_icon("check-square") %>パートナーズURL
+                  </h2>
+                  <div class="main_contents">
+                                     <div class="row">
+                    <div class="col-sm-6 col-md-6 search">
+                      <a href="https://uck-inc.com/" target="_blank">
+                        <div class="card top20">
+                        <div class="sub_pic">
+                           <img class="img-thumbnail" src="https://res.cloudinary.com/ho9upjx8x/image/upload/v1558598896/mash_up_routine/d2b9d7b790f6b64447d1eaf47b4921db.jpg" alt="">
+                           <span>海外インターン</span>
+                        </div>
+                         <div class="card-body">
+                            <div class="card-title">
+                               顧客のビジネスの付加価値につながる”創造性の高い”、”顧客と共にワクワクできる”サービスを一緒に開発しましょう
+                            </div>
+                             <div class="card-title">
+                               <table class="media-card_table">
+                                  <tr class="card_C_name">
+                                   <th>会社名</th>
+                                     <td>
+                                      <%= truncate(@spn_product.c_name, length: 30) do %>
+                                      <% end %>
+                                     </td>
+                                   </tr>
+                               </table>
+                             </div>
+                    <!--Grid column-->
+                    </div>
+                  </div>
+                  </a>
+              </div>
+              <div class="col-sm-6 col-md-6 search">
+                      <a href="https://mushashugyo.jp" target="_blank">
+                        <div class="card top20">
+                        <div class="sub_pic">
+                           <img class="img-thumbnail" src="https://res.cloudinary.com/ho9upjx8x/image/upload/v1557751855/mash_up_routine/60138100_2378474915728849_3715068057303908352_n.png" alt="">
+                           <span>短期プログラム</span>
+                        </div>
+                         <div class="card-body">
+                            <div class="card-title">
+                               2週間のビジネス経験で『変態』し、『自走式エンジン』を搭載する!
+                            </div>
+                             <div class="card-title">
+                               <table class="media-card_table">
+                                  <tr class="card_C_name">
+                                   <th>会社名</th>
+                                     <td>
+                                      株式会社旅武者
+                                     </td>
+                                   </tr>
+                               </table>
+                             </div>
+                    </div>
+                  </div>
+                  </a>
+              </div>
+    </div>
+                  </div>
+               <div class="main_contents">
+                  <h2 class="header_text">
+                  <%= fa_icon("check-square") %>クラウドファンディング支援者名一覧
+                  </h2>
+                 <div class="row">
+                  <div class="col-sm-6 col-md-6 search">
+                  <h2 class="par_header_text">
+                    <div class="name_center">Kenichi Mizuhata</div>
+                  </h2>
+                  <h2 class="par_header_text">
+                    <div class="name_center"> 菅原 智弘</div>
+                   </h2>
+                  </div>
+                  <div class="col-sm-6 col-md-6 search">
+                   <h2 class="par_header_text">
+                    <div class="name_center">ikawa seikei</div>
+                   </h2>
+                  </div>
+
+                </div>
+              <?
+            </div>
+
+      <div class="gray-content">
+      </div>
+
+        <!--Section: Examples-->
+            </div>
+
+    </div>

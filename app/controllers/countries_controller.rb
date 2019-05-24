@@ -3,5 +3,6 @@ class CountriesController < ApplicationController
 	  @country = Country.find(params[:id])
 	  @countries = Country.order('id ASC').limit(20)
 	  @connect_products = @country.products.where.not(slider_photo1: nil).limit(5)
+	  @spn_product = Product.find(42)
     end
 end

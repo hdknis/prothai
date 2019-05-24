@@ -16,5 +16,6 @@ class ProductsController < ApplicationController
     @relation_products = Product.order('id ASC').limit(5)
     @countries = Country.order('id ASC').limit(20)
     @connect_tags = @product.connect_tags
+    @spn_product = Product.find(42)
   end
 end

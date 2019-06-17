@@ -2,13 +2,13 @@ class ProductsController < ApplicationController
   before_action :create_info , only: [:index, :show]
 
   def create_info
-    @product = Product.order('id ASC').limit(20)
+    @product = Product.order('id ASC').limit(40)
     @periods = Period.order('id ASC')
     @countrys = Country.order('id ASC')
   end
 
   def index
-    @products = Product.order('id ASC').where.not(slider_photo1: nil,id: 32).limit(20)
+    @products = Product.order('id ASC').where.not(slider_photo1: nil,id: 32).limit(40)
   end
 
   def show

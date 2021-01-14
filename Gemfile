@@ -70,7 +70,7 @@ gem 'sprockets', '3.7.2'
 gem 'mechanize'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
-gem 'rails_admin', '~> 1.3'
+gem 'rails_admin', '~> 1.4'
 gem "rails_admin_import", "~> 2.1"
 gem 'devise'
 gem 'cancan'

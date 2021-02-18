@@ -1,5 +1,7 @@
 {
   "name": "book_review",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "3"
+  }
 }

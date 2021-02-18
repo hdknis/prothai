@@ -18,8 +18,8 @@ ActiveRecord::Schema.define(version: 2019_03_06_080915) do
     t.string "industry"
     t.string "user_status"
     t.text "body"
-    t.datetime "created_at", default: -> { "CURRENT_TIMESTAMP" }
-    t.datetime "updated_at", default: -> { "CURRENT_TIMESTAMP" }
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "connect_tags", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -63,7 +63,6 @@ ActiveRecord::Schema.define(version: 2019_03_06_080915) do
     t.string "period", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "preprofile"
   end
 
   create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|

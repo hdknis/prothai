@@ -8,6 +8,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   # storage :file
   process :convert => 'png'
   # storage :fog
+  process resize_to_fill: [540, 300]
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
